@@ -1,0 +1,77 @@
+==============================================================================
+UZIVATELSKA DOKUMENTACE
+
+    aplikace resi prehlednou formou nacteni a zobrazeni csv souboru.
+        csv soubor se nachazi v: data/rs_auto_motor.csv
+
+        a je po startu aplikace nacten do pameti (~pomoci: dynamickeho seznamu).
+        nasledne se program prepne do stavu: "L = LIST", kde zobrazi 1. stranku
+
+    nyni se aplikace ovlada pomoci nabidky:
+        menu: L = LIST | F = FILTR | V = VYSTUP | K = KONEC
+
+    nabidka se ovlada pomoci uzivatelskeho vstupu, kdy v dolni casti obrazovky
+    se zobrazuje "volba:", kde musi uzivatel zvolit hlavni volbu nabidky,
+
+        pomoci pismen: L, F, V, K.
+        timto se voli jednotlive stavy.
+
+        kazdy stav ma svou sub-nabidku:
+
+            L = LIST (~prehled automobilu)
+                p=predhozi, n=nasledujici, g=goto, h=home, e=end, m=limit na stranku
+
+                zde je mozne prochazet stranky:
+                    p=predchozi, n=nasledujici
+
+                skakat na urcitou stranku v seznamu:
+                    g=goto
+
+                skakat na 1. nebo posledni stranku v seznamu:
+                    h=home, e=end
+
+               anebo menit pocet zobrazenych polozek na strance
+                    m=limit na stranku
+
+
+            F = FILTR (~nastaveni filtru a vyhledavani)
+                n=pridat novy filtr, u=smazat posledni filtr
+
+                ...tato moznost volba neni bohuzel z casovych duvodu funkcni...
+                {
+                 2p.Saloun: programove je trivialni, vse je uchovano ve strukture:
+                    appINFO, "cols" anebo "filtr"
+                    a manipulace predstavuje pouhe zapinani/vypinani tohoto pole, prip. zmenu poradi
+                }
+
+
+            V = VYSTUP
+                a=ulozit vse, s=zobr. sloupce a akt. filtry, f=vsechny sloupce s akt. filtry
+
+                vystup slouzi k porizeni .html vystupu k ruznym dalsim pracem.
+                volby:
+
+                a=ulozit vse
+                    ==> ulozi veskery csv seznam do .html souboru
+
+                s=zobr. sloupce a akt. filtry
+                    ==> ...tato moznost volba neni bohuzel z casovych duvodu funkcni...
+                    ==> vystup je generovan pouze se sloupci, ktere se zobrazuji na obrazovce a filtry, ktere jsou aktivni
+                    {
+                     2p.Saloun: v programu je funkcne implementovano, ovsem zapnuti novych sloupcu,
+                                ci filtru se resi nyni bohuzel. zakomentovanim/odkomentovanim.
+                    }
+
+                f=vsechny sloupce s akt. filtry
+                    ==> ...tato moznost volba neni bohuzel z casovych duvodu funkcni...
+                    ==> vystup je generovan se vsemi sloupci a se zohlednenim pouze aktivnich filtru
+                    {
+                     2p.Saloun: v programu je funkcne implementovano, ovsem zapnuti novych sloupcu,
+                                ci filtru se resi nyni bohuzel. zakomentovanim/odkomentovanim.
+                    }
+
+            K = KONEC --> ukonceni programu
+
+    soucasti programu jsou prehledne nabidky, ktere vedou uzivatele ke spravne volbe.
+
+==============================================================================

@@ -1,0 +1,243 @@
+\hypertarget{structs__carITEM}{
+\section{\-Dokumentace struktury s\-\_\-car\-I\-T\-E\-M}
+\label{d7/da8/structs__carITEM}\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}}
+}
+
+
+vyctovy typ enum pro typ paliva,  
+
+
+
+
+{\ttfamily \#include $<$io.\-h$>$}
+
+\subsection*{\-Veřejné atributy}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structs__carITEM_ac3fb1808cd4c5d9db744b2342efebd01}{id}
+\item 
+string \hyperlink{structs__carITEM_a0645a77c08276a5d14a7d21f5e0f21de}{zn\-\_\-nazev}
+\begin{DoxyCompactList}\small\item\em id radku \end{DoxyCompactList}\item 
+string \hyperlink{structs__carITEM_aad62e052d82d733a186d4dc5401da634}{m\-\_\-nazev}
+\begin{DoxyCompactList}\small\item\em zn\-\_\-nazev = (zn)acka nazev \end{DoxyCompactList}\item 
+\hyperlink{io_8h_a3092c477112abb33d997526688293bed}{car\-T\-Y\-P\-E} \hyperlink{structs__carITEM_a4173c03873679957370ee10781c99291}{m\-\_\-druh}
+\begin{DoxyCompactList}\small\item\em m\-\_\-nazev = (m)odel nazev \end{DoxyCompactList}\item 
+string \hyperlink{structs__carITEM_a3fb9d29cae50d02de945bdac1b9e7af6}{m\-\_\-oznaceni}
+\begin{DoxyCompactList}\small\item\em m\-\_\-druh = (m)odel auta \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structs__carITEM_a577c657f610b4f7d778c0aa213ea08c9}{m\-\_\-rok\-\_\-od}
+\begin{DoxyCompactList}\small\item\em m\-\_\-oznaceni = (m)odel oznaceni \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structs__carITEM_ad0b03b89f0df3e8b016c84cb8a8ae371}{m\-\_\-rok\-\_\-do}
+\begin{DoxyCompactList}\small\item\em m\-\_\-rok\-\_\-od = (m)odel je v obehu od roku \end{DoxyCompactList}\item 
+string \hyperlink{structs__carITEM_a114f1162d2b3165c3ce07fa6d128d96b}{r\-\_\-nazev}
+\begin{DoxyCompactList}\small\item\em m\-\_\-rok\-\_\-do = (m)odel je v obehu do roku \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structs__carITEM_a02056de93d14dc2689a0b5bb3b991817}{r\-\_\-objem}
+\begin{DoxyCompactList}\small\item\em r\-\_\-nazev = moto(r), nazev motoru \end{DoxyCompactList}\item 
+\hyperlink{io_8h_a5a939c07993e0071f24abc5eeb3e32c1}{car\-F\-U\-E\-L} \hyperlink{structs__carITEM_a381b61a73e3f24bf12eb8db98616d0e6}{r\-\_\-palivo}
+\begin{DoxyCompactList}\small\item\em r\-\_\-objem = objem moto(r)u $\sim$ 1650ccm \end{DoxyCompactList}\item 
+string \hyperlink{structs__carITEM_ab14179f26f8655f40d4e86950aadff7f}{r\-\_\-jednotka}
+\begin{DoxyCompactList}\small\item\em r\-\_\-palivo = moto(r), typ paliva, \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structs__carITEM_adebdcb0629c4d2738f06b462caf10576}{r\-\_\-kw}
+\begin{DoxyCompactList}\small\item\em r\-\_\-jednotka = moto(r), nazev jednotky \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structs__carITEM_ad2a7d41a5464f90aa3faac5216bdaa03}{r\-\_\-kw\-\_\-rpm}
+\begin{DoxyCompactList}\small\item\em r\-\_\-kw = moto(r) vykon v k\-W \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structs__carITEM_acded6b0c9bcf2c711eb7f127d1fba382}{r\-\_\-nm}
+\begin{DoxyCompactList}\small\item\em r\-\_\-kw\-\_\-rpm = moto(r) vykon v k\-W/\-R\-P\-M \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structs__carITEM_a712a5a7cbd59dc84a426168f834da8a2}{r\-\_\-nm\-\_\-rpm}
+\begin{DoxyCompactList}\small\item\em r\-\_\-nm = moto(r), tocivy moment \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structs__carITEM_a13180f6d951508be29c8612bdb88229e}{r\-\_\-rok\-\_\-od}
+\begin{DoxyCompactList}\small\item\em r\-\_\-nm\-\_\-rpm = moto(r), tocivy moment/\-R\-P\-M \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structs__carITEM_a2bdee748226e3ff73959a766dbd00315}{r\-\_\-rok\-\_\-do}
+\begin{DoxyCompactList}\small\item\em r\-\_\-rok\-\_\-od = moto(r) je v objehu od roku \end{DoxyCompactList}\item 
+\hyperlink{structs__carITEM}{s\-\_\-car\-I\-T\-E\-M} $\ast$ \hyperlink{structs__carITEM_a934faba6a15cd1f9836ad59caa0214a0}{pnext}
+\begin{DoxyCompactList}\small\item\em r\-\_\-rok\-\_\-do = moto(r) je v objehu do roku \end{DoxyCompactList}\item 
+bool \hyperlink{structs__carITEM_a687529357a76cad13a85d8bbffc092be}{show}
+\begin{DoxyCompactList}\small\item\em (pointer\-:car\-I\-T\-E\-M) pnext pro navaznost, dyn.\-sezn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailní popis}
+vyctovy typ enum pro typ paliva, 
+
+\begin{DoxySeeAlso}{\-Viz také}
+\-: \hyperlink{io_8h_ab185ce476fadf726e050c47e0ca3e717}{car\-I\-T\-E\-M}\-:\hyperlink{structs__carITEM_a381b61a73e3f24bf12eb8db98616d0e6}{r\-\_\-palivo} 
+\end{DoxySeeAlso}
+
+
+\subsection{\-Dokumentace k datovým členům}
+\hypertarget{structs__carITEM_ac3fb1808cd4c5d9db744b2342efebd01}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!id@{id}}
+\index{id@{id}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf s\-\_\-car\-I\-T\-E\-M\-::id}}}
+\label{d7/da8/structs__carITEM_ac3fb1808cd4c5d9db744b2342efebd01}
+\hypertarget{structs__carITEM_a4173c03873679957370ee10781c99291}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!m\-\_\-druh@{m\-\_\-druh}}
+\index{m\-\_\-druh@{m\-\_\-druh}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{m\-\_\-druh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf car\-T\-Y\-P\-E} {\bf s\-\_\-car\-I\-T\-E\-M\-::m\-\_\-druh}}}
+\label{d7/da8/structs__carITEM_a4173c03873679957370ee10781c99291}
+
+
+m\-\_\-nazev = (m)odel nazev 
+
+\hypertarget{structs__carITEM_aad62e052d82d733a186d4dc5401da634}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!m\-\_\-nazev@{m\-\_\-nazev}}
+\index{m\-\_\-nazev@{m\-\_\-nazev}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{m\-\_\-nazev}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf s\-\_\-car\-I\-T\-E\-M\-::m\-\_\-nazev}}}
+\label{d7/da8/structs__carITEM_aad62e052d82d733a186d4dc5401da634}
+
+
+zn\-\_\-nazev = (zn)acka nazev 
+
+\hypertarget{structs__carITEM_a3fb9d29cae50d02de945bdac1b9e7af6}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!m\-\_\-oznaceni@{m\-\_\-oznaceni}}
+\index{m\-\_\-oznaceni@{m\-\_\-oznaceni}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{m\-\_\-oznaceni}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf s\-\_\-car\-I\-T\-E\-M\-::m\-\_\-oznaceni}}}
+\label{d7/da8/structs__carITEM_a3fb9d29cae50d02de945bdac1b9e7af6}
+
+
+m\-\_\-druh = (m)odel auta 
+
+\begin{DoxySeeAlso}{\-Viz také}
+\-: \hyperlink{io_8h_a3092c477112abb33d997526688293bed}{car\-T\-Y\-P\-E} 
+\end{DoxySeeAlso}
+\hypertarget{structs__carITEM_ad0b03b89f0df3e8b016c84cb8a8ae371}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!m\-\_\-rok\-\_\-do@{m\-\_\-rok\-\_\-do}}
+\index{m\-\_\-rok\-\_\-do@{m\-\_\-rok\-\_\-do}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{m\-\_\-rok\-\_\-do}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf s\-\_\-car\-I\-T\-E\-M\-::m\-\_\-rok\-\_\-do}}}
+\label{d7/da8/structs__carITEM_ad0b03b89f0df3e8b016c84cb8a8ae371}
+
+
+m\-\_\-rok\-\_\-od = (m)odel je v obehu od roku 
+
+\hypertarget{structs__carITEM_a577c657f610b4f7d778c0aa213ea08c9}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!m\-\_\-rok\-\_\-od@{m\-\_\-rok\-\_\-od}}
+\index{m\-\_\-rok\-\_\-od@{m\-\_\-rok\-\_\-od}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{m\-\_\-rok\-\_\-od}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf s\-\_\-car\-I\-T\-E\-M\-::m\-\_\-rok\-\_\-od}}}
+\label{d7/da8/structs__carITEM_a577c657f610b4f7d778c0aa213ea08c9}
+
+
+m\-\_\-oznaceni = (m)odel oznaceni 
+
+\hypertarget{structs__carITEM_a934faba6a15cd1f9836ad59caa0214a0}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!pnext@{pnext}}
+\index{pnext@{pnext}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{pnext}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s\-\_\-car\-I\-T\-E\-M}$\ast$ {\bf s\-\_\-car\-I\-T\-E\-M\-::pnext}}}
+\label{d7/da8/structs__carITEM_a934faba6a15cd1f9836ad59caa0214a0}
+
+
+r\-\_\-rok\-\_\-do = moto(r) je v objehu do roku 
+
+\hypertarget{structs__carITEM_ab14179f26f8655f40d4e86950aadff7f}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!r\-\_\-jednotka@{r\-\_\-jednotka}}
+\index{r\-\_\-jednotka@{r\-\_\-jednotka}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{r\-\_\-jednotka}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf s\-\_\-car\-I\-T\-E\-M\-::r\-\_\-jednotka}}}
+\label{d7/da8/structs__carITEM_ab14179f26f8655f40d4e86950aadff7f}
+
+
+r\-\_\-palivo = moto(r), typ paliva, 
+
+\begin{DoxySeeAlso}{\-Viz také}
+\-: \hyperlink{io_8h_a5a939c07993e0071f24abc5eeb3e32c1}{car\-F\-U\-E\-L} 
+\end{DoxySeeAlso}
+\hypertarget{structs__carITEM_adebdcb0629c4d2738f06b462caf10576}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!r\-\_\-kw@{r\-\_\-kw}}
+\index{r\-\_\-kw@{r\-\_\-kw}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{r\-\_\-kw}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf s\-\_\-car\-I\-T\-E\-M\-::r\-\_\-kw}}}
+\label{d7/da8/structs__carITEM_adebdcb0629c4d2738f06b462caf10576}
+
+
+r\-\_\-jednotka = moto(r), nazev jednotky 
+
+\hypertarget{structs__carITEM_ad2a7d41a5464f90aa3faac5216bdaa03}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!r\-\_\-kw\-\_\-rpm@{r\-\_\-kw\-\_\-rpm}}
+\index{r\-\_\-kw\-\_\-rpm@{r\-\_\-kw\-\_\-rpm}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{r\-\_\-kw\-\_\-rpm}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf s\-\_\-car\-I\-T\-E\-M\-::r\-\_\-kw\-\_\-rpm}}}
+\label{d7/da8/structs__carITEM_ad2a7d41a5464f90aa3faac5216bdaa03}
+
+
+r\-\_\-kw = moto(r) vykon v k\-W 
+
+\hypertarget{structs__carITEM_a114f1162d2b3165c3ce07fa6d128d96b}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!r\-\_\-nazev@{r\-\_\-nazev}}
+\index{r\-\_\-nazev@{r\-\_\-nazev}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{r\-\_\-nazev}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf s\-\_\-car\-I\-T\-E\-M\-::r\-\_\-nazev}}}
+\label{d7/da8/structs__carITEM_a114f1162d2b3165c3ce07fa6d128d96b}
+
+
+m\-\_\-rok\-\_\-do = (m)odel je v obehu do roku 
+
+\hypertarget{structs__carITEM_acded6b0c9bcf2c711eb7f127d1fba382}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!r\-\_\-nm@{r\-\_\-nm}}
+\index{r\-\_\-nm@{r\-\_\-nm}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{r\-\_\-nm}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf s\-\_\-car\-I\-T\-E\-M\-::r\-\_\-nm}}}
+\label{d7/da8/structs__carITEM_acded6b0c9bcf2c711eb7f127d1fba382}
+
+
+r\-\_\-kw\-\_\-rpm = moto(r) vykon v k\-W/\-R\-P\-M 
+
+\hypertarget{structs__carITEM_a712a5a7cbd59dc84a426168f834da8a2}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!r\-\_\-nm\-\_\-rpm@{r\-\_\-nm\-\_\-rpm}}
+\index{r\-\_\-nm\-\_\-rpm@{r\-\_\-nm\-\_\-rpm}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{r\-\_\-nm\-\_\-rpm}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf s\-\_\-car\-I\-T\-E\-M\-::r\-\_\-nm\-\_\-rpm}}}
+\label{d7/da8/structs__carITEM_a712a5a7cbd59dc84a426168f834da8a2}
+
+
+r\-\_\-nm = moto(r), tocivy moment 
+
+\hypertarget{structs__carITEM_a02056de93d14dc2689a0b5bb3b991817}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!r\-\_\-objem@{r\-\_\-objem}}
+\index{r\-\_\-objem@{r\-\_\-objem}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{r\-\_\-objem}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf s\-\_\-car\-I\-T\-E\-M\-::r\-\_\-objem}}}
+\label{d7/da8/structs__carITEM_a02056de93d14dc2689a0b5bb3b991817}
+
+
+r\-\_\-nazev = moto(r), nazev motoru 
+
+\hypertarget{structs__carITEM_a381b61a73e3f24bf12eb8db98616d0e6}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!r\-\_\-palivo@{r\-\_\-palivo}}
+\index{r\-\_\-palivo@{r\-\_\-palivo}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{r\-\_\-palivo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf car\-F\-U\-E\-L} {\bf s\-\_\-car\-I\-T\-E\-M\-::r\-\_\-palivo}}}
+\label{d7/da8/structs__carITEM_a381b61a73e3f24bf12eb8db98616d0e6}
+
+
+r\-\_\-objem = objem moto(r)u $\sim$ 1650ccm 
+
+\hypertarget{structs__carITEM_a2bdee748226e3ff73959a766dbd00315}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!r\-\_\-rok\-\_\-do@{r\-\_\-rok\-\_\-do}}
+\index{r\-\_\-rok\-\_\-do@{r\-\_\-rok\-\_\-do}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{r\-\_\-rok\-\_\-do}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf s\-\_\-car\-I\-T\-E\-M\-::r\-\_\-rok\-\_\-do}}}
+\label{d7/da8/structs__carITEM_a2bdee748226e3ff73959a766dbd00315}
+
+
+r\-\_\-rok\-\_\-od = moto(r) je v objehu od roku 
+
+\hypertarget{structs__carITEM_a13180f6d951508be29c8612bdb88229e}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!r\-\_\-rok\-\_\-od@{r\-\_\-rok\-\_\-od}}
+\index{r\-\_\-rok\-\_\-od@{r\-\_\-rok\-\_\-od}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{r\-\_\-rok\-\_\-od}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf s\-\_\-car\-I\-T\-E\-M\-::r\-\_\-rok\-\_\-od}}}
+\label{d7/da8/structs__carITEM_a13180f6d951508be29c8612bdb88229e}
+
+
+r\-\_\-nm\-\_\-rpm = moto(r), tocivy moment/\-R\-P\-M 
+
+\hypertarget{structs__carITEM_a687529357a76cad13a85d8bbffc092be}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!show@{show}}
+\index{show@{show}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf s\-\_\-car\-I\-T\-E\-M\-::show}}}
+\label{d7/da8/structs__carITEM_a687529357a76cad13a85d8bbffc092be}
+
+
+(pointer\-:car\-I\-T\-E\-M) pnext pro navaznost, dyn.\-sezn. 
+
+\hypertarget{structs__carITEM_a0645a77c08276a5d14a7d21f5e0f21de}{
+\index{s\-\_\-car\-I\-T\-E\-M@{s\-\_\-car\-I\-T\-E\-M}!zn\-\_\-nazev@{zn\-\_\-nazev}}
+\index{zn\-\_\-nazev@{zn\-\_\-nazev}!s_carITEM@{s\-\_\-car\-I\-T\-E\-M}}
+\subsubsection[{zn\-\_\-nazev}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf s\-\_\-car\-I\-T\-E\-M\-::zn\-\_\-nazev}}}
+\label{d7/da8/structs__carITEM_a0645a77c08276a5d14a7d21f5e0f21de}
+
+
+id radku 
+
+
+
+\-Dokumentace pro tuto strukturu (struct) byla generována z následujícího souboru\-:\begin{DoxyCompactItemize}
+\item 
+/home/users/smid/texty/smid.\-sk.\-jan.\-rsync/skola/semestry/1/zaklady-\/programovani/projekt/src/\hyperlink{io_8h}{io.\-h}\end{DoxyCompactItemize}

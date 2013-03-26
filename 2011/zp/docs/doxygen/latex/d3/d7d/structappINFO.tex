@@ -1,0 +1,149 @@
+\hypertarget{structappINFO}{
+\section{\-Dokumentace struktury app\-I\-N\-F\-O}
+\label{d3/d7d/structappINFO}\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}}
+}
+
+
+struktura pro ulozeni stavu filtru  
+
+
+\subsection*{\-Veřejné atributy}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{io_8h_ab185ce476fadf726e050c47e0ca3e717}{car\-I\-T\-E\-M} $\ast$ \hyperlink{structappINFO_a7a03b4aba262b9a92ba934319c2d0c0e}{plist}
+\item 
+int \hyperlink{structappINFO_a05aebd22f950eef36e212a5d647175dc}{state}
+\begin{DoxyCompactList}\small\item\em pointer\-:car\-I\-T\-E\-M = na seznam nactenych dat \end{DoxyCompactList}\item 
+int \hyperlink{structappINFO_adfd6385ddf12d07eae63c0f6c2e35f56}{mstate}
+\item 
+int \hyperlink{structappINFO_a3e71923aa543da9b106e9959dc4c67e7}{page}
+\begin{DoxyCompactList}\small\item\em stav aplikace \end{DoxyCompactList}\item 
+int \hyperlink{structappINFO_afff0bc6ce594cc74345e3641a0522ab8}{plimit}
+\item 
+int \hyperlink{structappINFO_a24c25ecb17d321f5cbb73df0a25fcf78}{pmax}
+\item 
+int \hyperlink{structappINFO_ad97cbcd08e92d265bceb5fd0a2e0e184}{cols} \mbox{[}\-C\-O\-L\-S\-\_\-\-M\-A\-X\mbox{]}
+\begin{DoxyCompactList}\small\item\em strankovani\-: stranka, pocet radek na str \end{DoxyCompactList}\item 
+\hyperlink{structcolFILTER}{col\-F\-I\-L\-T\-E\-R} \hyperlink{structappINFO_a23c6e7c58add373c270611f2fd0bdca1}{filtr} \mbox{[}\-F\-I\-L\-T\-E\-R\-\_\-\-M\-A\-X\mbox{]}
+\begin{DoxyCompactList}\small\item\em sloupce, ktere vykreslim \end{DoxyCompactList}\item 
+int \hyperlink{structappINFO_a01029658c954b104b7b981442c9a1655}{cmax}
+\begin{DoxyCompactList}\small\item\em filtry, ktere ovlivnuji vystup \end{DoxyCompactList}\item 
+int \hyperlink{structappINFO_a97c8f57e46a015eb2f9a2ddf73348f25}{fmax}
+\item 
+string \hyperlink{structappINFO_ad3bf01db2ebdae4bbc4b14963751c2a8}{msg}
+\begin{DoxyCompactList}\small\item\em maximalni pocet nastavenych\-: cols, filtrs \end{DoxyCompactList}\item 
+string \hyperlink{structappINFO_a5c23293cc828613f5ce00b3ac415b23e}{hint}
+\item 
+string \hyperlink{structappINFO_a3deb9643e9aa5638f10183f79eda5876}{sekce}
+\item 
+\-F\-I\-L\-E $\ast$ \hyperlink{structappINFO_abb0511ea3f7fa90338f6cf28a78eb8fd}{fout}
+\begin{DoxyCompactList}\small\item\em zpravy -\/ msg, hint, sekce \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailní popis}
+struktura pro ulozeni stavu filtru 
+
+\subsection{\-Dokumentace k datovým členům}
+\hypertarget{structappINFO_a01029658c954b104b7b981442c9a1655}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!cmax@{cmax}}
+\index{cmax@{cmax}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{cmax}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf app\-I\-N\-F\-O\-::cmax}}}
+\label{d3/d7d/structappINFO_a01029658c954b104b7b981442c9a1655}
+
+
+filtry, ktere ovlivnuji vystup 
+
+\hypertarget{structappINFO_ad97cbcd08e92d265bceb5fd0a2e0e184}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!cols@{cols}}
+\index{cols@{cols}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{cols}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf app\-I\-N\-F\-O\-::cols}\mbox{[}\-C\-O\-L\-S\-\_\-\-M\-A\-X\mbox{]}}}
+\label{d3/d7d/structappINFO_ad97cbcd08e92d265bceb5fd0a2e0e184}
+
+
+strankovani\-: stranka, pocet radek na str 
+
+\hypertarget{structappINFO_a23c6e7c58add373c270611f2fd0bdca1}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!filtr@{filtr}}
+\index{filtr@{filtr}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{filtr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf col\-F\-I\-L\-T\-E\-R} {\bf app\-I\-N\-F\-O\-::filtr}\mbox{[}\-F\-I\-L\-T\-E\-R\-\_\-\-M\-A\-X\mbox{]}}}
+\label{d3/d7d/structappINFO_a23c6e7c58add373c270611f2fd0bdca1}
+
+
+sloupce, ktere vykreslim 
+
+\hypertarget{structappINFO_a97c8f57e46a015eb2f9a2ddf73348f25}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!fmax@{fmax}}
+\index{fmax@{fmax}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{fmax}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf app\-I\-N\-F\-O\-::fmax}}}
+\label{d3/d7d/structappINFO_a97c8f57e46a015eb2f9a2ddf73348f25}
+\hypertarget{structappINFO_abb0511ea3f7fa90338f6cf28a78eb8fd}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!fout@{fout}}
+\index{fout@{fout}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{fout}]{\setlength{\rightskip}{0pt plus 5cm}\-F\-I\-L\-E$\ast$ {\bf app\-I\-N\-F\-O\-::fout}}}
+\label{d3/d7d/structappINFO_abb0511ea3f7fa90338f6cf28a78eb8fd}
+
+
+zpravy -\/ msg, hint, sekce 
+
+\hypertarget{structappINFO_a5c23293cc828613f5ce00b3ac415b23e}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!hint@{hint}}
+\index{hint@{hint}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{hint}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf app\-I\-N\-F\-O\-::hint}}}
+\label{d3/d7d/structappINFO_a5c23293cc828613f5ce00b3ac415b23e}
+\hypertarget{structappINFO_ad3bf01db2ebdae4bbc4b14963751c2a8}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!msg@{msg}}
+\index{msg@{msg}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{msg}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf app\-I\-N\-F\-O\-::msg}}}
+\label{d3/d7d/structappINFO_ad3bf01db2ebdae4bbc4b14963751c2a8}
+
+
+maximalni pocet nastavenych\-: cols, filtrs 
+
+\hypertarget{structappINFO_adfd6385ddf12d07eae63c0f6c2e35f56}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!mstate@{mstate}}
+\index{mstate@{mstate}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{mstate}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf app\-I\-N\-F\-O\-::mstate}}}
+\label{d3/d7d/structappINFO_adfd6385ddf12d07eae63c0f6c2e35f56}
+\hypertarget{structappINFO_a3e71923aa543da9b106e9959dc4c67e7}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!page@{page}}
+\index{page@{page}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{page}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf app\-I\-N\-F\-O\-::page}}}
+\label{d3/d7d/structappINFO_a3e71923aa543da9b106e9959dc4c67e7}
+
+
+stav aplikace 
+
+\hypertarget{structappINFO_afff0bc6ce594cc74345e3641a0522ab8}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!plimit@{plimit}}
+\index{plimit@{plimit}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{plimit}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf app\-I\-N\-F\-O\-::plimit}}}
+\label{d3/d7d/structappINFO_afff0bc6ce594cc74345e3641a0522ab8}
+\hypertarget{structappINFO_a7a03b4aba262b9a92ba934319c2d0c0e}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!plist@{plist}}
+\index{plist@{plist}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{plist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf car\-I\-T\-E\-M}$\ast$ {\bf app\-I\-N\-F\-O\-::plist}}}
+\label{d3/d7d/structappINFO_a7a03b4aba262b9a92ba934319c2d0c0e}
+\hypertarget{structappINFO_a24c25ecb17d321f5cbb73df0a25fcf78}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!pmax@{pmax}}
+\index{pmax@{pmax}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{pmax}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf app\-I\-N\-F\-O\-::pmax}}}
+\label{d3/d7d/structappINFO_a24c25ecb17d321f5cbb73df0a25fcf78}
+\hypertarget{structappINFO_a3deb9643e9aa5638f10183f79eda5876}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!sekce@{sekce}}
+\index{sekce@{sekce}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{sekce}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf app\-I\-N\-F\-O\-::sekce}}}
+\label{d3/d7d/structappINFO_a3deb9643e9aa5638f10183f79eda5876}
+\hypertarget{structappINFO_a05aebd22f950eef36e212a5d647175dc}{
+\index{app\-I\-N\-F\-O@{app\-I\-N\-F\-O}!state@{state}}
+\index{state@{state}!appINFO@{app\-I\-N\-F\-O}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf app\-I\-N\-F\-O\-::state}}}
+\label{d3/d7d/structappINFO_a05aebd22f950eef36e212a5d647175dc}
+
+
+pointer\-:car\-I\-T\-E\-M = na seznam nactenych dat 
+
+
+
+\-Dokumentace pro tuto strukturu (struct) byla generována z následujícího souboru\-:\begin{DoxyCompactItemize}
+\item 
+/home/users/smid/texty/smid.\-sk.\-jan.\-rsync/skola/semestry/1/zaklady-\/programovani/projekt/src/\hyperlink{main_8cc}{main.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,257 @@
+\hypertarget{list_8cc}{
+\section{\-Dokumentace souboru /home/users/smid/texty/smid.sk.jan.rsync/skola/semestry/1/zaklady-\/programovani/projekt/src/list.cc}
+\label{d2/da4/list_8cc}\index{/home/users/smid/texty/smid.\-sk.\-jan.\-rsync/skola/semestry/1/zaklady-\/programovani/projekt/src/list.\-cc@{/home/users/smid/texty/smid.\-sk.\-jan.\-rsync/skola/semestry/1/zaklady-\/programovani/projekt/src/list.\-cc}}
+}
+\subsection*{\-Výčty}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095}{\-S\-T\-R\-\_\-\-P\-A\-D} \{ \hyperlink{list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095a7433fa7d681bdaf51299c293674e93fe}{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T}, 
+\hyperlink{list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095a017bce2e7a39d0ebbc557928ebb9945d}{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T}, 
+\hyperlink{list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095a52737fdd7d2ff02744e02e1559efaa7d}{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-B\-O\-T\-H}
+ \}
+\begin{DoxyCompactList}\small\item\em \hyperlink{list_8cc}{list.\-cc}, (c) $<$\href{mailto:jan@smid.sk}{\tt jan@smid.\-sk}$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Funkce}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{list_8cc_ac1eaabfc570b51058f9b31610df1e7ec}{str\-\_\-pad} (const string \&str, int pad\-\_\-length, string pad\-\_\-string=\char`\"{} \char`\"{}, \hyperlink{list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095}{\-S\-T\-R\-\_\-\-P\-A\-D} pad\-\_\-type=\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T)
+\begin{DoxyCompactList}\small\item\em formatovani retezce vc. \end{DoxyCompactList}\item 
+string \& \hyperlink{list_8cc_a8fc62e8780fa315c8c415696521185d1}{str\-\_\-replace} (const string \&search, const string \&replace, string \&subject)
+\begin{DoxyCompactList}\small\item\em nahrazeni retezce v retezci \end{DoxyCompactList}\item 
+bool \hyperlink{list_8cc_a0038df898c35b6a483fa874b3671735b}{file\-\_\-exists} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em zjistuje, zda je soubor ke cteni \end{DoxyCompactList}\item 
+string \hyperlink{list_8cc_aa5d5f64154d467f495aba38ee9139698}{list\-\_\-item} (\hyperlink{structappINFO}{app\-I\-N\-F\-O} info, \hyperlink{io_8h_ab185ce476fadf726e050c47e0ca3e717}{car\-I\-T\-E\-M} $\ast$item, bool empty=false, bool title=false, bool ret=false)
+\begin{DoxyCompactList}\small\item\em zobrazi 1x zaznam z tabulky \end{DoxyCompactList}\item 
+void \hyperlink{list_8cc_a0b94c8bf78031c6a40ea51a90672bbf1}{list\-\_\-filtr} (\hyperlink{structappINFO}{app\-I\-N\-F\-O} info)
+\begin{DoxyCompactList}\small\item\em zobrazi nastavene filtry \end{DoxyCompactList}\item 
+void \hyperlink{list_8cc_ac98361051b53a2af7ab6361cbf5fbca1}{list\-\_\-paginator} (\hyperlink{structappINFO}{app\-I\-N\-F\-O} info)
+\begin{DoxyCompactList}\small\item\em zobrazi strankovani \end{DoxyCompactList}\item 
+void \hyperlink{list_8cc_a296a4c410b170a0424f67160a21f5bdc}{list\-\_\-html\-\_\-header} (\hyperlink{structappINFO}{app\-I\-N\-F\-O} info)
+\begin{DoxyCompactList}\small\item\em tiskne/uklada html zahlavi \end{DoxyCompactList}\item 
+void \hyperlink{list_8cc_a17151a2a83b2c991624e93231db212d1}{list\-\_\-html\-\_\-footer} (\hyperlink{structappINFO}{app\-I\-N\-F\-O} info)
+\begin{DoxyCompactList}\small\item\em tiskne/uklada html zapati \end{DoxyCompactList}\item 
+void \hyperlink{list_8cc_a3682b083f4f18bd36fba7facb77e8701}{list} (\hyperlink{structappINFO}{app\-I\-N\-F\-O} info)
+\begin{DoxyCompactList}\small\item\em zobrazi vypis $\sim$ tabulku \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Dokumentace výčtových typů}
+\hypertarget{list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095}{
+\index{list.\-cc@{list.\-cc}!\-S\-T\-R\-\_\-\-P\-A\-D@{\-S\-T\-R\-\_\-\-P\-A\-D}}
+\index{\-S\-T\-R\-\_\-\-P\-A\-D@{\-S\-T\-R\-\_\-\-P\-A\-D}!list.cc@{list.\-cc}}
+\subsubsection[{\-S\-T\-R\-\_\-\-P\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-S\-T\-R\-\_\-\-P\-A\-D}}}
+\label{d2/da4/list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095}
+
+
+\hyperlink{list_8cc}{list.\-cc}, (c) $<$\href{mailto:jan@smid.sk}{\tt jan@smid.\-sk}$>$ 
+
+-\/-\/ vypisy dat na obrazovku anebo do souboru \begin{Desc}
+\item[\-Hodnoty výčtu\-: ]\par
+\begin{description}
+\index{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T@{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T}!list.\-cc@{list.\-cc}}\index{list.\-cc@{list.\-cc}!\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T@{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T}}\item[{\em 
+\hypertarget{list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095a7433fa7d681bdaf51299c293674e93fe}{
+\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T}
+\label{d2/da4/list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095a7433fa7d681bdaf51299c293674e93fe}
+}]\index{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T@{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T}!list.\-cc@{list.\-cc}}\index{list.\-cc@{list.\-cc}!\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T@{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T}}\item[{\em 
+\hypertarget{list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095a017bce2e7a39d0ebbc557928ebb9945d}{
+\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T}
+\label{d2/da4/list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095a017bce2e7a39d0ebbc557928ebb9945d}
+}]\index{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-B\-O\-T\-H@{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-B\-O\-T\-H}!list.\-cc@{list.\-cc}}\index{list.\-cc@{list.\-cc}!\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-B\-O\-T\-H@{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-B\-O\-T\-H}}\item[{\em 
+\hypertarget{list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095a52737fdd7d2ff02744e02e1559efaa7d}{
+\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-B\-O\-T\-H}
+\label{d2/da4/list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095a52737fdd7d2ff02744e02e1559efaa7d}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{\-Dokumentace funkcí}
+\hypertarget{list_8cc_a0038df898c35b6a483fa874b3671735b}{
+\index{list.\-cc@{list.\-cc}!file\-\_\-exists@{file\-\_\-exists}}
+\index{file\-\_\-exists@{file\-\_\-exists}!list.cc@{list.\-cc}}
+\subsubsection[{file\-\_\-exists}]{\setlength{\rightskip}{0pt plus 5cm}bool file\-\_\-exists (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}
+\label{d2/da4/list_8cc_a0038df898c35b6a483fa874b3671735b}
+
+
+zjistuje, zda je soubor ke cteni 
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em (char)} & filename = nazev souboru \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Návratová hodnota}
+(bool) 
+\end{DoxyReturn}
+\hypertarget{list_8cc_a3682b083f4f18bd36fba7facb77e8701}{
+\index{list.\-cc@{list.\-cc}!list@{list}}
+\index{list@{list}!list.cc@{list.\-cc}}
+\subsubsection[{list}]{\setlength{\rightskip}{0pt plus 5cm}void list (
+\begin{DoxyParamCaption}
+\item[{{\bf app\-I\-N\-F\-O}}]{info}
+\end{DoxyParamCaption}
+)}}
+\label{d2/da4/list_8cc_a3682b083f4f18bd36fba7facb77e8701}
+
+
+zobrazi vypis $\sim$ tabulku 
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em (app\-I\-N\-F\-O)} & info = stav aplikace \\
+\hline
+\end{DoxyParams}
+\hypertarget{list_8cc_a0b94c8bf78031c6a40ea51a90672bbf1}{
+\index{list.\-cc@{list.\-cc}!list\-\_\-filtr@{list\-\_\-filtr}}
+\index{list\-\_\-filtr@{list\-\_\-filtr}!list.cc@{list.\-cc}}
+\subsubsection[{list\-\_\-filtr}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-filtr (
+\begin{DoxyParamCaption}
+\item[{{\bf app\-I\-N\-F\-O}}]{info}
+\end{DoxyParamCaption}
+)}}
+\label{d2/da4/list_8cc_a0b94c8bf78031c6a40ea51a90672bbf1}
+
+
+zobrazi nastavene filtry 
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em (app\-I\-N\-F\-O)} & info = stav aplikace \\
+\hline
+\end{DoxyParams}
+\hypertarget{list_8cc_a17151a2a83b2c991624e93231db212d1}{
+\index{list.\-cc@{list.\-cc}!list\-\_\-html\-\_\-footer@{list\-\_\-html\-\_\-footer}}
+\index{list\-\_\-html\-\_\-footer@{list\-\_\-html\-\_\-footer}!list.cc@{list.\-cc}}
+\subsubsection[{list\-\_\-html\-\_\-footer}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-html\-\_\-footer (
+\begin{DoxyParamCaption}
+\item[{{\bf app\-I\-N\-F\-O}}]{info}
+\end{DoxyParamCaption}
+)}}
+\label{d2/da4/list_8cc_a17151a2a83b2c991624e93231db212d1}
+
+
+tiskne/uklada html zapati 
+
+\hypertarget{list_8cc_a296a4c410b170a0424f67160a21f5bdc}{
+\index{list.\-cc@{list.\-cc}!list\-\_\-html\-\_\-header@{list\-\_\-html\-\_\-header}}
+\index{list\-\_\-html\-\_\-header@{list\-\_\-html\-\_\-header}!list.cc@{list.\-cc}}
+\subsubsection[{list\-\_\-html\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-html\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{{\bf app\-I\-N\-F\-O}}]{info}
+\end{DoxyParamCaption}
+)}}
+\label{d2/da4/list_8cc_a296a4c410b170a0424f67160a21f5bdc}
+
+
+tiskne/uklada html zahlavi 
+
+\hypertarget{list_8cc_aa5d5f64154d467f495aba38ee9139698}{
+\index{list.\-cc@{list.\-cc}!list\-\_\-item@{list\-\_\-item}}
+\index{list\-\_\-item@{list\-\_\-item}!list.cc@{list.\-cc}}
+\subsubsection[{list\-\_\-item}]{\setlength{\rightskip}{0pt plus 5cm}string list\-\_\-item (
+\begin{DoxyParamCaption}
+\item[{{\bf app\-I\-N\-F\-O}}]{info, }
+\item[{{\bf car\-I\-T\-E\-M} $\ast$}]{item, }
+\item[{bool}]{empty = {\ttfamily false}, }
+\item[{bool}]{title = {\ttfamily false}, }
+\item[{bool}]{ret = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}
+\label{d2/da4/list_8cc_aa5d5f64154d467f495aba38ee9139698}
+
+
+zobrazi 1x zaznam z tabulky 
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em (app\-I\-N\-F\-O)} & info = stav aplikace \\
+\hline
+{\em (car\-I\-T\-E\-M)} & item = radkovy zaznam s daty \\
+\hline
+{\em (bool)} & empty = zda chci zobrazit pouze prazdny radek, \mbox{[}default\-: false\mbox{]} \\
+\hline
+{\em (bool)} & title = zda chci zobrazit pouze titulky, \mbox{[}default\-: false\mbox{]} \\
+\hline
+{\em (bool)} & ret = zda chci vratit vysledek, \mbox{[}default\-: false\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{list_8cc_ac98361051b53a2af7ab6361cbf5fbca1}{
+\index{list.\-cc@{list.\-cc}!list\-\_\-paginator@{list\-\_\-paginator}}
+\index{list\-\_\-paginator@{list\-\_\-paginator}!list.cc@{list.\-cc}}
+\subsubsection[{list\-\_\-paginator}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-paginator (
+\begin{DoxyParamCaption}
+\item[{{\bf app\-I\-N\-F\-O}}]{info}
+\end{DoxyParamCaption}
+)}}
+\label{d2/da4/list_8cc_ac98361051b53a2af7ab6361cbf5fbca1}
+
+
+zobrazi strankovani 
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em (app\-I\-N\-F\-O)} & info = stav aplikace \\
+\hline
+\end{DoxyParams}
+\hypertarget{list_8cc_ac1eaabfc570b51058f9b31610df1e7ec}{
+\index{list.\-cc@{list.\-cc}!str\-\_\-pad@{str\-\_\-pad}}
+\index{str\-\_\-pad@{str\-\_\-pad}!list.cc@{list.\-cc}}
+\subsubsection[{str\-\_\-pad}]{\setlength{\rightskip}{0pt plus 5cm}string str\-\_\-pad (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{str, }
+\item[{int}]{pad\-\_\-length, }
+\item[{string}]{pad\-\_\-string = {\ttfamily \char`\"{}~\char`\"{}}, }
+\item[{{\bf \-S\-T\-R\-\_\-\-P\-A\-D}}]{pad\-\_\-type = {\ttfamily \-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T}}
+\end{DoxyParamCaption}
+)}}
+\label{d2/da4/list_8cc_ac1eaabfc570b51058f9b31610df1e7ec}
+
+
+formatovani retezce vc. 
+
+zarovnani 
+\begin{DoxyParams}{\-Parametry}
+{\em (string)} & \&str = retezec \\
+\hline
+{\em (int)} & pad\-\_\-length = delka pro zarovnani \\
+\hline
+{\em (string)} & pad\-\_\-string = text pro zarovnani, \mbox{[}default\-: \char`\"{} \char`\"{}\mbox{]} \\
+\hline
+{\em (\-S\-T\-R\-\_\-\-P\-A\-D)} & pad\-\_\-type = typ zarovnani, \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-Viz také}
+\-: enum \hyperlink{list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095}{\-S\-T\-R\-\_\-\-P\-A\-D}, \mbox{[}default\-: \hyperlink{list_8cc_aa0646e1ed1f2f4d0f7accfba1e1df095a7433fa7d681bdaf51299c293674e93fe}{\-S\-T\-R\-\_\-\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T}\mbox{]} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{\-Návratová hodnota}
+(string) 
+\end{DoxyReturn}
+\hypertarget{list_8cc_a8fc62e8780fa315c8c415696521185d1}{
+\index{list.\-cc@{list.\-cc}!str\-\_\-replace@{str\-\_\-replace}}
+\index{str\-\_\-replace@{str\-\_\-replace}!list.cc@{list.\-cc}}
+\subsubsection[{str\-\_\-replace}]{\setlength{\rightskip}{0pt plus 5cm}string\& str\-\_\-replace (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{search, }
+\item[{const string \&}]{replace, }
+\item[{string \&}]{subject}
+\end{DoxyParamCaption}
+)}}
+\label{d2/da4/list_8cc_a8fc62e8780fa315c8c415696521185d1}
+
+
+nahrazeni retezce v retezci 
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em (string)} & search = co hledam \\
+\hline
+{\em (string)} & replace = nahrada \\
+\hline
+{\em (string)} & subject = retezec \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Návratová hodnota}
+(string) 
+\end{DoxyReturn}

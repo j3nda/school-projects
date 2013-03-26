@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>ZPauto: Zdrojový soubor /home/users/smid/texty/smid.sk.jan.rsync/skola/semestry/1/zaklady-programovani/projekt/src/io.h</title>
+
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ZPauto
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Generováno programem Doxygen 1.7.5.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Hledat');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Hlavní&#160;stránka</span></a></li>
+      <li><a href="../../pages.html"><span>Ostatní&#160;stránky</span></a></li>
+      <li><a href="../../annotated.html"><span>Třídy</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Soubory</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Hledat" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Seznam&#160;souborů</span></a></li>
+      <li><a href="../../globals.html"><span>Symboly&#160;v&#160;souborech</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/users/smid/texty/smid.sk.jan.rsync/skola/semestry/1/zaklady-programovani/projekt/src/io.h</div>  </div>
+</div>
+<div class="contents">
+<a href="../../dc/dac/io_8h.html">Zobrazit dokumentaci tohoto souboru.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00009"></a><a class="code" href="../../dc/dac/io_8h.html#a16ccdad359c0b884161e9d4d8906a540">00009</a> <span class="preprocessor">#define DISPLAY_ALL     0                       </span>
+<a name="l00010"></a><a class="code" href="../../dc/dac/io_8h.html#a4dec5bb7b0cdc6f3fb29fbee8ee9057e">00010</a> <span class="preprocessor">#define DISPLAY_TOP     1                       </span>
+<a name="l00011"></a><a class="code" href="../../dc/dac/io_8h.html#a50c3146cab005ab51254d95de3b4b531">00011</a> <span class="preprocessor">#define DISPLAY_CONTENT 2                       </span>
+<a name="l00012"></a><a class="code" href="../../dc/dac/io_8h.html#ae2f0c9ccdf2a0fe48fc144ebb6ce4fad">00012</a> <span class="preprocessor">#define DISPLAY_BOTTOM  3                       </span>
+<a name="l00013"></a><a class="code" href="../../dc/dac/io_8h.html#a87e275517f273d58942f505831c12120">00013</a> <span class="preprocessor">#define DISPLAY_MENU    4                       </span>
+<a name="l00016"></a><a class="code" href="../../dc/dac/io_8h.html#ad86b50ab1ad039d109c6cae0efe0ba57">00016</a> <span class="preprocessor">#define CARTYPE_O       1                       </span>
+<a name="l00017"></a><a class="code" href="../../dc/dac/io_8h.html#adb5ad0df384535f07c61aaf221fe9448">00017</a> <span class="preprocessor">#define CARTYPE_N       2                       </span>
+<a name="l00018"></a><a class="code" href="../../dc/dac/io_8h.html#ac033ffeb2b506ccaf663f9cfc2b319bf">00018</a> <span class="preprocessor">#define CARTYPE_NONE    3                       </span>
+<a name="l00020"></a><a class="code" href="../../dc/dac/io_8h.html#afa2707d7df6b708678f38bbeb39b7c91">00020</a> <span class="preprocessor">#define CARFUEL_B       1                       </span>
+<a name="l00021"></a><a class="code" href="../../dc/dac/io_8h.html#a92b055b298208ec52545d7d782023966">00021</a> <span class="preprocessor">#define CARFUEL_N       2                       </span>
+<a name="l00022"></a><a class="code" href="../../dc/dac/io_8h.html#a1f94053b7f927c76dfee0fc41818b909">00022</a> <span class="preprocessor">#define CARFUEL_L       3                       </span>
+<a name="l00023"></a><a class="code" href="../../dc/dac/io_8h.html#a74e37c67d1dc1abc3e96777616f2db7f">00023</a> <span class="preprocessor">#define CARFUEL_NONE    4                       </span>
+<a name="l00026"></a><a class="code" href="../../dc/dac/io_8h.html#a8671e565ad80b715edb99e42ef68e5bd">00026</a> <span class="preprocessor">#define COL_NONE        -1                      </span>
+<a name="l00027"></a><a class="code" href="../../dc/dac/io_8h.html#abf46006e603a1b8b85637cf685ca123b">00027</a> <span class="preprocessor">#define COL_ID          0                       </span>
+<a name="l00028"></a><a class="code" href="../../dc/dac/io_8h.html#a24830c764a71d6ac04d4d9cfc95a9503">00028</a> <span class="preprocessor">#define COL_ZNACKA      1                       </span>
+<a name="l00029"></a><a class="code" href="../../dc/dac/io_8h.html#a0af3408bdb0315c33757745e9eb545c2">00029</a> <span class="preprocessor">#define COL_MODEL       2                       </span>
+<a name="l00030"></a><a class="code" href="../../dc/dac/io_8h.html#af42ad7662e8f50f4fc102ebd093385a3">00030</a> <span class="preprocessor">#define COL_DRUH        3                       </span>
+<a name="l00031"></a><a class="code" href="../../dc/dac/io_8h.html#a4550a3d3f10e346dddd341613b62a647">00031</a> <span class="preprocessor">#define COL_OZNACENI    4                       </span>
+<a name="l00032"></a><a class="code" href="../../dc/dac/io_8h.html#add387a8ad14d30ab417b0c1eccb8c5df">00032</a> <span class="preprocessor">#define COL_MODEL_OD    5                       </span>
+<a name="l00033"></a><a class="code" href="../../dc/dac/io_8h.html#a8babc19fe8788774e73f6e316ac0bb9d">00033</a> <span class="preprocessor">#define COL_MODEL_DO    6                       </span>
+<a name="l00034"></a><a class="code" href="../../dc/dac/io_8h.html#a2cf7342714a5b8c6d510e2c4d326b11f">00034</a> <span class="preprocessor">#define COL_MOTOR       7                       </span>
+<a name="l00035"></a><a class="code" href="../../dc/dac/io_8h.html#a13e123b9e696cd520653e6af1d0438e7">00035</a> <span class="preprocessor">#define COL_OBJEM       8                       </span>
+<a name="l00036"></a><a class="code" href="../../dc/dac/io_8h.html#a6926fb993eadee6786169bbd35a697cb">00036</a> <span class="preprocessor">#define COL_PALIVO      9                       </span>
+<a name="l00037"></a><a class="code" href="../../dc/dac/io_8h.html#a844c09d461cfc76c82c8aa708d42bf49">00037</a> <span class="preprocessor">#define COL_JEDNOTKA    10                      </span>
+<a name="l00038"></a><a class="code" href="../../dc/dac/io_8h.html#a993c475290445925d08685e58bb85fe1">00038</a> <span class="preprocessor">#define COL_KW          11                      </span>
+<a name="l00039"></a><a class="code" href="../../dc/dac/io_8h.html#a254ffd2439787fc65c34f4c1435ff869">00039</a> <span class="preprocessor">#define COL_KWRPM       12                      </span>
+<a name="l00040"></a><a class="code" href="../../dc/dac/io_8h.html#a504ce8678e6f0629f4a1eace3620b168">00040</a> <span class="preprocessor">#define COL_NM          13                      </span>
+<a name="l00041"></a><a class="code" href="../../dc/dac/io_8h.html#ae4b89e7c06ac750df5f1684ee82b9bf4">00041</a> <span class="preprocessor">#define COL_NMRPM       14                      </span>
+<a name="l00042"></a><a class="code" href="../../dc/dac/io_8h.html#a5e9c714ea589415e253a9ba6b0be69ee">00042</a> <span class="preprocessor">#define COL_MOTOR_OD    15                      </span>
+<a name="l00043"></a><a class="code" href="../../dc/dac/io_8h.html#ac4d0df6bb792e3548db50aebed4528dc">00043</a> <span class="preprocessor">#define COL_MOTOR_DO    16                      </span>
+<a name="l00046"></a><a class="code" href="../../dc/dac/io_8h.html#a3092c477112abb33d997526688293bed">00046</a> <span class="preprocessor">typedef enum</span>
+<a name="l00047"></a>00047 <span class="preprocessor"></span>{
+<a name="l00048"></a><a class="code" href="../../dc/dac/io_8h.html#a3092c477112abb33d997526688293beda6b12960a49d2c14ad819b3091cb6a49e">00048</a>     <a class="code" href="../../dc/dac/io_8h.html#a3092c477112abb33d997526688293beda6b12960a49d2c14ad819b3091cb6a49e">OSOBNI</a>   = <a class="code" href="../../dc/dac/io_8h.html#ad86b50ab1ad039d109c6cae0efe0ba57">CARTYPE_O</a>,                       
+<a name="l00049"></a><a class="code" href="../../dc/dac/io_8h.html#a3092c477112abb33d997526688293beda6e8e002a79ab9f3137cc966be3d7d485">00049</a>     <a class="code" href="../../dc/dac/io_8h.html#a3092c477112abb33d997526688293beda6e8e002a79ab9f3137cc966be3d7d485">NAKLADNI</a> = <a class="code" href="../../dc/dac/io_8h.html#adb5ad0df384535f07c61aaf221fe9448">CARTYPE_N</a>,                       
+<a name="l00050"></a><a class="code" href="../../dc/dac/io_8h.html#a3092c477112abb33d997526688293beda9a4d2e00881c82311e684ed539bd25cd">00050</a>     <a class="code" href="../../dc/dac/io_8h.html#a3092c477112abb33d997526688293beda9a4d2e00881c82311e684ed539bd25cd">TNIC</a>     = <a class="code" href="../../dc/dac/io_8h.html#ac033ffeb2b506ccaf663f9cfc2b319bf">CARTYPE_NONE</a>,                    
+<a name="l00051"></a>00051 } <a class="code" href="../../dc/dac/io_8h.html#a3092c477112abb33d997526688293bed">carTYPE</a>;                                      
+<a name="l00054"></a><a class="code" href="../../dc/dac/io_8h.html#a5a939c07993e0071f24abc5eeb3e32c1">00054</a> <span class="keyword">typedef</span> <span class="keyword">enum</span>
+<a name="l00055"></a>00055 {
+<a name="l00056"></a><a class="code" href="../../dc/dac/io_8h.html#a5a939c07993e0071f24abc5eeb3e32c1a52364225bcef55847f64e51feffab9cd">00056</a>     <a class="code" href="../../dc/dac/io_8h.html#a5a939c07993e0071f24abc5eeb3e32c1a52364225bcef55847f64e51feffab9cd">BENZIN</a> = <a class="code" href="../../dc/dac/io_8h.html#afa2707d7df6b708678f38bbeb39b7c91">CARFUEL_B</a>,                         
+<a name="l00057"></a><a class="code" href="../../dc/dac/io_8h.html#a5a939c07993e0071f24abc5eeb3e32c1a35fbd3ed8276faf2a18e175f410ab6e1">00057</a>     <a class="code" href="../../dc/dac/io_8h.html#a5a939c07993e0071f24abc5eeb3e32c1a35fbd3ed8276faf2a18e175f410ab6e1">NAFTA</a>  = <a class="code" href="../../dc/dac/io_8h.html#a92b055b298208ec52545d7d782023966">CARFUEL_N</a>,                         
+<a name="l00058"></a><a class="code" href="../../dc/dac/io_8h.html#a5a939c07993e0071f24abc5eeb3e32c1a06587dfe046adfe72db07893ca8b16c3">00058</a>     <a class="code" href="../../dc/dac/io_8h.html#a5a939c07993e0071f24abc5eeb3e32c1a06587dfe046adfe72db07893ca8b16c3">LPG</a>    = <a class="code" href="../../dc/dac/io_8h.html#a1f94053b7f927c76dfee0fc41818b909">CARFUEL_L</a>,                         
+<a name="l00059"></a><a class="code" href="../../dc/dac/io_8h.html#a5a939c07993e0071f24abc5eeb3e32c1a1c757fbfbbfd03c2875226bc604fe41f">00059</a>     <a class="code" href="../../dc/dac/io_8h.html#a5a939c07993e0071f24abc5eeb3e32c1a1c757fbfbbfd03c2875226bc604fe41f">FNIC</a>   = <a class="code" href="../../dc/dac/io_8h.html#a74e37c67d1dc1abc3e96777616f2db7f">CARFUEL_NONE</a>,                      
+<a name="l00060"></a>00060 } <a class="code" href="../../dc/dac/io_8h.html#a5a939c07993e0071f24abc5eeb3e32c1" title="vyctovy typ enum pro typ automobilu,">carFUEL</a>;                                      
+<a name="l00063"></a><a class="code" href="../../d7/da8/structs__carITEM.html">00063</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d7/da8/structs__carITEM.html" title="vyctovy typ enum pro typ paliva,">s_carITEM</a>
+<a name="l00064"></a>00064 {
+<a name="l00065"></a><a class="code" href="../../d7/da8/structs__carITEM.html#ac3fb1808cd4c5d9db744b2342efebd01">00065</a>     <span class="keywordtype">int</span> <a class="code" href="../../d7/da8/structs__carITEM.html#ac3fb1808cd4c5d9db744b2342efebd01">id</a>;                                     
+<a name="l00066"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a0645a77c08276a5d14a7d21f5e0f21de">00066</a>     <span class="keywordtype">string</span> <a class="code" href="../../d7/da8/structs__carITEM.html#a0645a77c08276a5d14a7d21f5e0f21de" title="id radku">zn_nazev</a>;                            
+<a name="l00067"></a><a class="code" href="../../d7/da8/structs__carITEM.html#aad62e052d82d733a186d4dc5401da634">00067</a>     <span class="keywordtype">string</span> <a class="code" href="../../d7/da8/structs__carITEM.html#aad62e052d82d733a186d4dc5401da634" title="zn_nazev = (zn)acka nazev">m_nazev</a>;                             
+<a name="l00068"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a4173c03873679957370ee10781c99291">00068</a>     <a class="code" href="../../dc/dac/io_8h.html#a3092c477112abb33d997526688293bed">carTYPE</a> <a class="code" href="../../d7/da8/structs__carITEM.html#a4173c03873679957370ee10781c99291" title="m_nazev = (m)odel nazev">m_druh</a>;                             
+<a name="l00069"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a3fb9d29cae50d02de945bdac1b9e7af6">00069</a>     <span class="keywordtype">string</span> <a class="code" href="../../d7/da8/structs__carITEM.html#a3fb9d29cae50d02de945bdac1b9e7af6" title="m_druh = (m)odel auta">m_oznaceni</a>;                          
+<a name="l00070"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a577c657f610b4f7d778c0aa213ea08c9">00070</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/da8/structs__carITEM.html#a577c657f610b4f7d778c0aa213ea08c9" title="m_oznaceni = (m)odel oznaceni">m_rok_od</a>;                      
+<a name="l00071"></a><a class="code" href="../../d7/da8/structs__carITEM.html#ad0b03b89f0df3e8b016c84cb8a8ae371">00071</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/da8/structs__carITEM.html#ad0b03b89f0df3e8b016c84cb8a8ae371" title="m_rok_od = (m)odel je v obehu od roku">m_rok_do</a>;                      
+<a name="l00072"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a114f1162d2b3165c3ce07fa6d128d96b">00072</a>     <span class="keywordtype">string</span> <a class="code" href="../../d7/da8/structs__carITEM.html#a114f1162d2b3165c3ce07fa6d128d96b" title="m_rok_do = (m)odel je v obehu do roku">r_nazev</a>;                             
+<a name="l00073"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a02056de93d14dc2689a0b5bb3b991817">00073</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/da8/structs__carITEM.html#a02056de93d14dc2689a0b5bb3b991817" title="r_nazev = moto(r), nazev motoru">r_objem</a>;                       
+<a name="l00074"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a381b61a73e3f24bf12eb8db98616d0e6">00074</a>     <a class="code" href="../../dc/dac/io_8h.html#a5a939c07993e0071f24abc5eeb3e32c1" title="vyctovy typ enum pro typ automobilu,">carFUEL</a> <a class="code" href="../../d7/da8/structs__carITEM.html#a381b61a73e3f24bf12eb8db98616d0e6" title="r_objem = objem moto(r)u ~ 1650ccm">r_palivo</a>;                           
+<a name="l00075"></a><a class="code" href="../../d7/da8/structs__carITEM.html#ab14179f26f8655f40d4e86950aadff7f">00075</a>     <span class="keywordtype">string</span> <a class="code" href="../../d7/da8/structs__carITEM.html#ab14179f26f8655f40d4e86950aadff7f" title="r_palivo = moto(r), typ paliva,">r_jednotka</a>;                          
+<a name="l00076"></a><a class="code" href="../../d7/da8/structs__carITEM.html#adebdcb0629c4d2738f06b462caf10576">00076</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/da8/structs__carITEM.html#adebdcb0629c4d2738f06b462caf10576" title="r_jednotka = moto(r), nazev jednotky">r_kw</a>;                          
+<a name="l00077"></a><a class="code" href="../../d7/da8/structs__carITEM.html#ad2a7d41a5464f90aa3faac5216bdaa03">00077</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/da8/structs__carITEM.html#ad2a7d41a5464f90aa3faac5216bdaa03" title="r_kw = moto(r) vykon v kW">r_kw_rpm</a>;                      
+<a name="l00078"></a><a class="code" href="../../d7/da8/structs__carITEM.html#acded6b0c9bcf2c711eb7f127d1fba382">00078</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/da8/structs__carITEM.html#acded6b0c9bcf2c711eb7f127d1fba382" title="r_kw_rpm = moto(r) vykon v kW/RPM">r_nm</a>;                          
+<a name="l00079"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a712a5a7cbd59dc84a426168f834da8a2">00079</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/da8/structs__carITEM.html#a712a5a7cbd59dc84a426168f834da8a2" title="r_nm = moto(r), tocivy moment">r_nm_rpm</a>;                      
+<a name="l00080"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a13180f6d951508be29c8612bdb88229e">00080</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/da8/structs__carITEM.html#a13180f6d951508be29c8612bdb88229e" title="r_nm_rpm = moto(r), tocivy moment/RPM">r_rok_od</a>;                      
+<a name="l00081"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a2bdee748226e3ff73959a766dbd00315">00081</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/da8/structs__carITEM.html#a2bdee748226e3ff73959a766dbd00315" title="r_rok_od = moto(r) je v objehu od roku">r_rok_do</a>;                      
+<a name="l00083"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a934faba6a15cd1f9836ad59caa0214a0">00083</a>     <a class="code" href="../../d7/da8/structs__carITEM.html" title="vyctovy typ enum pro typ paliva,">s_carITEM</a> *<a class="code" href="../../d7/da8/structs__carITEM.html#a934faba6a15cd1f9836ad59caa0214a0" title="r_rok_do = moto(r) je v objehu do roku">pnext</a>;                           
+<a name="l00084"></a><a class="code" href="../../d7/da8/structs__carITEM.html#a687529357a76cad13a85d8bbffc092be">00084</a>     <span class="keywordtype">bool</span>       <a class="code" href="../../d7/da8/structs__carITEM.html#a687529357a76cad13a85d8bbffc092be" title="(pointer:carITEM) pnext pro navaznost, dyn.sezn.">show</a>;                            
+<a name="l00086"></a>00086 } <a class="code" href="../../dc/dac/io_8h.html#ab185ce476fadf726e050c47e0ca3e717" title="vyctovy typ enum pro typ paliva,">carITEM</a>;                                      
+</pre></div></div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Vše</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Třídy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Soubory</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkce</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Proměnné</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definice typů</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Výčty</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Hodnoty výčtu</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definice maker</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Generováno so 31. pro 2011 23.16:07 pro projekt ZPauto programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>

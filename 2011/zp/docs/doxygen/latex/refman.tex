@@ -1,0 +1,86 @@
+\documentclass[a4paper]{book}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[czech]{babel}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=4,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large \-Z\-Pauto \\[1ex]\large 1.\-0 }\\
+\vspace*{1cm}
+{\large \-Generováno programem Doxygen 1.7.5.1}\\
+\vspace*{0.5cm}
+{\small so 31. pro 2011 23.16:07}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{\-Seznam plánovaných úprav}
+\label{todo}
+\hypertarget{todo}{}
+\input{dd/da0/todo}
+\chapter{\-Rejstřík tříd}
+\input{annotated}
+\chapter{\-Rejstřík souborů}
+\input{files}
+\chapter{\-Dokumentace tříd}
+\input{d3/d7d/structappINFO}
+\input{d5/d5b/structcolFILTER}
+\input{d7/da8/structs__carITEM}
+\chapter{\-Dokumentace souborů}
+\input{db/dd3/io_8cc}
+\input{dc/dac/io_8h}
+\input{d2/da4/list_8cc}
+\input{d9/d0f/main_8cc}
+\input{d9/d8f/run_8cc}
+\printindex
+\end{document}

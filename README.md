@@ -7,10 +7,22 @@ school-projects
 list:
 -----
 
-    * alg1 - algorithms I
-        This course is an introductory programming course. Students are expected
-        general orientation in IT and high school mathematics. Discussed algorithms
-        and data structures will be demonstrated in C + +. Considerable emphasis is
-        placed on the practical implementation of the discussed algorithms and data
-        structures. Students are encouraged to analyze the synthesis of algorithmic
-        problems and solutions from smaller units.
+    2011/
+        * alg1/ ~ algorithms I
+            This course is an introductory programming course. Students are expected
+            general orientation in IT and high school mathematics. Discussed algorithms
+            and data structures will be demonstrated in C + +. Considerable emphasis is
+            placed on the practical implementation of the discussed algorithms and data
+            structures. Students are encouraged to analyze the synthesis of algorithmic
+            problems and solutions from smaller units.
+
+        * zp/ ~ introduction to programming
+            The course aims to provide students with the basics of procedural programming
+            and support for additional courses focusing detail on algorithms and programming
+            languages. After the basics of programming, students will be able to:
+                operate and utilize an integrated development environment for C / C + +,
+                creating documentation not only to the source code, work in the university's
+                school network to get acquainted with the tools for creating documentation.
+            Besides the comparison of input knowledge of procedural programming C / C +
+            + acquire a general overview important for subsequent studies.
+

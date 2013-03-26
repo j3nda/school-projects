@@ -1,0 +1,170 @@
+\hypertarget{io_8cc}{
+\section{\-Dokumentace souboru /home/users/smid/texty/smid.sk.jan.rsync/skola/semestry/1/zaklady-\/programovani/projekt/src/io.cc}
+\label{db/dd3/io_8cc}\index{/home/users/smid/texty/smid.\-sk.\-jan.\-rsync/skola/semestry/1/zaklady-\/programovani/projekt/src/io.\-cc@{/home/users/smid/texty/smid.\-sk.\-jan.\-rsync/skola/semestry/1/zaklady-\/programovani/projekt/src/io.\-cc}}
+}
+\subsection*{\-Funkce}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{io_8cc_ae1cba21f18924c07642131c3e6179f0c}{warning} (const char $\ast$msg, const char $\ast$prefix=\char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \char`\"{})
+\begin{DoxyCompactList}\small\item\em \hyperlink{io_8cc}{io.\-cc}, (c) $<$\href{mailto:jan@smid.sk}{\tt jan@smid.\-sk}$>$ \end{DoxyCompactList}\item 
+void \hyperlink{io_8cc_a915f6be42635bd8c8ff1980c11b18d1d}{fatal} (const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em zobrazi fatal error hlasku a ukonci program! \end{DoxyCompactList}\item 
+void \hyperlink{io_8cc_a354b9827a7d2db1bd694714217098719}{fgetcsv} (std\-::vector$<$ std\-::string $>$ \&record, const std\-::string \&line, char delimiter= ',')
+\begin{DoxyCompactList}\small\item\em parsuje csv radku z dodaneho streamu ($\sim$souboru) a vysledek vklada do vektoru$<$string$>$ \end{DoxyCompactList}\item 
+\hyperlink{io_8h_ab185ce476fadf726e050c47e0ca3e717}{car\-I\-T\-E\-M} $\ast$ \hyperlink{io_8cc_a9893798babad418b2667a72173529c79}{load\-Data} (const char $\ast$fn, bool skip1=true)
+\item 
+void \hyperlink{io_8cc_a3d8809561baab84d0ccfc64192fbb481}{release\-Data} (\hyperlink{io_8h_ab185ce476fadf726e050c47e0ca3e717}{car\-I\-T\-E\-M} $\ast$p=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em uvolni data z pameti \end{DoxyCompactList}\item 
+int \hyperlink{io_8cc_a56ca80c88a03dcf346ad3f81d3b1a2f5}{get\-\_\-pmax} (\hyperlink{io_8h_ab185ce476fadf726e050c47e0ca3e717}{car\-I\-T\-E\-M} $\ast$p=\-N\-U\-L\-L)
+\item 
+void \hyperlink{io_8cc_a267ee031da4ce20c39b0d3bb0db47e70}{display\-\_\-clear} (int max=128)
+\begin{DoxyCompactList}\small\item\em provede clear screen -\/ vycisteni obrazovky \end{DoxyCompactList}\item 
+void \hyperlink{io_8cc_a3237a40552b8004d48c978635eab4303}{display} (\hyperlink{structappINFO}{app\-I\-N\-F\-O} \&info, int phase=\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-A\-L\-L)
+\begin{DoxyCompactList}\small\item\em zobrazi kompletni ovladaci obrazovku vcetne stavu a nabidky \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Dokumentace funkcí}
+\hypertarget{io_8cc_a3237a40552b8004d48c978635eab4303}{
+\index{io.\-cc@{io.\-cc}!display@{display}}
+\index{display@{display}!io.cc@{io.\-cc}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void display (
+\begin{DoxyParamCaption}
+\item[{{\bf app\-I\-N\-F\-O} \&}]{info, }
+\item[{int}]{phase = {\ttfamily \-D\-I\-S\-P\-L\-A\-Y\-\_\-\-A\-L\-L}}
+\end{DoxyParamCaption}
+)}}
+\label{db/dd3/io_8cc_a3237a40552b8004d48c978635eab4303}
+
+
+zobrazi kompletni ovladaci obrazovku vcetne stavu a nabidky 
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em (app\-I\-N\-F\-O)} & info = stav aplikace \\
+\hline
+{\em (int)} & phase = faze vykresleni aplikace, \mbox{[}default\-: \-D\-I\-S\-P\-L\-A\-Y\-\_\-\-A\-L\-L\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{io_8cc_a267ee031da4ce20c39b0d3bb0db47e70}{
+\index{io.\-cc@{io.\-cc}!display\-\_\-clear@{display\-\_\-clear}}
+\index{display\-\_\-clear@{display\-\_\-clear}!io.cc@{io.\-cc}}
+\subsubsection[{display\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void display\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{int}]{max = {\ttfamily 128}}
+\end{DoxyParamCaption}
+)}}
+\label{db/dd3/io_8cc_a267ee031da4ce20c39b0d3bb0db47e70}
+
+
+provede clear screen -\/ vycisteni obrazovky 
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em (int)} & max = maximalni pocet radku v terminalu ($\sim$na obrazovce), \mbox{[}default\-: 128\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{\-Plánované úpravy}
+\item[\hyperlink{todo__todo000001}{\-Plánované úpravy}]\-: vhodnejsi smazani obrazovky,\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{\-Viz také}
+\-: \href{http://www.cplusplus.com/forum/articles/10515/}{\tt http\-://www.\-cplusplus.\-com/forum/articles/10515/}
+\end{DoxySeeAlso}
+\-: standardni sirka x vyska terminalu je\-: 80 x 25 znaku \hypertarget{io_8cc_a915f6be42635bd8c8ff1980c11b18d1d}{
+\index{io.\-cc@{io.\-cc}!fatal@{fatal}}
+\index{fatal@{fatal}!io.cc@{io.\-cc}}
+\subsubsection[{fatal}]{\setlength{\rightskip}{0pt plus 5cm}void fatal (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}
+\label{db/dd3/io_8cc_a915f6be42635bd8c8ff1980c11b18d1d}
+
+
+zobrazi fatal error hlasku a ukonci program! 
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em (string)} & msg = hlaska \\
+\hline
+\end{DoxyParams}
+\hypertarget{io_8cc_a354b9827a7d2db1bd694714217098719}{
+\index{io.\-cc@{io.\-cc}!fgetcsv@{fgetcsv}}
+\index{fgetcsv@{fgetcsv}!io.cc@{io.\-cc}}
+\subsubsection[{fgetcsv}]{\setlength{\rightskip}{0pt plus 5cm}void fgetcsv (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::string $>$ \&}]{record, }
+\item[{const std\-::string \&}]{line, }
+\item[{char}]{delimiter = {\ttfamily ','}}
+\end{DoxyParamCaption}
+)}}
+\label{db/dd3/io_8cc_a354b9827a7d2db1bd694714217098719}
+
+
+parsuje csv radku z dodaneho streamu ($\sim$souboru) a vysledek vklada do vektoru$<$string$>$ 
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em (vector$<$string$>$)} & \&record = roz-\/parsovany zaznam \\
+\hline
+{\em (string)} & line = nactena radka ze souboru \\
+\hline
+{\em (char)} & delimiter = oddelovac, \mbox{[}default\-: ','\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{io_8cc_a56ca80c88a03dcf346ad3f81d3b1a2f5}{
+\index{io.\-cc@{io.\-cc}!get\-\_\-pmax@{get\-\_\-pmax}}
+\index{get\-\_\-pmax@{get\-\_\-pmax}!io.cc@{io.\-cc}}
+\subsubsection[{get\-\_\-pmax}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-pmax (
+\begin{DoxyParamCaption}
+\item[{{\bf car\-I\-T\-E\-M} $\ast$}]{p = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)}}
+\label{db/dd3/io_8cc_a56ca80c88a03dcf346ad3f81d3b1a2f5}
+\hypertarget{io_8cc_a9893798babad418b2667a72173529c79}{
+\index{io.\-cc@{io.\-cc}!load\-Data@{load\-Data}}
+\index{load\-Data@{load\-Data}!io.cc@{io.\-cc}}
+\subsubsection[{load\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf car\-I\-T\-E\-M}$\ast$ load\-Data (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fn, }
+\item[{bool}]{skip1 = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}
+\label{db/dd3/io_8cc_a9893798babad418b2667a72173529c79}
+\hypertarget{io_8cc_a3d8809561baab84d0ccfc64192fbb481}{
+\index{io.\-cc@{io.\-cc}!release\-Data@{release\-Data}}
+\index{release\-Data@{release\-Data}!io.cc@{io.\-cc}}
+\subsubsection[{release\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void release\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf car\-I\-T\-E\-M} $\ast$}]{p = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)}}
+\label{db/dd3/io_8cc_a3d8809561baab84d0ccfc64192fbb481}
+
+
+uvolni data z pameti 
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em (pointer\-:car\-I\-T\-E\-M)} & p = pointer na nactene data \\
+\hline
+\end{DoxyParams}
+\hypertarget{io_8cc_ae1cba21f18924c07642131c3e6179f0c}{
+\index{io.\-cc@{io.\-cc}!warning@{warning}}
+\index{warning@{warning}!io.cc@{io.\-cc}}
+\subsubsection[{warning}]{\setlength{\rightskip}{0pt plus 5cm}void warning (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg, }
+\item[{const char $\ast$}]{prefix = {\ttfamily \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-:~\char`\"{}}}
+\end{DoxyParamCaption}
+)}}
+\label{db/dd3/io_8cc_ae1cba21f18924c07642131c3e6179f0c}
+
+
+\hyperlink{io_8cc}{io.\-cc}, (c) $<$\href{mailto:jan@smid.sk}{\tt jan@smid.\-sk}$>$ 
+
+-\/-\/ input/output ($\sim$nacitani z a do souboru) zobrazi warning hlasku na stdout 
+\begin{DoxyParams}{\-Parametry}
+{\em (string)} & msg = hlaska \\
+\hline
+{\em (string)} & prefix = prefix pro uvozeni 'hlaska', \mbox{[}default\-: \char`\"{}\-W\-A\-R\-N\-I\-N\-G\-: \char`\"{}\mbox{]} \\
+\hline
+\end{DoxyParams}

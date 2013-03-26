@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>ZPauto: Dokumentace souboru /home/users/smid/texty/smid.sk.jan.rsync/skola/semestry/1/zaklady-programovani/projekt/src/main.cc</title>
+
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ZPauto
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Generováno programem Doxygen 1.7.5.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Hledat');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Hlavní&#160;stránka</span></a></li>
+      <li><a href="../../pages.html"><span>Ostatní&#160;stránky</span></a></li>
+      <li><a href="../../annotated.html"><span>Třídy</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Soubory</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Hledat" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Seznam&#160;souborů</span></a></li>
+      <li><a href="../../globals.html"><span>Symboly&#160;v&#160;souborech</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Třídy</a> &#124;
+<a href="#define-members">Definice maker</a> &#124;
+<a href="#func-members">Funkce</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentace souboru /home/users/smid/texty/smid.sk.jan.rsync/skola/semestry/1/zaklady-programovani/projekt/src/main.cc</div>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;fstream&gt;</code><br/>
+<code>#include &lt;istream&gt;</code><br/>
+<code>#include &lt;sstream&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &quot;<a class="el" href="../../dc/dac/io_8h_source.html">io.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="../../d2/da4/list_8cc.html">list.cc</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="../../db/dd3/io_8cc.html">io.cc</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="../../d9/d8f/run_8cc.html">run.cc</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Třídy</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5b/structcolFILTER.html">colFILTER</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d7d/structappINFO.html">appINFO</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">struktura pro ulozeni stavu filtru  <a href="../../d3/d7d/structappINFO.html#details">...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="define-members"></a>
+Definice maker</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#acb0676a77d8472d58f8caa2795d53045">IMG_DIR</a>&#160;&#160;&#160;&quot;../img/&quot;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#add836a505b86b88ac52e48d6bece5738">OUTPUT_DIR</a>&#160;&#160;&#160;&quot;../output/&quot;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a48cc0a91e8f54c62f3341c21c8cc74e8">DATA_DIR</a>&#160;&#160;&#160;&quot;../data/&quot;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a56a7709c22330c2f532c5d913c9001b0">DATA_FN</a>&#160;&#160;&#160;DATA_DIR&quot;rs_auto_motor.csv&quot;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#ae752e05cb5a5129633dc50ab2605ac22">STATE_QUIT</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#af1bc6b194e3b247774681f33ea53d965">STATE_LIST</a>&#160;&#160;&#160;100</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a87b469b3243bd597fbc7179f2b171b49">STATE_LIST_GOTO</a>&#160;&#160;&#160;101</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a57316b4e0d799081e2f119a79c08fa1c">STATE_LIST_LIMIT</a>&#160;&#160;&#160;102</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a8506ce8809f2e0aa29c99dc7ec08e4ff">STATE_FILTR</a>&#160;&#160;&#160;200</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#af84e097026dba62cd74487a7a66dfacc">STATE_VYSTUP</a>&#160;&#160;&#160;300</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#aedae3f2691f6f0f822ce6ba3193f734c">STATE_VYSTUP_ALL</a>&#160;&#160;&#160;301</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a2b937dc807e9b79126036bf8a200d45b">STATE_VYSTUP_SELECT</a>&#160;&#160;&#160;302</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a53975a6232dd8823f768539a21f493c6">STATE_VYSTUP_SAVE</a>&#160;&#160;&#160;303</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#ab85f61c8c7c2da9f8b9af3105d39c9b9">STATE_VYSTUP_FILTR</a>&#160;&#160;&#160;304</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#aa755a0930de06d27de1cbd74f81013c8">STATE_MAIN</a>&#160;&#160;&#160;STATE_LIST</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a888e7a9b9ca33151a39f51c022a0410b">HTML_NOIMAGE</a>&#160;&#160;&#160;&quot;_noimg.jpg&quot;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#af498cf84147dd86b22de16a54c793588">HTML_TITLE</a>&#160;&#160;&#160;&quot;zaklady programovani, projekt: &amp;lt;jan@smid.sk&amp;gt;, SMI051, skupina: LB1IKT04K&quot;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a6247bc79b0a606bddbf5a90fc3a03194">COPYRIGHT</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a5b854f24b8833bd5eb1fbb09e2c30892">PAGE_LIMIT</a>&#160;&#160;&#160;20</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#add07afb6dfabb2f235e14e881b3941bc">COLS_MAX</a>&#160;&#160;&#160;20</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#acf121ce172b258c76f62150ce2ed3951">FILTER_MAX</a>&#160;&#160;&#160;20</td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funkce</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a0d7e495d02d7ca23b7213ca238a09102">itoS</a> (int n)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">struktura pro ulozeni stavu aplikace  <a href="#a0d7e495d02d7ca23b7213ca238a09102"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#ae3161a142236037c4f9c011b4e888864">ctoS</a> (const char *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">konvertuje char -&gt; string  <a href="#ae3161a142236037c4f9c011b4e888864"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#a20901dbcf1ee7a07352b67b4c2c564a0">init</a> (<a class="el" href="../../d3/d7d/structappINFO.html">appINFO</a> &amp;info, int page=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">inicializace <a class="el" href="../../d3/d7d/structappINFO.html" title="struktura pro ulozeni stavu filtru">appINFO</a> struktury pro vychozi stav  <a href="#a20901dbcf1ee7a07352b67b4c2c564a0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0f/main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">hlavni spoustec aplikace  <a href="#ae66f6b31b5ad750f1fe042a706a4e3d4"></a><br/></td></tr>
+</table>
+<hr/><h2>Dokumentace k definicím maker</h2>
+<a class="anchor" id="add07afb6dfabb2f235e14e881b3941bc"></a><!-- doxytag: member="main.cc::COLS_MAX" ref="add07afb6dfabb2f235e14e881b3941bc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COLS_MAX&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6247bc79b0a606bddbf5a90fc3a03194"></a><!-- doxytag: member="main.cc::COPYRIGHT" ref="a6247bc79b0a606bddbf5a90fc3a03194" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COPYRIGHT</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Hodnota:</b><div class="fragment"><pre class="fragment"><span class="stringliteral">&quot;zaklady programovani, projekt: \&quot;katalog automobilu pro autobazar\&quot;\n&quot;</span> \
+                        <span class="stringliteral">&quot;(c) &lt;jan@smid.sk&gt;, SMI051, Jan Smid, FEI - komb., 1. rocnik, skup: LB1IKT04K\n&quot;</span>
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a48cc0a91e8f54c62f3341c21c8cc74e8"></a><!-- doxytag: member="main.cc::DATA_DIR" ref="a48cc0a91e8f54c62f3341c21c8cc74e8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DATA_DIR&#160;&#160;&#160;&quot;../data/&quot;</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a56a7709c22330c2f532c5d913c9001b0"></a><!-- doxytag: member="main.cc::DATA_FN" ref="a56a7709c22330c2f532c5d913c9001b0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DATA_FN&#160;&#160;&#160;DATA_DIR&quot;rs_auto_motor.csv&quot;</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acf121ce172b258c76f62150ce2ed3951"></a><!-- doxytag: member="main.cc::FILTER_MAX" ref="acf121ce172b258c76f62150ce2ed3951" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILTER_MAX&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a888e7a9b9ca33151a39f51c022a0410b"></a><!-- doxytag: member="main.cc::HTML_NOIMAGE" ref="a888e7a9b9ca33151a39f51c022a0410b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HTML_NOIMAGE&#160;&#160;&#160;&quot;_noimg.jpg&quot;</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af498cf84147dd86b22de16a54c793588"></a><!-- doxytag: member="main.cc::HTML_TITLE" ref="af498cf84147dd86b22de16a54c793588" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HTML_TITLE&#160;&#160;&#160;&quot;zaklady programovani, projekt: &amp;lt;jan@smid.sk&amp;gt;, SMI051, skupina: LB1IKT04K&quot;</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acb0676a77d8472d58f8caa2795d53045"></a><!-- doxytag: member="main.cc::IMG_DIR" ref="acb0676a77d8472d58f8caa2795d53045" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IMG_DIR&#160;&#160;&#160;&quot;../img/&quot;</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="add836a505b86b88ac52e48d6bece5738"></a><!-- doxytag: member="main.cc::OUTPUT_DIR" ref="add836a505b86b88ac52e48d6bece5738" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OUTPUT_DIR&#160;&#160;&#160;&quot;../output/&quot;</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5b854f24b8833bd5eb1fbb09e2c30892"></a><!-- doxytag: member="main.cc::PAGE_LIMIT" ref="a5b854f24b8833bd5eb1fbb09e2c30892" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PAGE_LIMIT&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8506ce8809f2e0aa29c99dc7ec08e4ff"></a><!-- doxytag: member="main.cc::STATE_FILTR" ref="a8506ce8809f2e0aa29c99dc7ec08e4ff" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STATE_FILTR&#160;&#160;&#160;200</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af1bc6b194e3b247774681f33ea53d965"></a><!-- doxytag: member="main.cc::STATE_LIST" ref="af1bc6b194e3b247774681f33ea53d965" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STATE_LIST&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a87b469b3243bd597fbc7179f2b171b49"></a><!-- doxytag: member="main.cc::STATE_LIST_GOTO" ref="a87b469b3243bd597fbc7179f2b171b49" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STATE_LIST_GOTO&#160;&#160;&#160;101</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a57316b4e0d799081e2f119a79c08fa1c"></a><!-- doxytag: member="main.cc::STATE_LIST_LIMIT" ref="a57316b4e0d799081e2f119a79c08fa1c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STATE_LIST_LIMIT&#160;&#160;&#160;102</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa755a0930de06d27de1cbd74f81013c8"></a><!-- doxytag: member="main.cc::STATE_MAIN" ref="aa755a0930de06d27de1cbd74f81013c8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STATE_MAIN&#160;&#160;&#160;STATE_LIST</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae752e05cb5a5129633dc50ab2605ac22"></a><!-- doxytag: member="main.cc::STATE_QUIT" ref="ae752e05cb5a5129633dc50ab2605ac22" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STATE_QUIT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af84e097026dba62cd74487a7a66dfacc"></a><!-- doxytag: member="main.cc::STATE_VYSTUP" ref="af84e097026dba62cd74487a7a66dfacc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STATE_VYSTUP&#160;&#160;&#160;300</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aedae3f2691f6f0f822ce6ba3193f734c"></a><!-- doxytag: member="main.cc::STATE_VYSTUP_ALL" ref="aedae3f2691f6f0f822ce6ba3193f734c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STATE_VYSTUP_ALL&#160;&#160;&#160;301</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab85f61c8c7c2da9f8b9af3105d39c9b9"></a><!-- doxytag: member="main.cc::STATE_VYSTUP_FILTR" ref="ab85f61c8c7c2da9f8b9af3105d39c9b9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STATE_VYSTUP_FILTR&#160;&#160;&#160;304</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a53975a6232dd8823f768539a21f493c6"></a><!-- doxytag: member="main.cc::STATE_VYSTUP_SAVE" ref="a53975a6232dd8823f768539a21f493c6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STATE_VYSTUP_SAVE&#160;&#160;&#160;303</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2b937dc807e9b79126036bf8a200d45b"></a><!-- doxytag: member="main.cc::STATE_VYSTUP_SELECT" ref="a2b937dc807e9b79126036bf8a200d45b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STATE_VYSTUP_SELECT&#160;&#160;&#160;302</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Dokumentace funkcí</h2>
+<a class="anchor" id="ae3161a142236037c4f9c011b4e888864"></a><!-- doxytag: member="main.cc::ctoS" ref="ae3161a142236037c4f9c011b4e888864" args="(const char *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ctoS </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>konvertuje char -&gt; string </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">(char)</td><td>s = retezec, ktery konvertuju </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(string) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a20901dbcf1ee7a07352b67b4c2c564a0"></a><!-- doxytag: member="main.cc::init" ref="a20901dbcf1ee7a07352b67b4c2c564a0" args="(appINFO &amp;info, int page=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d7d/structappINFO.html">appINFO</a> &amp;&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>page</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>inicializace <a class="el" href="../../d3/d7d/structappINFO.html" title="struktura pro ulozeni stavu filtru">appINFO</a> struktury pro vychozi stav </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">(appINFO)</td><td>info = struktura pro nastaveni </td></tr>
+    <tr><td class="paramname">(int)</td><td>page = 1. stranka pro vypis </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d7e495d02d7ca23b7213ca238a09102"></a><!-- doxytag: member="main.cc::itoS" ref="a0d7e495d02d7ca23b7213ca238a09102" args="(int n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string itoS </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>struktura pro ulozeni stavu aplikace </p>
+<p>konvertuje int -&gt; string </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">(int)</td><td>n = cislo, ktere konvertuju </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(string) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a><!-- doxytag: member="main.cc::main" ref="ae66f6b31b5ad750f1fe042a706a4e3d4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>hlavni spoustec aplikace </p>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) </dd></dl>
+
+</div>
+</div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Vše</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Třídy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Soubory</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkce</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Proměnné</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definice typů</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Výčty</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Hodnoty výčtu</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definice maker</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Generováno so 31. pro 2011 23.16:08 pro projekt ZPauto programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.7.5.1
+</small></address>
+
+</body>
+</html>
