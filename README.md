@@ -21,6 +21,12 @@ list:
             relationship to the development of technology in the major industrial
             sectors, especially their own field of study.
 
+        * lo/ ~ logic circuits
+            The aim of the course is to acquaint students with the basics of digital
+            systems with the perspective of the underlying hardware implementation
+            with automatic gates and with a finite number of states, displaying numbers
+            and symbols, basic algorithms for arithmetic operations in digital systems.
+
     2011/
         * alg1/ ~ algorithms I
             This course is an introductory programming course. Students are expected
