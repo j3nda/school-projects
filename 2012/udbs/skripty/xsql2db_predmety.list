@@ -1,0 +1,535 @@
+# @TODO: 8mi lete gymnazium + zkratka predmetu
+#
+# UCEBNI OSNOVY PRO VICELETE GYMNAZIUM, (c) <jan@smid.sk>
+# (soubor slouzi ke generovani dat pro klasifikaci zaku)
+#
+# rocnik4 =            1.-4. rocnik vc maturity
+# rocnik8 = ZS:5.-8. a 1.-4. rocnik vc maturity
+# volitelny: ano/ne (na studenta)
+# group    : gid    groupovani vice predmetu, tj. volim 1x na studenta z mnoziny
+# mat     = maturitni predmet
+#
+#rocnik4 rocnik8 volitelny? cetnost group   mat nazev predmetu
+1        -       -          3       -       -   Český jazyk a literatura
+2        -       -          3       -       -   Český jazyk a literatura
+3        -       -          3       -       -   Český jazyk a literatura
+4        -       -          4       -       Y   Český jazyk a literatura
+# ---vicelete
+55       -       -          4       -       -   Český jazyk a literatura
+66       -       -          4       -       -   Český jazyk a literatura
+77       -       -          4       -       -   Český jazyk a literatura
+88       -       -          4       -       -   Český jazyk a literatura
+11       -       -          3       -       -   Český jazyk a literatura
+22       -       -          3       -       -   Český jazyk a literatura
+33       -       -          3       -       -   Český jazyk a literatura
+44       -       -          4       -       Y   Český jazyk a literatura
+
+
+1        -       -          4       -       -   Matematika
+2        -       -          4       -       -   Matematika
+3        -       -          3       -       -   Matematika
+4        -       -          3       -       Y   Matematika
+# ---vicelete
+55       -       -          5       -       -   Matematika
+66       -       -          4       -       -   Matematika
+77       -       -          4       -       -   Matematika
+88       -       -          5       -       -   Matematika
+11       -       -          4       -       -   Matematika
+22       -       -          4       -       -   Matematika
+33       -       -          3       -       -   Matematika
+44       -       -          3       -       Y   Matematika
+
+
+1        -       -          2       -       -   Fyzika
+2        -       -          3       -       -   Fyzika
+3        -       -          3       -       Y   Fyzika
+# ---vicelete
+55       -       -          2       -       -   Fyzika
+66       -       -          2       -       -   Fyzika
+77       -       -          3       -       -   Fyzika
+88       -       -          2       -       -   Fyzika
+11       -       -          2       -       -   Fyzika
+22       -       -          3       -       -   Fyzika
+33       -       -          3       -       Y   Fyzika
+
+
+1        -       -          3       -       -   Chemie
+2        -       -          2       -       -   Chemie
+3        -       -          3       -       Y   Chemie
+# ---vicelete
+66       -       -          2       -       -   Chemie
+77       -       -          3       -       -   Chemie
+88       -       -          2       -       -   Chemie
+11       -       -          3       -       -   Chemie
+22       -       -          2       -       -   Chemie
+33       -       -          3       -       Y   Chemie
+
+
+1        -       -          3       -       -   Biologie
+2        -       -          3       -       -   Biologie
+3        -       -          2       -       Y   Biologie
+# ---vicelete
+55       -       -          2       -       -   Biologie
+66       -       -          2       -       -   Biologie
+77       -       -          2       -       -   Biologie
+88       -       -          2       -       -   Biologie
+11       -       -          3       -       -   Biologie
+22       -       -          3       -       -   Biologie
+33       -       -          2       -       Y   Biologie
+
+
+1        -       -          2       -       -   Zeměpis
+2        -       -          1       -       -   Zeměpis
+3        -       -          2       -       Y   Zeměpis
+# ---vicelete
+55       -       -          2       -       -   Zeměpis
+66       -       -          2       -       -   Zeměpis
+77       -       -          2       -       -   Zeměpis
+88       -       -          2       -       -   Zeměpis
+11       -       -          2       -       -   Zeměpis
+22       -       -          1       -       -   Zeměpis
+33       -       -          2       -       Y   Zeměpis
+
+
+1        -       -          2       -       -   Dějepis
+2        -       -          2       -       -   Dějepis
+3        -       -          3       -       Y   Dějepis
+# ---vicelete
+55       -       -          2       -       -   Dějepis
+66       -       -          2       -       -   Dějepis
+77       -       -          2       -       -   Dějepis
+88       -       -          2       -       -   Dějepis
+11       -       -          2       -       -   Dějepis
+22       -       -          2       -       -   Dějepis
+33       -       -          3       -       Y   Dějepis
+
+
+55       -       -          1       -       -   Přírodovědné praktikum
+66       -       -          1       -       -   Přírodovědné praktikum
+
+
+1        -       -          1       -       -   Základy společenských věd
+2        -       -          2       -       -   Základy společenských věd
+3        -       -          2       -       -   Základy společenských věd
+4        -       -          2       -       Y   Základy společenských věd
+# ---vicelete
+55       -       -          1       -       -   Občanská výchova
+66       -       -          1       -       -   Občanská výchova
+77       -       -          1       -       -   Občanská výchova
+88       -       -          1       -       -   Občanská výchova
+11       -       -          1       -       -   Základy společenských věd
+22       -       -          2       -       -   Základy společenských věd
+33       -       -          2       -       -   Základy společenských věd
+44       -       -          2       -       Y   Základy společenských věd
+
+
+1        -       -          2       -       -   Informatika
+2        -       -          2       -       Y   Informatika
+# ---vicelete
+66       -       -          1       -       -   Informatika
+77       -       -          1       -       -   Informatika
+88       -       -          2       -       -   Informatika
+11       -       -          2       -       -   Informatika
+22       -       -          2       -       Y   Informatika
+
+
+1        -       -          2       -       -   Tělesná výchova
+2        -       -          2       -       -   Tělesná výchova
+3        -       -          2       -       -   Tělesná výchova
+4        -       -          2       -       Y   Tělesná výchova
+# ---vicelete
+55       -       -          2       -       -   Tělesná výchova
+66       -       -          2       -       -   Tělesná výchova
+77       -       -          2       -       -   Tělesná výchova
+88       -       -          2       -       -   Tělesná výchova
+11       -       -          2       -       -   Tělesná výchova
+22       -       -          2       -       -   Tělesná výchova
+33       -       -          2       -       -   Tělesná výchova
+44       -       -          2       -       Y   Tělesná výchova
+
+
+# student x est-vych x vice let
+1        -       -          2       ev      -   Estetická výchova (hudební)
+1        -       -          2       ev      -   Estetická výchova (výtvarná)
+2        -       -          2       ev      Y   Estetická výchova (hudební)
+2        -       -          2       ev      Y   Estetická výchova (výtvarná)
+# ---vicelete
+55       -       -          2       ev      -   Estetická výchova (hudební)
+66       -       -          2       ev      -   Estetická výchova (hudební)
+77       -       -          2       ev      -   Estetická výchova (hudební)
+88       -       -          2       ev      -   Estetická výchova (hudební)
+11       -       -          2       ev      -   Estetická výchova (hudební)
+22       -       -          2       ev      Y   Estetická výchova (hudební)
+55       -       -          2       ev      -   Estetická výchova (výtvarná)
+66       -       -          2       ev      -   Estetická výchova (výtvarná)
+77       -       -          2       ev      -   Estetická výchova (výtvarná)
+88       -       -          2       ev      -   Estetická výchova (výtvarná)
+11       -       -          2       ev      -   Estetická výchova (výtvarná)
+22       -       -          2       ev      Y   Estetická výchova (výtvarná)
+
+
+# student x jazyk x vice let
+1        -       Y          4       cg1     -   Cizí jazyk (Anglický)
+1        -       Y          4       cg1     -   Cizí jazyk (Německý)
+2        -       Y          3       cg1     -   Cizí jazyk (Anglický)
+2        -       Y          3       cg1     -   Cizí jazyk (Německý)
+3        -       Y          3       cg1     -   Cizí jazyk (Anglický)
+3        -       Y          3       cg1     -   Cizí jazyk (Německý)
+4        -       Y          3       cg1     Y   Cizí jazyk (Anglický)
+4        -       Y          3       cg1     Y   Cizí jazyk (Německý)
+# ---vicelete
+55       -       Y          4       -       -   Cizí jazyk (Anglický)
+66       -       Y          4       -       -   Cizí jazyk (Anglický)
+77       -       Y          4       -       -   Cizí jazyk (Anglický)
+88       -       Y          4       -       -   Cizí jazyk (Anglický)
+11       -       Y          4       cg1     -   Cizí jazyk (Anglický)
+11       -       Y          4       cg1     -   Cizí jazyk (Německý)
+22       -       Y          3       cg1     -   Cizí jazyk (Anglický)
+22       -       Y          3       cg1     -   Cizí jazyk (Německý)
+33       -       Y          3       cg1     -   Cizí jazyk (Anglický)
+33       -       Y          3       cg1     -   Cizí jazyk (Německý)
+44       -       Y          3       cg1     Y   Cizí jazyk (Anglický)
+44       -       Y          3       cg1     Y   Cizí jazyk (Německý)
+
+
+2        -       Y          2       cg2     -   Cizí jazyk (Francouzský)
+2        -       Y          2       cg2     -   Cizí jazyk (Ruský)
+2        -       Y          2       cg2     -   Cizí jazyk (Latinský)
+3        -       Y          2       cg2     -   Cizí jazyk (Francouzský)
+3        -       Y          2       cg2     -   Cizí jazyk (Ruský)
+3        -       Y          2       cg2     -   Cizí jazyk (Latinský)
+4        -       Y          1       cg2     Y   Cizí jazyk (Francouzský)
+4        -       Y          1       cg2     Y   Cizí jazyk (Ruský)
+4        -       Y          1       cg2     Y   Cizí jazyk (Latinský)
+# ---vicelete
+22       -       Y          2       cg2     -   Cizí jazyk (Francouzský)
+22       -       Y          2       cg2     -   Cizí jazyk (Ruský)
+22       -       Y          2       cg2     -   Cizí jazyk (Latinský)
+33       -       Y          2       cg2     -   Cizí jazyk (Francouzský)
+33       -       Y          2       cg2     -   Cizí jazyk (Ruský)
+33       -       Y          2       cg2     -   Cizí jazyk (Latinský)
+44       -       Y          1       cg2     Y   Cizí jazyk (Francouzský)
+44       -       Y          1       cg2     Y   Cizí jazyk (Ruský)
+44       -       Y          1       cg2     Y   Cizí jazyk (Latinský)
+
+
+# student x volitelny predmet
+# -- volitelny 1
+3        -       Y          2       v1      -   volitelný předmět (Fyzikální seminář)
+3        -       Y          2       v1      -   volitelný předmět (Matematický seminář)
+3        -       Y          2       v1      -   volitelný předmět (Chemický seminář)
+3        -       Y          2       v1      -   volitelný předmět (Biologický seminář)
+3        -       Y          2       v1      -   volitelný předmět (Zeměpisný seminář)
+3        -       Y          2       v1      -   volitelný předmět (Dějepisný seminář)
+3        -       Y          2       v1      -   volitelný předmět (Společenskovědný seminář)
+3        -       Y          2       v1      -   volitelný předmět (Seminář českého jazyka)
+3        -       Y          2       v1      -   volitelný předmět (Programování)
+3        -       Y          2       v1      -   volitelný předmět (Deskriptivní geometrie)
+3        -       Y          2       v1      -   volitelný předmět (Seminář z informatiky)
+3        -       Y          2       v1      -   volitelný předmět (Počítačová grafika)
+3        -       Y          2       v1      -   volitelný předmět (Historie a teorie divadla)
+3        -       Y          2       v1      -   volitelný předmět (Anglická konverzace)
+3        -       Y          2       v1      -   volitelný předmět (Ruská konverzace)
+3        -       Y          2       v1      -   volitelný předmět (Francouzská konverzace)
+3        -       Y          2       v1      -   volitelný předmět (Německá konverzace)
+3        -       Y          2       v1      -   volitelný předmět (Prameny literatury)
+3        -       Y          2       v1      -   volitelný předmět (Člověk, společnost a média)
+4        -       Y          2       v1      -   volitelný předmět (Fyzikální seminář)
+4        -       Y          2       v1      -   volitelný předmět (Matematický seminář)
+4        -       Y          2       v1      -   volitelný předmět (Chemický seminář)
+4        -       Y          2       v1      -   volitelný předmět (Biologický seminář)
+4        -       Y          2       v1      -   volitelný předmět (Zeměpisný seminář)
+4        -       Y          2       v1      -   volitelný předmět (Dějepisný seminář)
+4        -       Y          2       v1      -   volitelný předmět (Společenskovědný seminář)
+4        -       Y          2       v1      -   volitelný předmět (Seminář českého jazyka)
+4        -       Y          2       v1      Y   volitelný předmět (Programování)
+4        -       Y          2       v1      Y   volitelný předmět (Deskriptivní geometrie)
+4        -       Y          2       v1      -   volitelný předmět (Seminář z informatiky)
+4        -       Y          2       v1      -   volitelný předmět (Počítačová grafika)
+4        -       Y          2       v1      -   volitelný předmět (Historie a teorie divadla)
+4        -       Y          2       v1      -   volitelný předmět (Anglická konverzace)
+4        -       Y          2       v1      -   volitelný předmět (Ruská konverzace)
+4        -       Y          2       v1      -   volitelný předmět (Francouzská konverzace)
+4        -       Y          2       v1      -   volitelný předmět (Německá konverzace)
+4        -       Y          2       v1      -   volitelný předmět (Prameny literatury)
+4        -       Y          2       v1      -   volitelný předmět (Člověk, společnost a média)
+# ---vicelete
+33       -       Y          2       v1      -   volitelný předmět (Fyzikální seminář)
+33       -       Y          2       v1      -   volitelný předmět (Matematický seminář)
+33       -       Y          2       v1      -   volitelný předmět (Chemický seminář)
+33       -       Y          2       v1      -   volitelný předmět (Biologický seminář)
+33       -       Y          2       v1      -   volitelný předmět (Zeměpisný seminář)
+33       -       Y          2       v1      -   volitelný předmět (Dějepisný seminář)
+33       -       Y          2       v1      -   volitelný předmět (Společenskovědný seminář)
+33       -       Y          2       v1      -   volitelný předmět (Seminář českého jazyka)
+33       -       Y          2       v1      -   volitelný předmět (Programování)
+33       -       Y          2       v1      -   volitelný předmět (Deskriptivní geometrie)
+33       -       Y          2       v1      -   volitelný předmět (Seminář z informatiky)
+33       -       Y          2       v1      -   volitelný předmět (Počítačová grafika)
+33       -       Y          2       v1      -   volitelný předmět (Historie a teorie divadla)
+33       -       Y          2       v1      -   volitelný předmět (Anglická konverzace)
+33       -       Y          2       v1      -   volitelný předmět (Ruská konverzace)
+33       -       Y          2       v1      -   volitelný předmět (Francouzská konverzace)
+33       -       Y          2       v1      -   volitelný předmět (Německá konverzace)
+33       -       Y          2       v1      -   volitelný předmět (Prameny literatury)
+33       -       Y          2       v1      -   volitelný předmět (Člověk, společnost a média)
+44       -       Y          2       v1      -   volitelný předmět (Fyzikální seminář)
+44       -       Y          2       v1      -   volitelný předmět (Matematický seminář)
+44       -       Y          2       v1      -   volitelný předmět (Chemický seminář)
+44       -       Y          2       v1      -   volitelný předmět (Biologický seminář)
+44       -       Y          2       v1      -   volitelný předmět (Zeměpisný seminář)
+44       -       Y          2       v1      -   volitelný předmět (Dějepisný seminář)
+44       -       Y          2       v1      -   volitelný předmět (Společenskovědný seminář)
+44       -       Y          2       v1      -   volitelný předmět (Seminář českého jazyka)
+44       -       Y          2       v1      Y   volitelný předmět (Programování)
+44       -       Y          2       v1      Y   volitelný předmět (Deskriptivní geometrie)
+44       -       Y          2       v1      -   volitelný předmět (Seminář z informatiky)
+44       -       Y          2       v1      -   volitelný předmět (Počítačová grafika)
+44       -       Y          2       v1      -   volitelný předmět (Historie a teorie divadla)
+44       -       Y          2       v1      -   volitelný předmět (Anglická konverzace)
+44       -       Y          2       v1      -   volitelný předmět (Ruská konverzace)
+44       -       Y          2       v1      -   volitelný předmět (Francouzská konverzace)
+44       -       Y          2       v1      -   volitelný předmět (Německá konverzace)
+44       -       Y          2       v1      -   volitelný předmět (Prameny literatury)
+44       -       Y          2       v1      -   volitelný předmět (Člověk, společnost a média)
+
+# -- volitelny 2
+3        -       Y          2       v2      -   volitelný předmět (Fyzikální seminář)
+3        -       Y          2       v2      -   volitelný předmět (Matematický seminář)
+3        -       Y          2       v2      -   volitelný předmět (Chemický seminář)
+3        -       Y          2       v2      -   volitelný předmět (Biologický seminář)
+3        -       Y          2       v2      -   volitelný předmět (Zeměpisný seminář)
+3        -       Y          2       v2      -   volitelný předmět (Dějepisný seminář)
+3        -       Y          2       v2      -   volitelný předmět (Společenskovědný seminář)
+3        -       Y          2       v2      -   volitelný předmět (Seminář českého jazyka)
+3        -       Y          2       v2      -   volitelný předmět (Programování)
+3        -       Y          2       v2      -   volitelný předmět (Deskriptivní geometrie)
+3        -       Y          2       v2      -   volitelný předmět (Seminář z informatiky)
+3        -       Y          2       v2      -   volitelný předmět (Počítačová grafika)
+3        -       Y          2       v2      -   volitelný předmět (Historie a teorie divadla)
+3        -       Y          2       v2      -   volitelný předmět (Anglická konverzace)
+3        -       Y          2       v2      -   volitelný předmět (Ruská konverzace)
+3        -       Y          2       v2      -   volitelný předmět (Francouzská konverzace)
+3        -       Y          2       v2      -   volitelný předmět (Německá konverzace)
+3        -       Y          2       v2      -   volitelný předmět (Prameny literatury)
+3        -       Y          2       v2      -   volitelný předmět (Člověk, společnost a média)
+4        -       Y          3       v2      -   volitelný předmět (Fyzikální seminář)
+4        -       Y          3       v2      -   volitelný předmět (Matematický seminář)
+4        -       Y          3       v2      -   volitelný předmět (Chemický seminář)
+4        -       Y          3       v2      -   volitelný předmět (Biologický seminář)
+4        -       Y          3       v2      -   volitelný předmět (Zeměpisný seminář)
+4        -       Y          3       v2      -   volitelný předmět (Dějepisný seminář)
+4        -       Y          3       v2      -   volitelný předmět (Společenskovědný seminář)
+4        -       Y          3       v2      -   volitelný předmět (Seminář českého jazyka)
+4        -       Y          3       v2      -   volitelný předmět (Programování)
+4        -       Y          3       v2      -   volitelný předmět (Deskriptivní geometrie)
+4        -       Y          3       v2      -   volitelný předmět (Seminář z informatiky)
+4        -       Y          3       v2      -   volitelný předmět (Počítačová grafika)
+4        -       Y          3       v2      -   volitelný předmět (Historie a teorie divadla)
+4        -       Y          3       v2      -   volitelný předmět (Anglická konverzace)
+4        -       Y          3       v2      -   volitelný předmět (Ruská konverzace)
+4        -       Y          3       v2      -   volitelný předmět (Francouzská konverzace)
+4        -       Y          3       v2      -   volitelný předmět (Německá konverzace)
+4        -       Y          3       v2      -   volitelný předmět (Prameny literatury)
+4        -       Y          3       v2      -   volitelný předmět (Člověk, společnost a média)
+# ---vicelete
+33       -       Y          2       v2      -   volitelný předmět (Fyzikální seminář)
+33       -       Y          2       v2      -   volitelný předmět (Matematický seminář)
+33       -       Y          2       v2      -   volitelný předmět (Chemický seminář)
+33       -       Y          2       v2      -   volitelný předmět (Biologický seminář)
+33       -       Y          2       v2      -   volitelný předmět (Zeměpisný seminář)
+33       -       Y          2       v2      -   volitelný předmět (Dějepisný seminář)
+33       -       Y          2       v2      -   volitelný předmět (Společenskovědný seminář)
+33       -       Y          2       v2      -   volitelný předmět (Seminář českého jazyka)
+33       -       Y          2       v2      -   volitelný předmět (Programování)
+33       -       Y          2       v2      -   volitelný předmět (Deskriptivní geometrie)
+33       -       Y          2       v2      -   volitelný předmět (Seminář z informatiky)
+33       -       Y          2       v2      -   volitelný předmět (Počítačová grafika)
+33       -       Y          2       v2      -   volitelný předmět (Historie a teorie divadla)
+33       -       Y          2       v2      -   volitelný předmět (Anglická konverzace)
+33       -       Y          2       v2      -   volitelný předmět (Ruská konverzace)
+33       -       Y          2       v2      -   volitelný předmět (Francouzská konverzace)
+33       -       Y          2       v2      -   volitelný předmět (Německá konverzace)
+33       -       Y          2       v2      -   volitelný předmět (Prameny literatury)
+33       -       Y          2       v2      -   volitelný předmět (Člověk, společnost a média)
+44       -       Y          3       v2      -   volitelný předmět (Fyzikální seminář)
+44       -       Y          3       v2      -   volitelný předmět (Matematický seminář)
+44       -       Y          3       v2      -   volitelný předmět (Chemický seminář)
+44       -       Y          3       v2      -   volitelný předmět (Biologický seminář)
+44       -       Y          3       v2      -   volitelný předmět (Zeměpisný seminář)
+44       -       Y          3       v2      -   volitelný předmět (Dějepisný seminář)
+44       -       Y          3       v2      -   volitelný předmět (Společenskovědný seminář)
+44       -       Y          3       v2      -   volitelný předmět (Seminář českého jazyka)
+44       -       Y          3       v2      -   volitelný předmět (Programování)
+44       -       Y          3       v2      -   volitelný předmět (Deskriptivní geometrie)
+44       -       Y          3       v2      -   volitelný předmět (Seminář z informatiky)
+44       -       Y          3       v2      -   volitelný předmět (Počítačová grafika)
+44       -       Y          3       v2      -   volitelný předmět (Historie a teorie divadla)
+44       -       Y          3       v2      -   volitelný předmět (Anglická konverzace)
+44       -       Y          3       v2      -   volitelný předmět (Ruská konverzace)
+44       -       Y          3       v2      -   volitelný předmět (Francouzská konverzace)
+44       -       Y          3       v2      -   volitelný předmět (Německá konverzace)
+44       -       Y          3       v2      -   volitelný předmět (Prameny literatury)
+44       -       Y          3       v2      -   volitelný předmět (Člověk, společnost a média)
+
+
+# -- volitelny 3
+3        -       Y          2       v3      -   volitelný předmět (Fyzikální seminář)
+3        -       Y          2       v3      -   volitelný předmět (Matematický seminář)
+3        -       Y          2       v3      -   volitelný předmět (Chemický seminář)
+3        -       Y          2       v3      -   volitelný předmět (Biologický seminář)
+3        -       Y          2       v3      -   volitelný předmět (Zeměpisný seminář)
+3        -       Y          2       v3      -   volitelný předmět (Dějepisný seminář)
+3        -       Y          2       v3      -   volitelný předmět (Společenskovědný seminář)
+3        -       Y          2       v3      -   volitelný předmět (Seminář českého jazyka)
+3        -       Y          2       v3      -   volitelný předmět (Programování)
+3        -       Y          2       v3      -   volitelný předmět (Deskriptivní geometrie)
+3        -       Y          2       v3      -   volitelný předmět (Seminář z informatiky)
+3        -       Y          2       v3      -   volitelný předmět (Počítačová grafika)
+3        -       Y          2       v3      -   volitelný předmět (Historie a teorie divadla)
+3        -       Y          2       v3      -   volitelný předmět (Anglická konverzace)
+3        -       Y          2       v3      -   volitelný předmět (Ruská konverzace)
+3        -       Y          2       v3      -   volitelný předmět (Francouzská konverzace)
+3        -       Y          2       v3      -   volitelný předmět (Německá konverzace)
+3        -       Y          2       v3      -   volitelný předmět (Prameny literatury)
+3        -       Y          2       v3      -   volitelný předmět (Člověk, společnost a média)
+4        -       Y          3       v3      -   volitelný předmět (Fyzikální seminář)
+4        -       Y          3       v3      -   volitelný předmět (Matematický seminář)
+4        -       Y          3       v3      -   volitelný předmět (Chemický seminář)
+4        -       Y          3       v3      -   volitelný předmět (Biologický seminář)
+4        -       Y          3       v3      -   volitelný předmět (Zeměpisný seminář)
+4        -       Y          3       v3      -   volitelný předmět (Dějepisný seminář)
+4        -       Y          3       v3      -   volitelný předmět (Společenskovědný seminář)
+4        -       Y          3       v3      -   volitelný předmět (Seminář českého jazyka)
+4        -       Y          3       v3      -   volitelný předmět (Programování)
+4        -       Y          3       v3      -   volitelný předmět (Deskriptivní geometrie)
+4        -       Y          3       v3      -   volitelný předmět (Seminář z informatiky)
+4        -       Y          3       v3      -   volitelný předmět (Počítačová grafika)
+4        -       Y          3       v3      -   volitelný předmět (Historie a teorie divadla)
+4        -       Y          3       v3      -   volitelný předmět (Anglická konverzace)
+4        -       Y          3       v3      -   volitelný předmět (Ruská konverzace)
+4        -       Y          3       v3      -   volitelný předmět (Francouzská konverzace)
+4        -       Y          3       v3      -   volitelný předmět (Německá konverzace)
+4        -       Y          3       v3      -   volitelný předmět (Prameny literatury)
+4        -       Y          3       v3      -   volitelný předmět (Člověk, společnost a média)
+# ---vicelete
+33       -       Y          2       v3      -   volitelný předmět (Fyzikální seminář)
+33       -       Y          2       v3      -   volitelný předmět (Matematický seminář)
+33       -       Y          2       v3      -   volitelný předmět (Chemický seminář)
+33       -       Y          2       v3      -   volitelný předmět (Biologický seminář)
+33       -       Y          2       v3      -   volitelný předmět (Zeměpisný seminář)
+33       -       Y          2       v3      -   volitelný předmět (Dějepisný seminář)
+33       -       Y          2       v3      -   volitelný předmět (Společenskovědný seminář)
+33       -       Y          2       v3      -   volitelný předmět (Seminář českého jazyka)
+33       -       Y          2       v3      -   volitelný předmět (Programování)
+33       -       Y          2       v3      -   volitelný předmět (Deskriptivní geometrie)
+33       -       Y          2       v3      -   volitelný předmět (Seminář z informatiky)
+33       -       Y          2       v3      -   volitelný předmět (Počítačová grafika)
+33       -       Y          2       v3      -   volitelný předmět (Historie a teorie divadla)
+33       -       Y          2       v3      -   volitelný předmět (Anglická konverzace)
+33       -       Y          2       v3      -   volitelný předmět (Ruská konverzace)
+33       -       Y          2       v3      -   volitelný předmět (Francouzská konverzace)
+33       -       Y          2       v3      -   volitelný předmět (Německá konverzace)
+33       -       Y          2       v3      -   volitelný předmět (Prameny literatury)
+33       -       Y          2       v3      -   volitelný předmět (Člověk, společnost a média)
+44       -       Y          3       v3      -   volitelný předmět (Fyzikální seminář)
+44       -       Y          3       v3      -   volitelný předmět (Matematický seminář)
+44       -       Y          3       v3      -   volitelný předmět (Chemický seminář)
+44       -       Y          3       v3      -   volitelný předmět (Biologický seminář)
+44       -       Y          3       v3      -   volitelný předmět (Zeměpisný seminář)
+44       -       Y          3       v3      -   volitelný předmět (Dějepisný seminář)
+44       -       Y          3       v3      -   volitelný předmět (Společenskovědný seminář)
+44       -       Y          3       v3      -   volitelný předmět (Seminář českého jazyka)
+44       -       Y          3       v3      -   volitelný předmět (Programování)
+44       -       Y          3       v3      -   volitelný předmět (Deskriptivní geometrie)
+44       -       Y          3       v3      -   volitelný předmět (Seminář z informatiky)
+44       -       Y          3       v3      -   volitelný předmět (Počítačová grafika)
+44       -       Y          3       v3      -   volitelný předmět (Historie a teorie divadla)
+44       -       Y          3       v3      -   volitelný předmět (Anglická konverzace)
+44       -       Y          3       v3      -   volitelný předmět (Ruská konverzace)
+44       -       Y          3       v3      -   volitelný předmět (Francouzská konverzace)
+44       -       Y          3       v3      -   volitelný předmět (Německá konverzace)
+44       -       Y          3       v3      -   volitelný předmět (Prameny literatury)
+44       -       Y          3       v3      -   volitelný předmět (Člověk, společnost a média)
+
+
+4        -       Y          2       v4      -   volitelný předmět (Fyzikální seminář)
+4        -       Y          2       v4      -   volitelný předmět (Matematický seminář)
+4        -       Y          2       v4      -   volitelný předmět (Chemický seminář)
+4        -       Y          2       v4      -   volitelný předmět (Biologický seminář)
+4        -       Y          2       v4      -   volitelný předmět (Zeměpisný seminář)
+4        -       Y          2       v4      -   volitelný předmět (Dějepisný seminář)
+4        -       Y          2       v4      -   volitelný předmět (Společenskovědný seminář)
+4        -       Y          2       v4      -   volitelný předmět (Seminář českého jazyka)
+4        -       Y          2       v4      -   volitelný předmět (Programování)
+4        -       Y          2       v4      -   volitelný předmět (Deskriptivní geometrie)
+4        -       Y          2       v4      -   volitelný předmět (Seminář z informatiky)
+4        -       Y          2       v4      -   volitelný předmět (Počítačová grafika)
+4        -       Y          2       v4      -   volitelný předmět (Historie a teorie divadla)
+4        -       Y          2       v4      -   volitelný předmět (Anglická konverzace)
+4        -       Y          2       v4      -   volitelný předmět (Ruská konverzace)
+4        -       Y          2       v4      -   volitelný předmět (Francouzská konverzace)
+4        -       Y          2       v4      -   volitelný předmět (Německá konverzace)
+4        -       Y          2       v4      -   volitelný předmět (Prameny literatury)
+4        -       Y          2       v4      -   volitelný předmět (Člověk, společnost a média)
+# ---vicelete
+44       -       Y          2       v4      -   volitelný předmět (Fyzikální seminář)
+44       -       Y          2       v4      -   volitelný předmět (Matematický seminář)
+44       -       Y          2       v4      -   volitelný předmět (Chemický seminář)
+44       -       Y          2       v4      -   volitelný předmět (Biologický seminář)
+44       -       Y          2       v4      -   volitelný předmět (Zeměpisný seminář)
+44       -       Y          2       v4      -   volitelný předmět (Dějepisný seminář)
+44       -       Y          2       v4      -   volitelný předmět (Společenskovědný seminář)
+44       -       Y          2       v4      -   volitelný předmět (Seminář českého jazyka)
+44       -       Y          2       v4      -   volitelný předmět (Programování)
+44       -       Y          2       v4      -   volitelný předmět (Deskriptivní geometrie)
+44       -       Y          2       v4      -   volitelný předmět (Seminář z informatiky)
+44       -       Y          2       v4      -   volitelný předmět (Počítačová grafika)
+44       -       Y          2       v4      -   volitelný předmět (Historie a teorie divadla)
+44       -       Y          2       v4      -   volitelný předmět (Anglická konverzace)
+44       -       Y          2       v4      -   volitelný předmět (Ruská konverzace)
+44       -       Y          2       v4      -   volitelný předmět (Francouzská konverzace)
+44       -       Y          2       v4      -   volitelný předmět (Německá konverzace)
+44       -       Y          2       v4      -   volitelný předmět (Prameny literatury)
+44       -       Y          2       v4      -   volitelný předmět (Člověk, společnost a média)
+
+
+4        -       Y          1       v5      -   volitelný předmět (Fyzikální seminář)
+4        -       Y          1       v5      -   volitelný předmět (Matematický seminář)
+4        -       Y          1       v5      -   volitelný předmět (Chemický seminář)
+4        -       Y          1       v5      -   volitelný předmět (Biologický seminář)
+4        -       Y          1       v5      -   volitelný předmět (Zeměpisný seminář)
+4        -       Y          1       v5      -   volitelný předmět (Dějepisný seminář)
+4        -       Y          1       v5      -   volitelný předmět (Společenskovědný seminář)
+4        -       Y          1       v5      -   volitelný předmět (Seminář českého jazyka)
+4        -       Y          1       v5      -   volitelný předmět (Programování)
+4        -       Y          1       v5      -   volitelný předmět (Deskriptivní geometrie)
+4        -       Y          1       v5      -   volitelný předmět (Seminář z informatiky)
+4        -       Y          1       v5      -   volitelný předmět (Počítačová grafika)
+4        -       Y          1       v5      -   volitelný předmět (Historie a teorie divadla)
+4        -       Y          1       v5      -   volitelný předmět (Anglická konverzace)
+4        -       Y          1       v5      -   volitelný předmět (Ruská konverzace)
+4        -       Y          1       v5      -   volitelný předmět (Francouzská konverzace)
+4        -       Y          1       v5      -   volitelný předmět (Německá konverzace)
+4        -       Y          1       v5      -   volitelný předmět (Prameny literatury)
+4        -       Y          1       v5      -   volitelný předmět (Člověk, společnost a média)
+# ---vicelete
+44       -       Y          1       v5      -   volitelný předmět (Fyzikální seminář)
+44       -       Y          1       v5      -   volitelný předmět (Matematický seminář)
+44       -       Y          1       v5      -   volitelný předmět (Chemický seminář)
+44       -       Y          1       v5      -   volitelný předmět (Biologický seminář)
+44       -       Y          1       v5      -   volitelný předmět (Zeměpisný seminář)
+44       -       Y          1       v5      -   volitelný předmět (Dějepisný seminář)
+44       -       Y          1       v5      -   volitelný předmět (Společenskovědný seminář)
+44       -       Y          1       v5      -   volitelný předmět (Seminář českého jazyka)
+44       -       Y          1       v5      -   volitelný předmět (Programování)
+44       -       Y          1       v5      -   volitelný předmět (Deskriptivní geometrie)
+44       -       Y          1       v5      -   volitelný předmět (Seminář z informatiky)
+44       -       Y          1       v5      -   volitelný předmět (Počítačová grafika)
+44       -       Y          1       v5      -   volitelný předmět (Historie a teorie divadla)
+44       -       Y          1       v5      -   volitelný předmět (Anglická konverzace)
+44       -       Y          1       v5      -   volitelný předmět (Ruská konverzace)
+44       -       Y          1       v5      -   volitelný předmět (Francouzská konverzace)
+44       -       Y          1       v5      -   volitelný předmět (Německá konverzace)
+44       -       Y          1       v5      -   volitelný předmět (Prameny literatury)
+44       -       Y          1       v5      -   volitelný předmět (Člověk, společnost a média)

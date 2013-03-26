@@ -8,6 +8,15 @@ list:
 -----
 
     2012/
+        * udbs/ ~ introduction to database systems
+            The aim of this course is to familiarize students with the basic concepts
+            of database technologies such as relational data model and the SQL language
+            for defining, manipulating and querying data. After completing the course,
+            students will be able to define a conceptual information system model,
+            the relational schema and emphasis is placed on basic SQL commands according
+            to the standard SQL92, which the student after completing the course control.
+
+        ---
         * alg2/ ~ alhorithms II
             The aim of the course is to introduce students to object-oriented programming
             and develop students' knowledge in the area of data structures. After completing
