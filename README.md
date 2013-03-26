@@ -7,6 +7,15 @@ school-projects
 list:
 -----
 
+    2012/
+        * alg2/ ~ alhorithms II
+            The aim of the course is to introduce students to object-oriented programming
+            and develop students' knowledge in the area of data structures. After completing
+            the course the student will be able to:
+                analyze a given problem from the position of the PLO, create and debug
+                a C + + program using OOP, use binary trees and hash tables,
+                assess the effectiveness of the solution to the problem.
+
     2011/
         * alg1/ ~ algorithms I
             This course is an introductory programming course. Students are expected
