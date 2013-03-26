@@ -16,6 +16,11 @@ list:
                 a C + + program using OOP, use binary trees and hash tables,
                 assess the effectiveness of the solution to the problem.
 
+        * dvt/ ~ history of science and technology
+            Get an overview of the development of new scientific knowledge and its
+            relationship to the development of technology in the major industrial
+            sectors, especially their own field of study.
+
     2011/
         * alg1/ ~ algorithms I
             This course is an introductory programming course. Students are expected
