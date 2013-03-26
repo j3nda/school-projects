@@ -2,7 +2,7 @@ school-projects
 ===============
 
     * various quality projects to completion of the courses
-    * all contents is licenced by: CC-SA ~ <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.cs"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />Uvedená práce (dílo) podléhá licenci <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.cs">Creative Commons Uveďte autora-Zachovejte licenci 3.0 Unported</a>
+    * all contents is licenced by: CC-SA ~ http://creativecommons.org/licenses/by-sa/3.0/deed.cs
 
 list:
 -----
