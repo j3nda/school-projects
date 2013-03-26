@@ -86,3 +86,13 @@ typedef struct s_carITEM
 } carITEM;                                      /** struktura pro ulozeni 1x zaznamu automobilu     */
 
 
+void warning(const char *msg, const char *prefix="WARNING: ");
+void fatal(const char *msg);
+void fgetcsv(std::vector<std::string> &record, const std::string& line, char delimiter = ',');
+carITEM *loadData(const char *fn, bool skip1 = true);
+void releaseData(carITEM *p = NULL);
+int get_pmax(carITEM *p = NULL);
+void display_clear(int max = 128);
+void display(appINFO &info, int phase = DISPLAY_ALL);
+
+

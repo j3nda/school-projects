@@ -6,6 +6,21 @@
  */
 
 
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <iostream>
+#include <fstream>
+#include <istream>
+#include <sstream>
+#include <string>
+#include <vector>
+    using namespace std;
+
+#include "main.h"
+#include "run.h"
+
+
 /**
  * aplikacni logika pro ruzne stavy aplikace.
  * (stav je resen pres strukturu: appINFO.state a appINFO.mstate)
