@@ -2,7 +2,7 @@ school-projects
 ===============
 
     * various quality projects to completion of the courses
-    * all contents is licenced by: CC-SA ~ http://creativecommons.org/licenses/by-sa/3.0/deed.cs
+    * all contents is licensed by: CC-SA ~ http://creativecommons.org/licenses/by-sa/3.0/deed.cs
 
 list:
 -----
