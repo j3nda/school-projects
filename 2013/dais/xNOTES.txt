@@ -1,0 +1,114 @@
+=============================================================================
+TODO:
+-----------------------------------------------------------------------------
+OK	- vpn vsb --> oracle shit << pres: /etc/vpnc/x-start.sh | x-stop.sh <root>
+OK	- table structure -> mysql
+OK		- j3nda / <password-passw> / mysql: domain.tld/adminer
+	- POST-IT-NOTES:
+		- SQL: schema oracle
+		- SQL: init skripty - na ?click? v appce
+		- ORM: insert, update, delete, read
+		- ORM: load model, save model, execute
+		- SQL: procedury z analyzy
+		- WEB: layout, menu, content, navigace
+		- WEB: list: ciselniky, Form: cudle + msg po akci
+	- ORM
+OK		- struktura v projektu
+		- JDBC driver
+			- pripojeni k oracle shitu
+			- jednoduchy sql dotaz, ze to funguje: INSERT + SELECT
+                - Oracle: HelloController.test_SqlOracleStorage_Query()
+                - MySql:  HelloController.test_SqlOracleStorage_Query()
+            - CRUD:
+                - create
+                - read
+                - update
+                - delete
+                - search
+                - exists
+                - list
+                - query --> viz: HelloController.test_SqlOracleStorage_Query()
+                    - iterace nad vysledkama, tj. foreach -> logger
+            - model ~ repository ~ dao
+                - load
+                - save
+            - model ~ mapper -> repository~dao
+            - service << na to asi hodim bobek a udelam to: PredmetRepository()->load/save aj....
+		- init skripty na nahozeni databaze ORACLE (asi to vem z MySQL)
+		- java command line shit pro nahozeni db!
+
+		- design + rozdeleni
+			- SqlOracleStorage
+			- OracleCRUD extends CRUD use SqlOracleStorage
+
+		- vlastni tridy
+			-
+
+
+		- activeRecord
+		- databaseGateway
+		- entity
+		- add/edit/delete -> CRUD
+	- HTML
+		- layout design
+		- layout co funguje + nejake cleneni dle "idcka" nebo tak neceho - jednoduche!
+			- data: postem!
+			- redirect after {get/post} << zbavim se nechteneho f5 a znovu-odeslani dat a muzu zobrazit nejakou infantilni message
+		- index.jsp - webAppController
+		- resp.jsp  - RESTfull controller = datove api
+OK		- paginator ??hazim bobek??
+		- dataGrid -> CRUD
+			- add
+			- edit
+			- delete
+
+
+TESTY:
+	- PredmetCRUD
+		- insert
+		- update
+		- delete
+		- read
+
+	+ dodelat CRUD.query() : ResultSet (ci neco takeho)
+	- PredmetTable
+
+
+	- PredmetModel
+		+ PredmetEntity - logicka entita, reprezentujici data v aplikaci
+		+ PredmetTable  - navaznost na fyzicke uloziste
+			+ PredmetSqlRepository - 
+				+ SqlRepository - konkretni uloziste (SQL-BASED)
+					+ BaseCRUD  - abstrakt, obecne fyzicke uloziste (prekryva a doplnuje dalsi metody mimo: CRUD ~ napr: exists, search, apod...)
+						+ CRUD  - abstrakt, klasicky CRUD
+
+		-- CRUD ~ (C)reate, (R)ead, (U)pdate, (D)elete
+
+
+
+=============================================================================
+rozdeleni: tabulky vs entity vs stranky
+
+tabulky:	entity:
+--------	-------
+predmet		predmet
+skplan
+skrok
+student		student
+trida
+ucitel
+vysvedceni
+znamka
+
+=============================================================================
+/
+
+
+
+service
+entity
+repository ~ dao
+mapper
+storage
+
+
