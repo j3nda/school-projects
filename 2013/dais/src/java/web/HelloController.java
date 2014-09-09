@@ -3,10 +3,19 @@ package web;
 
 import java.io.IOException;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
+import model.entity.PredmetDao;
+import model.entity.PredmetEntity;
+import model.service.repository.crud.PrimaryKey;
+import model.service.repository.crud.StorageInfo;
 import model.service.repository.crud.storage.SqlOracleStorage;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -66,7 +75,9 @@ public class HelloController implements Controller
 		maw.addObject("now", now);
 
 
-//		test_SqlOracleStorage_Query();
+		//test_SqlOracleStorage_Query();
+                //test_SqlMySqlStorage_Query();
+                test_SqlMySqlStorage_Entity();
 
         return maw;
     }
@@ -92,7 +103,71 @@ public class HelloController implements Controller
 
 	// TODO: CRU
 
+        protected void test_SqlMySqlStorage_Query()
+        {
+          try {
+            // Připojím se k MySql storage. I když třída se jmenuje ..Oracle.. a akorát se připojím k DB, ale čert to vem.
+            SqlOracleStorage mys = new SqlOracleStorage(ResourceManager.getSqlDataSource(), null);
+            final String q = "SELECT * FROM temp1";
+            logger.info(q);
+            // Zavolám nastavený select
+            ResultSet rs = mys.Query(q);
+            // Procházím vrácené řádky (dokud existují)
+            while (rs.next())
+            {   logger.info("\n=========RADEK: " + rs.getRow());
+                ResultSetMetaData md = rs.getMetaData();
+                // Zjistím si počet sloupců (sice je zbytečné zjišťovat pro každý řádek, ale neva)
+                int cols = md.getColumnCount();
+                // Projdu všechny sloupce a vypíšu nějaké informace
+                for (int i=1; i<=cols; i++)
+                {   logger.info("\nSLOUPEC: " + i);
+                    logger.info("getTableName: " + md.getTableName(i));
+                    logger.info("getColumnName: " + md.getColumnName(i));
+                    logger.info("getColumnType: " + md.getColumnType(i));
+                    logger.info("getColumnClassName: " + md.getColumnClassName(i));
+                    logger.info("getPrecision: " + md.getPrecision(i));
+                    logger.info("getScale: " + md.getScale(i));
+                    logger.info("isNullable: " + md.isNullable(i));
+                    switch (md.getColumnType(i))
+                    {   case 3 : logger.info(rs.getBigDecimal(i)); break;
+                        case 4 : logger.info(rs.getInt(i)); break;
+                        case 12 : logger.info(rs.getString(i)); break;
+                        case 91 : logger.info(rs.getDate(i)); break;
+                        default : logger.error("Neznamy typ: " + md.getColumnType(i) + " - tabulka: " + md.getTableName(i) + ", sloupec: " + md.getColumnName(i) + ", trida" + md.getColumnClassName(i));
+                    }
+                }
+            }
+          } catch (SQLException ex) {
+            Logger.getLogger(HelloController.class.getName()).log(Level.SEVERE, null, ex);
+          }
+        }
 
+        protected void test_SqlMySqlStorage_Entity()
+        {
+            //vložení předmětu: 40, testík
+            PredmetEntity novyPredmet = new PredmetEntity();
+            novyPredmet.setId(40);
+            novyPredmet.setNazev("testík");
+            boolean result = PredmetDao.insert(novyPredmet);
+            logger.info("výsledek insertu: " + result);
+
+            // načtení předmětu 40
+            PredmetEntity predmet = PredmetDao.seek(40);
+            logger.info(predmet.getId() + ": " + predmet.getNazev());
+
+            // změna názvu předmětu
+            predmet.setNazev("změněný název");
+            result = PredmetDao.update(predmet);
+            logger.info("výsledek updatu: " + result);
+
+            // znovu načtení změněného předmětu 40
+            PredmetEntity zmenenyPredmet = PredmetDao.seek(predmet.getId());
+            logger.info(zmenenyPredmet.getId() + ": " + zmenenyPredmet.getNazev());
+            
+            // smazání předmětu 40
+            result = PredmetDao.delete(40);
+            logger.info("výsledek deletu: " + result);
+        }
 //	protected void test_SqlOracleStorage_Query()
 //	{
 //		logger.info("test_SqlOracleStorage_Query: START");

@@ -1,8 +1,12 @@
 package model.service.repository.crud.storage;
 
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.sql.DataSource;
 import model.service.repository.crud.CRUDSEL;
 import model.service.repository.crud.ListConditions;
@@ -10,12 +14,12 @@ import model.service.repository.crud.PrimaryKey;
 import model.service.repository.crud.SearchConditions;
 import model.service.repository.crud.StorageDataRow;
 import model.service.repository.crud.StorageInfo;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 
 public class SqlOracleStorage extends CRUDSEL
 {
-
-	
 	public SqlOracleStorage(DataSource dataSource, StorageInfo storageInfo)
 	{
 		setDataSource(dataSource);
@@ -77,7 +81,26 @@ public class SqlOracleStorage extends CRUDSEL
 	@Override
 	public ResultSet Query(String query)
 	{
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            try {
+                PreparedStatement ps = getDataSource().getConnection().prepareStatement(query);
+                ResultSet rs = ps.executeQuery();
+                return rs;
+            } catch (SQLException ex) {
+                Logger.getLogger(SqlOracleStorage.class.getName()).log(Level.SEVERE, null, ex);
+                return null;
+            }
+	}
+
+	public int ExecuteUpdate(String query)
+	{
+            try {
+                PreparedStatement ps = getDataSource().getConnection().prepareStatement(query);
+                int rowCount = ps.executeUpdate();
+                return rowCount;
+           } catch (SQLException ex) {
+                Logger.getLogger(SqlOracleStorage.class.getName()).log(Level.SEVERE, null, ex);
+                return 0;
+            }
 	}
 
 
