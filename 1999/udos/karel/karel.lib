@@ -1,0 +1,108 @@
+#Karel.Library, (c) 1999 MCH
+#
+kerror=""
+
+karel_shutdown () {
+case $exit_code in
+0) kerror="0";;
+2) kerror="file non-exists";;
+20) kerror="by QUIT";;
+21) kerror="Non-Standard";;
+esac
+echo
+echo "*** KAREL v. ${kver}, (c) 1999 Jan SMID (MCH), L113"
+echo "*** (${kerror}), Normal shutdown."
+echo
+if test -r $fout
+then
+    rm $fout
+fi
+exit
+}
+
+karel_logo() {
+echo "+------------------------------------------------------------------------------+"
+echo "| K  K   AA   RRR   EEEE  L                                                    |"
+echo "| K K   A  A  R  R  E     L     Verze ${kver}, (c) 1999 Jan SMID (MCH), L113       |"
+echo "| KK    AAAA  RRR   EEE   L                                                    |"
+echo "| K K   A  A  R  R  E     L     (Tento program byl napsan pod OS Linux jako    |"
+echo "| K  K  A  A  R  R  EEEE  LLLL   textova procedura.)                           |"
+echo "+------------------------------------------------------------------------------+"
+echo "                          Karel byl spusten $krun krat."
+
+}
+
+main_menu () {
+echo "                   +-------------| Nabidka |-------------+"
+echo "                   | K,k = Ukonceni programu (QUIT)      |"
+echo "                   +-------------------------------------+"
+echo "                   | S,s = Start, spusti se interpreter  |"
+echo "                   |       jazyka KAREL                  |"
+echo "                   | H,h = Zobrazi napovedu (HELP)       |"
+echo "                   |       (mozno pouzit -di pro DIALOG) |"
+echo "                   | N,n = Umozni zmenit nastaveni       |"
+echo "                   |       (PROMPT, KAREL_CHARS, ...)    |"
+echo "                   |       Musi byt zapnute dialogy!!!   |"
+echo "                   +-------------------------------------+"
+echo
+echo -n "                   Vase volba?: "
+}
+
+uvod () {
+clear
+karel_logo
+echo
+echo
+main_menu
+}
+
+syntax_info () {
+clear
+echo "Syntax: ka [options] [-di]"
+echo 
+echo "Options: -help      - Tato napoveda"
+echo "         -about     - Vypise zakladni informace o programu"
+echo "         -di        - Spusti program s podporou dialogu"
+echo "         -s         - Spusti programovy interpreter"
+echo
+}
+
+about () {
+if test $di = "$ne"
+then
+    cat $fabout|more
+    echo -n "           <<Zmackni ENTER pro pokracovani, Ctrl+C pro konec>>"
+    read cokoliv
+    clear
+else
+    dialog --title "$fabout" --textbox $fabout 20 60
+    clear
+fi
+}
+
+qquit () {
+if test $di = "$ne"
+then
+    dotaz="QWERT"
+    until test $dotaz = "n"
+    do
+        echo -n "Opravdu chces skoncit? [(A)no / (N)e]: "	
+	read dotaz
+	case $dotaz in
+	a | A | ano) exit_code=0
+                     karel_shutdown;;
+	n | N | ne) dotaz="n";;
+	esac
+    done
+    clear
+else
+    if dialog --yesno "Opravdu chces skoncit?" 7 30
+    then
+	clear
+	exit_code=0
+	karel_shutdown
+    else
+	clear
+    fi
+fi
+}

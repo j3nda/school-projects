@@ -1,0 +1,937 @@
+#!/bin/bash
+# Jan SMID, L113, L98847
+#
+#
+#Definice zakladnich konstant a promennych
+kver="1.2"	#Verze programu
+krun=0
+exit_code=0
+eof="SHIT!!!"
+fini="karel.ini"
+fcmd="karel.cmd"
+flib="karel.lib"
+fhlp="karel.hlp"
+fabout="karel.help"
+fpm="karel.pm"
+temp=$HOME"/karel.temporary.file"
+temp1=$HOME"/karel.temporary1.file"
+fout=$HOME"/karel.temporary.file.out"
+filename="karel.save.default"
+ano="Ano"
+ne="Ne"
+di=$ne
+cmdecho=""
+ibox="Input.Box.Text.Default"
+iboxt="Input.Box.Message"
+
+#Definice zakladni TXT znaku (pro konfiguraci prostredi)
+kleft="<."
+kright=".>"
+kup="/\\"
+kdown="\\/"
+
+kLEFT="<#"
+kRIGHT="#>"
+kUP="#\\"
+kDOWN="#/"
+
+kLeft="<@"
+kRight="@>"
+kUp="@\\"
+kDown="@/"
+
+knone=".."
+kwall="++"
+kcase="##"
+kbedna=$ano
+klock=$ne
+kinfo=$ano
+
+kx="02"	#x-KAREL
+ky="02"	#y-ova souradnice KARLA
+ks="0"	#oriantace KARLA (0-right, 1-up, 2-left, 3-down)
+
+kprompt="cmd:>"	#Interpreterovska vyzva
+
+. karel.lib	#Zavedeni podpurnych funkci
+
+#Definice internich (neexternich funkci)
+start_interpreter () {
+ok_exit=""
+pole_clear
+until test "$ok_exit" = "KAREL_QUIT"
+do
+    clear
+    pole_write    
+    echo
+    echo $cmdecho
+    cmdecho=""
+    echo -n $kprompt" "
+    ok_help=""
+    read ok_exit ok_help
+    doIT=$ne
+    
+    case $ok_exit in
+	k | K | konec) ok_exit="KAREL_QUIT"
+		       doIT=$ano;;
+	q | Q | quit | exit) ok_exit="*BLBOST*"
+	                     saveini
+			     doIT=$ano
+                             qquit;;
+	-h | -H | -help) fabout="karel.help"
+		         doIT=$ano
+			 cp $fhlp $fabout
+		         about
+			 rm $fabout;;
+	h | H | help) sed '1,94d' karel.hlp>karel.cmd.help0
+	              sed '51,$d' karel.cmd.help0>karel.cmd.help
+		      rm karel.cmd.help0
+		      fabout="karel.cmd.help"
+		      about
+		      doIT=$ano
+                      rm $fabout;;
+	n | N | novy) novy_prikaz
+	              doIT=$ano;;
+	pm) if test "$di" = "$ne"
+	    then
+		cmdecho="Chyba! Musi byt zapnuty dialogy! (syntax: dialog)"
+	    else
+		chmod +x $fpm
+		. $fpm
+		chmod -x $fpm
+	    fi
+	    doIT=$ano;;
+	c | C | config) if test "$di" = "$ne"
+	    then
+		cmdecho="Chyba! Musi byt zapnuty dialogy! (syntax: dialog)"
+	    else
+		nastaveni
+	    fi
+	    doIT=$ano;;
+	save) getfname
+	      saveproc
+	      doIT=$ano;;
+	load) getfname
+              if test -r $filename
+              then
+	          loadproc
+              fi
+	          doIT=$ano;;	      
+	krok) do_krok
+	      doIT=$ano;;
+	vlevo) do_vlevo
+	       doIT=$ano;;
+	zamek) if test "$klock" = "$ano"
+	       then
+	           klock=$ne
+	       else
+	           klock=$ano
+	       fi
+	       doIT=$ano;;
+	info | i | I) if test "$kinfo" = "$ano"
+	       then
+	           kinfo=$ne
+	       else
+	           kinfo=$ano
+	       fi
+	       doIT=$ano;;
+	dialog) if test "$di" = "$ano"
+	       then
+	           di=$ne
+	       else
+	           di=$ano
+	       fi
+	       doIT=$ano;;
+	polozb) do_polozb
+	        doIT=$ano;;
+	vezmib) do_vezmib
+	        doIT=$ano;;
+	poloz) do_poloz
+	       doIT=$ano;;
+	vezmi) do_vezmi
+	       doIT=$ano;;
+    esac    
+
+if test "$doIT" = "$ne"
+then
+#Ted to bude vyhledavat externi prikazy
+    etemp1=$temp".ext.1"
+    etemp2=$temp".ext.2"
+    grep "+"$ok_exit"+" $fcmd >$etemp1
+    echo -n $eof>>$etemp1
+    sed 's/+//g' $etemp1 >$etemp2
+    cp $etemp2 $etemp1
+    read a b <$etemp1
+    
+#Zjisti, pokud cmd existuje
+    if test "$a" != "$eof"
+    then
+    
+    cmdexist=$ano
+    sed '1d' $etemp1 >$etemp2
+    cp $etemp2 $etemp1
+    
+    case $ok_help in
+    -h | -H | -help | h | H | help) cmdecho="HELP: "$a", "$b
+			            rm $etemp1
+				    rm $etemp2;;				    
+    *) echo -n "Pracuji, cekej"
+       a="krok"
+       until test "$a" = "$eof"
+       do
+           echo -n "."
+           read a b <$etemp1
+	   sed '1d' $etemp1 >$etemp2
+	   cp $etemp2 $etemp1
+	   
+	   case $b in
+	       krok) do_krok
+	             cmdecho="";;
+	       vlevo) do_vlevo
+	              cmdecho="";;
+	       poloz) do_poloz
+	              cmdecho="";;
+	       vezmi) do_vezmi
+	              cmdecho="";;
+	       polozb) do_polozb
+	               cmdecho="";;
+	       vezmib) do_vezmib
+	               cmdecho="";;
+	   esac
+       done
+       rm $etemp1
+       rm $etemp2
+    esac
+    
+    else
+	cmdexist=$ne
+	cmdecho="Prikaz nenalezen!"
+	rm $etemp1
+	rm $etemp2	
+    fi    
+fi
+
+done
+}
+
+novy_prikaz () {
+nt=$temp".new.command"
+ccmd=""
+hcmd=""
+acmd=""
+if test "$di" = "$ano"
+then
+    #spust pm
+    echo
+else
+    clear
+    cp $fcmd $nt
+    echo -n "Zadej novy prikaz: "
+    read ccmd
+    echo -n "Zadej napovedu pro prikaz: "
+    read hcmd
+    echo>>$nt
+    echo "+"$ccmd"+ "$hcmd>>$nt
+    
+    acmd="nic"
+    echo "Zadej regularni jednoduchy prikaz [Q=Neukladej, K=Uloz]:"
+    echo "Jednoduche prikazy: krok, vlevo, poloz, vezmi, polozb, vezmib"
+until test "$acmd" = "KONEC"
+do    
+    echo -n "Prikaz: "
+    read acmd
+    case $acmd in
+    Q) acmd="KONEC"
+       rm $nt;;
+    K) acmd="KONEC"
+       cp $nt $fcmd
+       rm $nt;;
+    *) echo "+"$ccmd"+ "$acmd>>$nt;;
+    esac
+done
+fi
+}
+
+
+dopln_nuly () {
+case $kx in
+0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) kx=0$kx;;
+esac
+case $ky in
+0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) ky=0$ky;;
+esac
+}
+
+#Seznam prikazu, krok, vlevo, ...
+do_krok () {	
+ax=$kx
+ay=$ky
+case $ks in
+    0) kx=`expr $kx + 1`;;
+    1) ky=`expr $ky - 1`;;
+    2) kx=`expr $kx - 1`;;
+    3) ky=`expr $ky + 1`;;
+esac
+dopln_nuly
+aax=$kx
+aay=$ky
+kx=$ax
+ky=$ay
+eval echo -n "\$pole$aax$aay">$temp
+bb=none
+bb=`cat $temp`
+rm $temp
+		
+if test "$bb" = "$kwall"
+then
+    continue
+fi
+	      
+case $ks in
+    0) kx=`expr $kx + 1`;;
+    1) ky=`expr $ky - 1`;;
+    2) kx=`expr $kx - 1`;;
+    3) ky=`expr $ky + 1`;;
+esac
+dopln_nuly
+}
+
+do_vlevo () {	
+ks=`expr $ks + 1`
+if test "$ks" = "4"
+then
+    ks="0"
+fi
+}
+
+do_polozb () {
+eval echo -n "\$pole$kx$ky">$temp
+bb=none
+bb=`cat $temp`
+rm $temp
+		
+if test "$bb" = "$knone"
+then
+    eval pole$kx$ky=$kcase
+    kbedna=$ne
+fi
+}
+
+do_vezmib () {
+eval echo -n "\$pole$kx$ky">$temp
+bb=none
+bb=`cat $temp`
+rm $temp
+				
+if test "$bb" = "$kcase"
+then
+    eval pole$kx$ky=$knone
+    kbedna=$ano
+fi
+}
+
+do_poloz () {
+if test "$klock" = "$ano"
+then
+    continue
+fi
+ax=$kx
+ay=$ky
+case $ks in
+    0) kx=`expr $kx + 1`;;
+    1) ky=`expr $ky - 1`;;
+    2) kx=`expr $kx - 1`;;
+    3) ky=`expr $ky + 1`;;
+esac
+dopln_nuly
+aax=$kx
+aay=$ky
+kx=$ax
+ky=$ay
+eval echo -n "\$pole$aax$aay">$temp
+bb=none
+bb=`cat $temp`
+rm $temp
+		
+if test "$bb" = "$knone"
+then
+    eval pole$aax$aay=$kwall
+fi
+}
+
+do_vezmi () {
+if test "$klock" = "$ano"
+then
+    continue
+fi
+ax=$kx
+ay=$ky
+case $ks in
+    0) kx=`expr $kx + 1`;;
+    1) ky=`expr $ky - 1`;;
+    2) kx=`expr $kx - 1`;;
+    3) ky=`expr $ky + 1`;;
+esac
+dopln_nuly
+aax=$kx
+aay=$ky
+kx=$ax
+ky=$ay
+eval echo -n "\$pole$aax$aay">$temp
+bb=none
+bb=`cat $temp`
+rm $temp
+		
+if test "$bb" = "$kwall"
+then
+    eval pole$aax$aay=$knone
+fi
+}
+
+
+pole_clear () {
+for yy in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+do
+    for xx in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+    do
+	eval pole${xx}${yy}=$knone
+    done
+done
+for aa in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+do
+    eval pole${aa}01=$kwall
+    eval pole${aa}15=$kwall
+done
+for aa in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+do
+    eval pole01${aa}=$kwall
+    eval pole15${aa}=$kwall
+done
+}
+
+pole_write () {
+echo>$fout
+for yy in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+do
+    for xx in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+    do
+	if test "$xx" = "$kx"
+	then
+	    if test "$yy" = "$ky"
+	    then
+		eval echo -n "\$pole$kx$ky">$temp
+		bb=none
+	        bb=`cat $temp`
+		rm $temp
+		if test "$bb" = "$kcase"
+		then
+		    case $ks in
+		    0) echo -n $kRight>>$fout
+		       continue;;
+		    1) echo -n $kUp>>$fout
+		       continue;;
+		    2) echo -n $kLeft>>$fout
+		       continue;;
+		    3) echo -n $kDown>>$fout
+		       continue;;
+		    esac
+		fi
+	    
+		if test "$kbedna" = "$ne"
+		then
+		    case $ks in
+		    0) echo -n $kright>>$fout
+		       continue;;
+		    1) echo -n $kup>>$fout
+		       continue;;
+		    2) echo -n $kleft>>$fout
+		       continue;;
+		    3) echo -n $kdown>>$fout
+		       continue;;
+		    esac
+		else
+		    case $ks in
+		    0) echo -n $kRIGHT>>$fout
+		       continue;;
+		    1) echo -n $kUP>>$fout
+		       continue;;
+		    2) echo -n $kLEFT>>$fout
+		       continue;;
+		    3) echo -n $kDOWN>>$fout
+		       continue;;
+		    esac		
+		fi
+	    fi
+	fi
+	
+	eval echo -n "\$pole$xx$yy">>$fout
+    done
+
+    if test "$kinfo" = "$ano"
+    then
+    bbb=$yy
+    for I in 1 2 3 4 5 6 7 8 9
+    do
+	if test "$bbb" = "0$I"
+	then
+	    bbb=$I
+	fi
+    done
+    echo -n "..........|.">>$fout
+    case $ks in
+    0) korient="Vpravo";;
+    1) korient="Nahoru";;
+    2) korient="Vlevo";;
+    3) korient="Dolu";;
+    esac		    
+    case $bbb in
+    2) echo -n "Pozice [x/y]: "$kx"/"$ky>>$fout;;
+    3) echo -n "   Orientace: "$korient>>$fout;;            
+    4) echo -n "       Bedna: "$kbedna>>$fout;;
+    5) echo -n "       Zamek: "$klock>>$fout;;
+    6) echo -n "     Dialogy: "$di>>$fout;;    
+    8) echo -n "h,H,help    - Zobrazi prikazy">>$fout;;
+    9) echo -n "-h,-H,-help - Zobrazi celou napovedu">>$fout;;
+    10) echo -n "   n,N,novy - Definuje novy prikaz">>$fout;;
+    11) echo -n "         pm - Spusti prikazovy manazer">>$fout;;
+    12) echo -n "  k,K,konec - Ukonci KARLA [Nabidka]">>$fout;;
+    13) echo -n "q,quit,exit - Ukonci KARLA [OS]">>$fout;;
+    15) echo -n "(c) 1999 Jan SMID, L113">>$fout;;
+    esac    
+    fi
+    
+    echo>>$fout
+done
+
+sed 's/\./ /g' $fout
+#cat $fout
+}
+
+getfname () {
+if test "$di" = "$ano"
+then
+    dialog --title "Save/Load" --inputbox "Zadej jmeno souboru:" 7 60 2>$temp
+    qq=`cat $temp`
+    rm $temp
+    filename=$qq
+else
+    echo -n "Zadej jmeno souboru (Save/Load): "
+    read filename
+    echo
+fi
+}
+
+saveproc () {
+fn=$filename
+#Uklada dulezite informace
+echo $kx>$fn	#Karel-x-coord
+echo $ky>>$fn	#Karel-y-coord
+echo $ks>>$fn	#Karel-smer
+echo $klock>>$fn	#Karel-zamek-na-bludiste-editace-cihel
+for yy in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+do
+    for xx in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+    do
+	eval echo "\$pole$xx$yy">>$fn
+    done
+#    echo>>$fn
+done
+}
+
+saveini () {
+fn1=$temp".save.ini"
+fn=$fini
+#Uklada dulezite informace
+echo $krun>$fn
+echo $kright>>$fn
+echo $kup>>$fn
+echo $kleft>>$fn
+echo $kdown>>$fn
+echo $kRIGHT>>$fn
+echo $kUP>>$fn
+echo $kLEFT>>$fn
+echo $kDOWN>>$fn
+echo $kRight>>$fn
+echo $kUp>>$fn
+echo $kLeft>>$fn
+echo $kDown>>$fn
+echo $kwall>>$fn
+echo $kcase>>$fn
+echo $kprompt>>$fn
+sed 's/\\/\\\\/g' $fn >$fn1
+cp $fn1 $fn
+rm $fn1
+}
+
+loadini () {
+fn=$temp1
+cp $fini $temp1
+echo -n "Load_ini: "
+read krun <$fn
+dline
+echo -n "."
+krun=`expr $krun + 1`
+read kright <$fn
+dline
+echo -n "."
+read kup <$fn
+dline
+echo -n "."
+read kleft <$fn
+dline
+echo -n "."
+read kdown <$fn
+dline
+echo -n "."
+read kRIGHT <$fn
+dline
+echo -n "."
+read kUP <$fn
+dline
+echo -n "."
+read kLEFT <$fn
+dline
+echo -n "."
+read kDOWN <$fn
+dline
+echo -n "."
+read kRight <$fn
+dline
+echo -n "."
+read kUp <$fn
+dline
+echo -n "."
+read kLeft <$fn
+dline
+echo -n "."
+read kDown <$fn
+dline
+echo -n "."
+read kwall <$fn
+dline
+echo -n "."
+read kcase <$fn
+dline
+echo -n "."
+read kprompt <$fn
+dline
+echo -n "."
+
+rm $temp1
+}
+
+dline () {
+dlinetemp=$temp".SED.temp"
+mv $fn $dlinetemp
+sed '1d' $dlinetemp >$temp1
+rm $dlinetemp
+}
+
+loadproc () {
+fn=$temp1
+cp $filename $temp1
+
+read kx <$fn	#Karel-x-coord
+dline
+read ky <$fn	#Karel-y-coord
+dline
+read ks <$fn	#Karel-smer
+dline
+read klock <$fn	#Karel-zamek-na-bludiste-editace-cihel
+dline
+kbedna="$ano"
+echo -n "Prosim cekej, nacitam"
+for yy in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+do
+    for xx in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+    do
+	bb=$knone
+	read bb <$fn
+	dline
+        eval pole${xx}${yy}=$bb
+	if test "$bb" = "$kcase"
+	then
+	    kbedna="$ne"
+	fi
+#	eval echo -n "\$pole$xx$yy">>$fn
+    done
+    echo -n "."
+#    echo>>$fn
+done
+echo
+rm $temp1
+}
+
+go_ibox () {
+dialog --title "Editace" --inputbox "$iboxt" 7 60 "$ibox" 2>$temp
+ibox=`cat $temp`
+rm $temp
+}
+
+karel_bez_bedny () {
+menu=X
+ibox=""
+    while [ $menu != K ]
+    do
+	dialog --title "Konfigurace" --menu "Karel bez bedny:" 11 40 7 \
+           1 "Karel smer vpravo" 2 "Karel smer nahoru" 3 "Karel smer vlevo" 4 "Karel smer dolu" Q "Konec (ESC)" 2>$temp
+	menu=`cat $temp`
+	rm $temp
+	case $menu in
+	    1) ibox=$kright
+	       iboxt="Nastaveni: Karel smer vpravo"
+	       go_ibox
+	       kright=$ibox;;
+	    2) ibox=$kup
+	       iboxt="Nastaveni: Karel smer nahoru"
+	       go_ibox
+	       kup=$ibox;;
+	    3) ibox=$kleft
+	       iboxt="Nastaveni: Karel smer vlevo"
+	       go_ibox
+	       kleft=$ibox;;
+	    4) ibox=$kdown
+	       iboxt="Nastaveni: Karel smer dolu"
+	       go_ibox
+	       kdown=$ibox;;
+	    Q) break;;
+	esac
+    done
+}
+
+karel_s_bednou () {
+menu=X
+ibox=""
+    while [ $menu != K ]
+    do
+	dialog --title "Konfigurace" --menu "Karel s bednou:" 11 40 7 \
+           1 "Karel smer vpravo" 2 "Karel smer nahoru" 3 "Karel smer vlevo" 4 "Karel smer dolu" Q "Konec (ESC)" 2>$temp
+	menu=`cat $temp`
+	rm $temp
+	case $menu in
+	    1) ibox=$kRIGHT
+	       iboxt="Nastaveni: Karel smer vpravo"
+	       go_ibox
+	       kRIGHT=$ibox;;
+	    2) ibox=$kUP
+	       iboxt="Nastaveni: Karel smer nahoru"
+	       go_ibox
+	       kUP=$ibox;;
+	    3) ibox=$kLEFT
+	       iboxt="Nastaveni: Karel smer vlevo"
+	       go_ibox
+	       kLEFT=$ibox;;
+	    4) ibox=$kDOWN
+	       iboxt="Nastaveni: Karel smer dolu"
+	       go_ibox
+	       kDOWN=$ibox;;
+	    Q) break;;
+	esac
+    done
+}
+
+karel_na_bedne () {
+menu=X
+ibox=""
+    while [ $menu != K ]
+    do
+	dialog --title "Konfigurace" --menu "Karel na bedne:" 11 40 7 \
+           1 "Karel smer vpravo" 2 "Karel smer nahoru" 3 "Karel smer vlevo" 4 "Karel smer dolu" Q "Konec (ESC)" 2>$temp
+	menu=`cat $temp`
+	rm $temp
+	case $menu in
+	    1) ibox=$kRight
+	       iboxt="Nastaveni: Karel smer vpravo"
+	       go_ibox
+	       kRight=$ibox;;
+	    2) ibox=$kUp
+	       iboxt="Nastaveni: Karel smer nahoru"
+	       go_ibox
+	       kUp=$ibox;;
+	    3) ibox=$kLeft
+	       iboxt="Nastaveni: Karel smer vlevo"
+	       go_ibox
+	       kLeft=$ibox;;
+	    4) ibox=$kDown
+	       iboxt="Nastaveni: Karel smer dolu"
+	       go_ibox
+	       kDown=$ibox;;
+	    Q) break;;
+	esac
+    done
+}
+
+karel_zdi_bedny () {
+menu=X
+ibox=""
+    while [ $menu != K ]
+    do
+	dialog --title "Konfigurace" --menu "Zdi, bedny...:" 11 40 7 \
+           1 "Definice zdi" 2 "Definice bedny" Q "Konec (ESC)" 2>$temp
+	menu=`cat $temp`
+	rm $temp
+	case $menu in
+	    1) ibox=$kwall
+	       iboxt="Nastaveni: Karel smer vpravo"
+	       go_ibox
+	       kwall=$ibox;;
+	    2) ibox=$kcase
+	       iboxt="Nastaveni: Karel smer nahoru"
+	       go_ibox
+	       kcase=$ibox;;
+	    Q) break;;
+	esac
+    done
+}
+
+nastaveni () {
+menu=X
+ibox=""
+    while [ $menu != K ]
+    do
+	dialog --title "Konfigurace" --menu "Nabidka:" 14 40 7 \
+           1 "Definice Karla (bez bedny)" 2 "Definice Karla (na bedne)" 3 "Definice Karla (s bednou)" A "Definice zdi, beden..." B "Zmena prompt" Q "Konec nastaveni (ESC)" 2>$temp
+	menu=`cat $temp`
+	rm $temp
+	case $menu in
+	    1) karel_bez_bedny;;
+	    2) karel_na_bedne;;
+	    3) karel_s_bednou;;
+	    A) karel_zdi_bedny;;
+	    B) ibox=$kprompt
+	       iboxt="Nastaveni prompt"
+	       go_ibox
+	       kprompt=$ibox;;
+	    Q) break;;
+	esac
+    done
+}
+
+echo -n "Init_file: ${flib}, "
+if test -r $flib	#Test existence souboru s funkcemi
+then
+    echo "Ok."
+else
+    echo "not-found."
+    exit_code=2
+    karel_shutdown
+fi
+
+echo -n "Init_help_file: ${fhlp}, "
+if test -r $fhlp	#Test existence souboru s napovedou
+then
+    echo "Ok."
+else
+    echo "not-found."
+    exit_code=2
+    karel_shutdown
+fi
+
+#Globalni kontrola argumentu
+echo -n "Init_arguments: "
+npar=$#
+echo $npar
+I=1
+while [ $I -le $npar ]	#I <= npar
+do
+
+case $1 in
+-h | -H | -help) syntax_info
+                 exit_code=0
+	         karel_shutdown;;
+-a | -A | -about) sed 's/<cmd:help1>//g' karel.hlp>karel.about.help0
+                  sed 's/<cmd:help2>//g' karel.about.help0>karel.about.help
+		  rm karel.about.help0
+                  fabout="karel.about.help"
+		  about
+                  rm $fabout
+                  exit_code=0
+                  karel_shutdown;;
+-s | -S | -start) start_interpreter;;
+-di) di="$ano";;
+esac
+    I=`expr $I + 1`
+    shift
+done
+
+echo -n "Init_pm: ${fpm}, "
+if test -r $fpm	#Test existence souboru s prikazovym manazerem
+then
+    echo "Ok."
+else
+    echo "none."
+fi
+
+echo -n "Init_commands: ${fcmd}, "
+if test -r $fcmd	#Test existence souboru s prikazy
+then
+    echo "Ok."
+else
+    echo "#Karel.Commands, (c) 1999 MCH">$fcmd
+    echo >>$fcmd
+    echo "+2krok+ Karel udela 2 kroky ve smeru">>$fcmd
+    echo "+2krok+ krok">$fcmd
+    echo "+2krok+ krok">$fcmd
+    echo "none."
+fi
+
+echo "Init_dialogs: $di"
+echo -n "Initialization: "
+if test -r $fini	#Test existence souboru s inicializaci
+then
+    echo "Ok."
+else
+    echo "not-found."
+    saveini
+fi
+loadini
+
+#if test "$di" = "no"
+#then
+    menu_sel="none"
+    until test "$menu_sel" = "quit"
+    do
+        uvod
+        read menu_sel
+        case $menu_sel in
+            K | k) exit_code=0
+		   saveini
+    	           karel_shutdown;;
+            S | s) start_interpreter;;
+	    N | n) if test "$di" = "$ano"
+		   then
+		       nastaveni
+		   fi;;
+            H | h) sed 's/<cmd:help1>//g' karel.hlp>karel.about.help0
+                   sed 's/<cmd:help2>//g' karel.about.help0>karel.about.help
+                   rm karel.about.help0
+                   fabout="karel.about.help"
+    	           about
+    	           rm $fabout;;
+    esac
+    done
+#else
+#    menu_sel=X
+#    while [ $menu_sel != K ]
+#    do
+#	dialog --title "Hlavni" --menu "Nabidka:" 11 40 5 \
+#           K "Ukonceni programu (QUIT)" - "----------------------------" S "Start, spusti se interpreter" H "Zobrazi napovedu (HELP)" N "Nastaveni prostredi " 2>$temp
+#	menu_sel=`cat $temp`
+#	rm $temp
+#	case $menu_sel in
+#	    K) exit_code=0
+#               karel_shutdown;;
+#            S) start_interpreter;;
+#            H) sed 's/<cmd:help1>//g' karel.hlp>karel.about.help0
+#               sed 's/<cmd:help2>//g' karel.about.help0>karel.about.help
+#               rm karel.about.help0
+#               fabout="karel.about.help"
+#    	       about
+#    	       rm $fabout;;	       
+#        esac    
+#    done
+#fi
+
+#kdyby byla nejaka chyba v programu, ukonci se, NESTANDARTNI KONEC!
+exit_code=21
+karel_shutdown

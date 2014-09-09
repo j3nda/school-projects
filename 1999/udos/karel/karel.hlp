@@ -1,0 +1,191 @@
+Jednoduchy programovaci jazyk KAREL, (c) 1999 MCH
+--------------------------------------------------------------------------------
+1.0 Kapanek z historie
+~~~~~~~~~~~~~~~~~~~~~~
+    Programovaci jazyk KAREL je velice  jednoduchym
+programovacim  jazykem, s  kterym jsem  se setkal v 
+roce 1987 na strojich 'IQ 151.'
+    Jednalo se o velice nizkou uroven programovani,
+kdy se tvorilo  bludiste s nejakym  panackem, ktery
+se pohyboval po  pracovni plose na  zaklade naprog-
+ramovanych prikazu. (krok, vlevo,...)
+
+2.0 Ucel tohoto programu
+~~~~~~~~~~~~~~~~~~~~~~~~
+    Hlavnim cilem tohoto programu je, dokazat ze se
+da pomoci jednoduchych textovych procedur naprogra-
+movat. Mimoto usiluje tento program take o  ziskani
+zapoctu z predmetu UOS, ktery  potrebuji k  dalsimu
+studiu informatiky na VSB.
+
+3.0 Zakladni vlastnosti
+~~~~~~~~~~~~~~~~~~~~~~~
+    Jednoduchy  programovy  interpret  KAREL  (dale
+pouze   KAREL)  se   vyznacuje  svymi  jednoduchymi
+algoritmy,  avsak   jejich   zvladnuti   v  nizkych
+programovacich jazycich (Assembler, Pascal, FoxPro,
+C, ...) vyzaduje trochu programatorske dovednosti.
+
+3.1 Rozvrzeni obrazovky
+~~~~~~~~~~~~~~~~~~~~~~~
+    Obrazovka, lepe receno pracovni plocha je  roz-
+delena do 3 zakladnich casti.
+
+    1) Vlevo nahore  se  objevuje  bludiste,  ktere
+KAREL sestavuje z  jednotlivych  zdi.   V  bludisti
+se muze  prochazet,  brat a pokladat  bednu, kterou
+zaroven hleda.
+
+    2) V dolni polovine obrazovky se vyskytuje pri-
+kazova radka pro komunikaci s KARLEM. (CommandLine)
+
+    3) V prave (horni) polovine obrazovky  je napo-
+veda. Jde o par hlavnich  prikazu, ktere  poukazuji
+na dalsi prikazy pro kominukaci.
+Napoveda se muze, ale nemusi zobrazovat  (i,I,info)
+
+3.2 Bludiste
+~~~~~~~~~~~~
+    Bludiste se  sklada z  prostoru o rozloze 30x15
+textovych znaku, pricemz  jde o ctverec,  kdy X-ova
+souradnice se  sklada ze 2  textovych znaku a Y-ova
+souradnice se sklada z 1 textoveho znaku.
+    Pro manipulaci  s  timto bludistem slouzi  pre-
+chodny soubor ($HOME/karel.temporary.file.out)
+    Znaky,  ktere se  vyskytuji a  symbolizuji  tak
+jednotlive prvky v bludisti jsou tyto:
+
+    /\  - Karel je natocen smerem nahoru
+     >  - Karel je natocen smerem doprava    
+    \/  - Karel je natocen smerem dolu
+    <   - Karel je natocen smerem doleva    
+    ++  - Zed (cihla) bludiste {Okraj bludiste
+          je vzdy lemovan zdi (cihlami)}
+    ##  - Bedna, ktera je v bludisti pouze 1
+    #>  - Karel je natocen doprava a vlastni bednu
+    #<  - Karel je natocen do leva a vlastni bednu
+    #\  - Karel je natocen nahoru  a vlastni bednu
+    #/  - Karel je natocen dolu    a vlastni bednu
+    
+    @>  - Karel je natocen doprava a stoji na bedne
+    @<  - Karel je natocen do leva a stoji na bedne
+    @\  - Karel je natocen nahoru  a stoji na bedne
+    @/  - Karel je natocen dolu    a stoji na bedne
+    
+4.0 Prikazy
+~~~~~~~~~~~
+    Vsechny prikazy, ktere KAREL umi vykonat se de-
+li na dve casti.
+
+1) Zakladni (interni) prikazy  -  To  jsou prikazy,
+        ktere  jsou  jiz  predprogramovane  a  jsou
+	ulozeny pouze         v textove procedure.
+	
+2) Rozsirene (externi) prikazy -  To  jsou vsechny,
+        ktere jsou ulozeny v  souboru  'karel.cmd'.
+	Veskere  tyto  prikazy  jsou  slozeny z ne-
+	kolika jednoduchych prikazu.
+	
+Poznamka: Pri pohybu, pokud  KAREL  narazi na  zed,
+          neudela nic. Proste zustane tam, kde byl!
+Take externi prikazy MUSI vyuzivat zakl. jednoduche
+prikazy. Pokud by tomu tak nebylo,  mohlo by  dojit
+k nekonecne smycce!
+
+4.1 Zakladni (interni) prikazy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Seznam vsech zakladnich prikazu + jejich popis:
+    
+           Prikazy pro pohyb KARLA:
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+krok             - KAREL udela krok ve smeru, ktery
+                   je aktualni.
+vlevo            - KAREL se otoci doleva (VlevoBok)
+poloz            - KAREL polozi zed/cihlu do smeru,
+                   ktery je aktualni.
+vezmi            - KAREL vezme zed/cihlu  ze smeru,
+                   ktery je aktualni.
+zamek            - Zamkne/Odemkne editaci bludiste
+                   (Mimo BEDNY!!!)
+polozb           - KAREL polozi bednu na  svou akt.
+                   pozici. POZOR,  bedna  je v blu-
+		   disti pouze JEDNA. KAREL ji MUSI
+		   mit u sebe!
+vezmib           - KAREL vezme bednu ze sve aktual.
+                   pozice. POZOR,  bedna je v  blu-
+		   disti  pouze  JEDNA.   KAREL  ji
+		   NESMI mit u sebe!
+		   
+     Prikazy pro interpreter pseudo-jazyka:
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	   
+save             - Ulozi nastaveni KARLA,  bludiste
+                   do souboru Vami zvoleneho jmena.
+load             - Nacte nastaveni KARLA,  bludiste
+                   ze souboru.
+dialog           - Zapne/Vypne dialogy
+n,N,novy         - Definuje novy prikaz
+pm               - Prikazovy manazer. Umoznuje spra-
+                   vovat prikazy (new, del, edit..)
+                   Vyzaduje zapnute dialogy!
+k,K,konec        - Ukonceni interpreteru, odchod do
+                   hlavni nabidky.
+q,Q,quit,exit    - Ukonceni interpreteru, odchod do
+                   OS (Operacniho Systemu).
+h,H,help         - Vypsani napovedy. Pouze prikazy!
+-h,-H,-help      - Vypsani napovedy. (karel.hlp)
+i,I,info         - Zapne/Vypne vypsani informaci
+                   o KARLU, bludisti, smeru...
+c,C,config       - Konfigurace KARLA a celeho pros-
+                   tredi (Prompt, ...)
+
+4.2 Rozsirene (externi) prikazy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Pro tyto  prikazy  laskave pouzijte  prikazovy
+manazer (pm). Vyzaduje zapnuti dialogu!
+
+5.0 Prikazovy manazer
+~~~~~~~~~~~~~~~~~~~~~
+    Jde o jednoduchou utilitku, ktera spravuje
+externi prikazy KARLA.
+Vyzaduje zapnuti dialogu!
+    Objevi se zakladni nabidka, ktera umoznuje
+vyber prikazu (soubor: karel.cmd).
+Po zvoleni danneho prikazu se  objevi  nabidka
+s moznosti 1) Pridej prikaz |vlozi novy prikaz
+           2) Zrus prikaz   |smaze zvoleny pr.
+    Pokud by jste chteli vlozit zcela novy pr.
+potom zvolte libovolny a v dalsi nabidce
+zvolte "Pridej prikaz", tim si navolite zcela
+novy prikaz.
+
+POZOR! 1) Vzdy musi byt definovan 1  prikaz v
+          (souboru: karel.cmd), jinak program
+nebude fungovat spravne.
+       2) Neni osetreno pridavani  prikazu se
+          stejnym jmenem, kdyz prikaz jiz
+existuje. VZDY se vykona ten,  co byl  vlozen
+drive.
+    
+6.0 Konfigurace KARLA
+~~~~~~~~~~~~~~~~~~~~~
+    Pro lepsi praci s programem jej lze nakonfi-
+gurovat dle vlastnich pozadavku. Vse samodzrejme
+v ramci moznosti.
+    Takto nadefinovana konfigurace je ukladana
+do souboru 'karel.ini'. Je zde ulozeno:
+- Kolikrat byl KAREL spusten
+- Karel bez bedny vpravo
+- Karel bez bedny nahoru
+- Karel bez bedny vlevo
+- Karel bez bedny dolu
+- Karel s bednou vpravo
+- Karel s bednou nahoru
+- Karel s bednou vlevo
+- Karel s bednou dolu
+- Karel na bedne vpravo
+- Karel na bedne nahoru
+- Karel na bedne vlevo
+- Karel na bedne dolu
+- Prompt, vyzva na prikazovem radku
+- Zed (nesmi byt pouzito ' ', '.')
+- Bedna (nesmi byt pouzito ' ', '.')
