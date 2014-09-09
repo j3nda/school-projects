@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head>
+    <title>tamz1snake: smi051</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="initial-scale = 1.0, user-scalable = no, width=device-width" />
+    <meta name="Description" content="tamz1snake v html5 pro mobily a desktop." />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link rel="apple-touch-startup-image" href="start.png" />
+    <!-- iPhone/iPod Touch Portrait – 320 x 460 (standard resolution) -->
+    <link rel="apple-touch-startup-image" href="start.png" media="screen and (max-device-width: 320px)" />
+    <!-- iPhone/iPod Touch Portrait – 640 x 920 pixels (high-resolution) -->
+<!--
+    <link rel="apple-touch-startup-image" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" href="start.png" />
+-->
+    <link rel="apple-touch-icon" href="icon32x32.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="icon72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="icon114x114.png" />
+<!--
+	<link href="jquery.mobile-1.4.2.min.css" rel="stylesheet" />
+-->
+    <link href="index.css" rel="stylesheet" />
+</head>
+	
+
+<body>
+
+    <div id="wrapper">
+        <div id="main-menu-bg"><img src="main-menu-bg.png" /></div>
+        
+        <div id="header">
+            <div id="pause-button-wrapper">
+                <div id="pause-pause" class="pause-button"><img src="pause43x43.png" /></div>
+                <div id="pause-play"><img src="play43x43.png" /></div>
+                <div style="clear:both;"></div>
+            </div>
+            <div id="lives-container"></div>
+            <div id="level-container">L:<span id="level">1</span></div>
+        </div>
+
+        <div id="canvas-background">
+            <canvas id='canvas'></canvas>
+        </div>
+
+        
+        <div id="in-game-score"><h3>Skóre: <span id="score2">0</span></h3></div>
+        <div id="in-game-paused"><h3>Pauza!</h3></div>
+        <div id="main-menu">
+            
+            <div id="main-content" class="menu">
+                <h3>tamz1snake</h3>
+                <a href="#" id="mmPlay" class="simplemodal-close large button">Hraj!</a>
+                <a href="#" id="mmHighScore" class="button large">Nejlepší hráči</a>
+
+                <p class="me">Jan Šmíd, SMI051</p>
+            </div>
+
+            <div id="highscore-content" class="menu" style="display:none;">
+                <h3 class="highscore">Nejlepší</h3>
+                <p id="topten-content"></p>
+                <a href="#" id="hsBack" class="button medium right blue">Zpět</a>
+            </div>
+
+            <div id="pause-content" class="menu" style="display:none;">
+                <h3 class="paused">Pauza!</h3>
+                <a href="#" id="gpContinue" class="simplemodal-close large button">Pokračovat ve hře...</a>
+                <a href="#" id="gpRestart" class="simplemodal-close large button">Restart hry!</a>
+                <a href="#" id="gpMenu" class="button large">Menu</a>
+            </div>
+
+            <div id="gameover-content" class="menu" style="display:none;">
+                <h3 class="about">Konec hry!</h3>
+                <input type="text" name="snakePlayer" value="" id="snakePlayer" />
+                <p class="your">
+                    <span id="your-score">Skóre: </span><span id="your-record">Rekord: </span>
+                    <span class='current-score'>0</span></p>
+                <p class="high">Nejlepší skóre: <span class='high-score'>0</span></p>
+                <a href="#" id="hsMenu" class="button medium replay">Menu</a>
+                <a href="#" id="hsRestart" class="simplemodal-close button replay blue medium">Hrát znovu!</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="jquery-1.7.1.min.js" ></script>
+<!--
+	<script type="text/javascript" src="jquery.mobile-1.4.2.min.js"></script>
+-->
+    <script type="text/javascript" src="jquery.simplemodal-1.4.4.js" ></script>
+    <script type="text/javascript" src="index.js" ></script>
+    <script type="text/javascript" src="addToHome.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            recognizeOrientation();
+            startSnakeGame();
+            assignTouchEvents();
+
+
+			$('#mmPlay').click(function (e) {
+				e.preventDefault();
+				start(true);
+			});
+			$('#mmHighScore').click(function (e) {
+				e.preventDefault();
+				highscore();
+			});
+
+			$('#hsBack').click(function (e) {
+				e.preventDefault();
+				backToMainContentMenu();
+			});
+
+			$('#gpContinue').click(function (e) {
+				e.preventDefault();
+				play();
+			});
+			
+			$('#gpRestart').click(function (e) {
+				e.preventDefault();
+				restart();
+			});
+			
+			$('#gpMenu').click(function (e) {
+				e.preventDefault();
+				backToMainContentMenu();
+			});
+
+            $('.pause-button').click(function (e) {
+                e.preventDefault();
+                pause();
+                pauseMenu();
+            });
+            
+            $('#hsMenu').click(function (e) {
+                e.preventDefault();
+                updateHighScores(true);
+                backToMainContentMenu();
+            });
+            $('#hsRestart').click(function (e) {
+                e.preventDefault();
+                updateHighScores(true);
+                restart();
+            });
+            $("#snakePlayer").change(function() {
+                updatePlayerName($("#snakePlayer").val());
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        window.applicationCache.addEventListener('updateready', function() {
+            window.applicationCache.swapCache();
+        }, false);
+    </script>
+
+</body>
+</html>

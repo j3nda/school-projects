@@ -1,0 +1,29 @@
+tamz1snake
+
+===
+	- levely a jejich kolize (2, 3, 4)
+	- food: graficke
+	- kdyz se sezeru, tak problik obrazovky
+	- hlava hada: grafika
+	- telo  hada: grafika
+	- deploy na mobil
+		- jquery mi deploynout jde, ale zere to totalne zdroje mobilu, az to nejde ovladat
+
+		- cordova mi nejede pze:
+			1) build.xml selze na checkovani verzi, i kdyz je vsechno ok a podle tutorialu
+			   i kdyz v beanech mam vsechno nastavene, jak ma byt. tak to v beanech nejde!@#$%^&*()
+			2) z cmd-line mi to neslo pustit - 
+				/home/users/smid/.cordova/lib/android/cordova/3.4.0/bin/node_modules/q/q.js:126
+									throw e;
+										  ^
+				Error: The command "android" failed. Make sure you have the latest Android SDK installed, and the "android" command (inside the tools/ folder) is added to your path.
+
+				
+
+===
+- kazdy level vlastni pozadi - nejak namalovat
+- animovane zradlo: kvitko
+? zvuky?
+
+===
+===
