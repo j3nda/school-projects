@@ -1,0 +1,73 @@
+=============================================================================
+SUMMARY-PLAN:
+=============================================================================
+
+	DAIS
+	+--> fork --> VIS (tenkyKlient+tlustyKlient) ???
+	+--> fork --> JAT (~J2EE, JavaBeans, @todo: honza)
+
+=============================================================================
+
+MILESTONE 0.dais - cela funkcni appka pro DAIS
+==============================================
+	1) ORM
+	2) webAplikace - pristupna pres URL adresu
+	3) ma pohledy:
+	3.1) prehled ciselniku (predmet, ...)
+	3.2) add/edit/delete (entity zaznamu vc. komunikace s db)
+	4) umoznuje spustit ulozenou proceduru a zobrazit vystup
+	5) ma netrivialni formular pro "uzavrezni skolniho roku"
+	5.1) a zobrazuje nejak rozumne tuto akci...
+	6) pri zmene prumeru posila email/sms
+
+
+MILESTONE 0.vis - cela funkcni appka pro VIS
+==============================================
+	0) vychazi z DAIS
+	-
+	1) je napsana pomoci navrhovych vzoru (~ActiveRecord, DatabaseGateway, ...)
+	2) obsahuje webAplikaci - pristupnou pres URL adresu
+	3) obsahuje tlusteho-klienta jako offline applikaci ??????
+
+
+MILESTONE 0.jat - cela funkcni appka pro JAT
+==============================================
+	0) vychazi z DAIS
+	-
+	1) obsahuje webAplikaci - pristupnou pres URL adresu
+	2) service/formulare~javaForms/javaBeans << @TODO: honza-zjisti-19.9.ve-skole
+
+
+=============================================================================
+TODO:
+-----------------------------------------------------------------------------
+
+dais)
+	- POST-IT-NOTES:
+		- SQL: schema oracle
+		- SQL: init skripty - na ?click? v appce
+		- ORM: insert, update, delete, read
+		- ORM: load model, save model, execute
+		- SQL: procedury z analyzy
+		- WEB: layout, menu, content, navigace
+		- WEB: list: ciselniky, Form: cudle + msg po akci
+
+
+vis)
+	- SQL: MySQL na asnetxe
+	- SQL: init skripty - na ?click? v appce
+	- ORM: insert, update, delete, read
+	- ORM: load model, save model, execute
+	- WEB: layout, menu, content, navigace
+	- WEB: list: ciselniky, Form: cudle + msg po akci
+
+
+jat)
+	- SQL: MySQL na asnetxe
+	- SQL: init skripty - na ?click? v appce
+	- ORM: insert, update, delete, read
+	- ORM: load model, save model, execute
+	- WEB: layout, menu, content, navigace
+	- WEB: list: ciselniky, Form: cudle + msg po akci
+
+

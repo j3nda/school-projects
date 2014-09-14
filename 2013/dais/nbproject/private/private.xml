@@ -16,6 +16,8 @@
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/web/WEB-INF/jsp/index.jsp</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/service/repository/crud/CRUD.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/jdbc/PrimaryKey.java</file>
+            <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/entity/PredmetEntity.java</file>
+            <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/service/repository/crud/CRUDSEL.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/service/repository/crud/storage/SqlOracleStorage.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/service/repository/PredmetRepository.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/jdbc/CRUD.java</file>
@@ -24,6 +26,7 @@
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/service/repository/crud/CRUDSE.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/jdbc/crud/SqlCRUD.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/service/repository/crud/StorageInfo.java</file>
+            <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/service/repository/crud/storage/SqlMySqlStorage.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/jdbc/IPrimaryKey.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/resources/ResourceManager.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/service/repository/mapper/PredmetMapper.java</file>
@@ -34,6 +37,8 @@
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/jdbc/RepositoryInfo.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/service/repository/crud/storage/SqlOraclePrimaryKey.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/service/repository/crud/PrimaryKey.java</file>
+            <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/entity/PredmetDao.java</file>
+            <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/model/service/repository/crud/storage/SqlMySqlPrimaryKey.java</file>
             <file>file:/home/users/smid/NetBeansProjects/daiswebapp/src/java/jdbc/ExtendedCRUD.java</file>
         </group>
     </open-files>

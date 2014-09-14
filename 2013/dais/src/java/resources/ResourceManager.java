@@ -16,8 +16,8 @@ public class ResourceManager
 	static public DataSource getSqlDataSource()
 	{
 //		return (DataSource)getDataSource("SqlOracle@smi051");
-		return (DataSource)getDataSource("SqlMysql@asnetxe.tergos");
-//		return (DataSource)getDataSource("SqlMysql@asnetxe.j3nda");
+//		return (DataSource)getDataSource("SqlMysql@asnetxe.tergos");
+		return (DataSource)getDataSource("SqlMysql@asnetxe.j3nda");
 	}
 
 
@@ -25,8 +25,10 @@ public class ResourceManager
 	{
 		switch(name) {
 			case "SqlMysql@asnetxe.j3nda":
-				throw new RuntimeException("Unimplemented: org.springframework.jdbc.datasource.DriverManagerDataSource()!");
-//				DriverManagerDataSource dataSource = new DriverManagerDataSource();
+				// NOTE: http://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/jdbc.html
+				// NOTE: 12.9 Initializing a DataSource
+				DriverManagerDataSource dataSource = new DriverManagerDataSource("j3nda@asnetxe.com.db=skola-dais");
+				return (DataSource) dataSource;
 //
 //				dataSource.setDriverClassName(DataSourceDemo.DRIVER);
 //				dataSource.setUrl(DataSourceDemo.JDBC_URL);

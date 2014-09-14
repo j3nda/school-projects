@@ -20,7 +20,7 @@ public class StorageInfo implements IStorageInfo
 	public StorageInfo(String tableName, PrimaryKey pkey)
 	{
 		this.name = tableName;
-		this.pkey      = pkey;
+		this.pkey = pkey;
 	}
 
 

@@ -14,8 +14,6 @@ import model.service.repository.crud.PrimaryKey;
 import model.service.repository.crud.SearchConditions;
 import model.service.repository.crud.StorageDataRow;
 import model.service.repository.crud.StorageInfo;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 
 
 public class SqlOracleStorage extends CRUDSEL
