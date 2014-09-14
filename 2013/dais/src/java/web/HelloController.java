@@ -204,8 +204,8 @@ public class HelloController implements Controller
 
 
 
-	protected void test_SqlMySqlStorage_Query()
-	{
+//	protected void test_SqlMySqlStorage_Query()
+//	{
 //		- JDBC driver
 //			- pripojeni k oracle shitu
 //			- jednoduchy sql dotaz, ze to funguje: INSERT + SELECT
@@ -221,7 +221,7 @@ public class HelloController implements Controller
 //                - list
 //                - query --> viz: HelloController.test_SqlOracleStorage_Query()
 //                    - iterace nad vysledkama, tj. foreach -> logger
-
+//    }
 
 
 }
