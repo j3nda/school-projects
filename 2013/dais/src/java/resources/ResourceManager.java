@@ -21,9 +21,13 @@ public class ResourceManager
 	}
 
 
+//	static public DataSource getMemcacheDataSource()
+
+
 	static public Object getDataSource(String name)
 	{
 		switch(name) {
+			case "SqlMysql":
 			case "SqlMysql@asnetxe.j3nda":
 				// NOTE: http://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/jdbc.html
 				// NOTE: 12.9 Initializing a DataSource
@@ -41,6 +45,7 @@ public class ResourceManager
 			case "SqlMysql@asnetxe.tergos":
 				return (DataSource) new SingleConnectionDataSource("jdbc:mysql://localhost:3306/test", "root", "t3rg0s", true);
 
+			case "SqlOracle":
 			case "SqlOracle@smi051":
 				throw new RuntimeException("Unimplemented: org.springframework.jdbc.datasource.DriverManagerDataSource()!");
 //				break;

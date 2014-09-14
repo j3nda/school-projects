@@ -52,6 +52,9 @@ dais)
 		- WEB: layout, menu, content, navigace
 		- WEB: list: ciselniky, Form: cudle + msg po akci
 
+	- honza:
+		- napsat hlavicky metod, co kam pude a jak se bude volat (promenne bez typu)
+
 
 vis)
 	- SQL: MySQL na asnetxe

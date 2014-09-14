@@ -204,4 +204,24 @@ public class HelloController implements Controller
 
 
 
+	protected void test_SqlMySqlStorage_Query()
+	{
+//		- JDBC driver
+//			- pripojeni k oracle shitu
+//			- jednoduchy sql dotaz, ze to funguje: INSERT + SELECT
+//                - Oracle: HelloController.test_SqlOracleStorage_Query()
+//                - MySql:  HelloController.test_SqlOracleStorage_Query()
+//            - CRUD:
+//                - create
+//                - read
+//                - update
+//                - delete
+//                - search
+//                - exists
+//                - list
+//                - query --> viz: HelloController.test_SqlOracleStorage_Query()
+//                    - iterace nad vysledkama, tj. foreach -> logger
+
+
+
 }
