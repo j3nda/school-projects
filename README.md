@@ -1,22 +1,43 @@
 school-projects
 ===============
 
-    * various quality projects to completion of the courses
-    * all contents is licensed by: CC-SA ~ http://creativecommons.org/licenses/by-sa/3.0/deed.cs
+    * various quality projects to complete school courses
+    * all this published contents is licensed by: CC-SA ~ http://creativecommons.org/licenses/by-sa/3.0/deed.cs
 
 list:
 -----
 
-    2012/
-        * udbs/ ~ introduction to database systems
-            The aim of this course is to familiarize students with the basic concepts
-            of database technologies such as relational data model and the SQL language
-            for defining, manipulating and querying data. After completing the course,
-            students will be able to define a conceptual information system model,
-            the relational schema and emphasis is placed on basic SQL commands according
-            to the standard SQL92, which the student after completing the course control.
+    2013/
+        * dais/ ~ database and information systems
+            The aim of the course is to provide students with a bachelor's degree
+            extended information about database technologies with an emphasis
+            the creation of an information system. Graduates will be able to implement
+            an information system, which will have a nontrivial data layer and will use
+            the capabilities of modern DBMS.
 
-        ---
+        * tamz1/ ~ Development of application for mobile devices I. (J2ME, Html5)
+            To acquaint students with the basics of creating applications for mobile devices.
+            After completing the course the student will be able to: 
+            - To assess the suitability of the platform for the intended application 
+            - Analyze, design and implement an application 
+            - Compare the effectiveness of applications with applications written
+              for the desktop 
+            - Understand the importance of typical extension API and their use
+            - Decide how to distribute the application on the target device
+              and distinguish whether the application must be digitally signed.
+
+        * tamz2/ ~ Development of application for mobile devices II. (Android SDK)
+            To acquaint students with the advanced techniques of developing applications
+            for mobile devices, especially mobile phones. 
+            Technology Android, NET Compact Framework. After completing the course,
+            students will be able to: 
+            - Identify the application domain of mobile devices. 
+            - Describe the procedures used in developing mobile applications. 
+            - Distinguish the differences between platforms Android and CF 
+            - Modify desktop applications for use on mobile platforms. 
+            - Assess the real capabilities of the device due to project requirements.
+
+    2012/
         * alg2/ ~ alhorithms II
             The aim of the course is to introduce students to object-oriented programming
             and develop students' knowledge in the area of data structures. After completing
@@ -35,6 +56,14 @@ list:
             systems with the perspective of the underlying hardware implementation
             with automatic gates and with a finite number of states, displaying numbers
             and symbols, basic algorithms for arithmetic operations in digital systems.
+
+        * udbs/ ~ introduction to database systems
+            The aim of this course is to familiarize students with the basic concepts
+            of database technologies such as relational data model and the SQL language
+            for defining, manipulating and querying data. After completing the course,
+            students will be able to define a conceptual information system model,
+            the relational schema and emphasis is placed on basic SQL commands according
+            to the standard SQL92, which the student after completing the course control.
 
     2011/
         * alg1/ ~ algorithms I
