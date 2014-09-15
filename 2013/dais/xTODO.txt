@@ -57,6 +57,7 @@ dais)
 OK		- 2x stranky skrz SpringMVC: index -> redirect -> hello | test, @see: /WEB-INF/dispatcher-servlet.xml
 OK			- BaseController: pro handling: @layout a @content pro data v sablone napric 1x controllerem
 			- remove(somehow): /WEB-INF/jsp/layouts/dais/redirect.jsp ~ while accessing testController!
+			- layout: header/content/footer inc. images, css, javascript
 	- jarda:
 		- JNBI connector <resources.xml> --> javaAppConnector
 
