@@ -9,5 +9,8 @@
     <body>
         <h1>Hello World!</h1>
 		<p>Greetings, it is now <c:out value="${now}"/></p>
+        
+        <p><a href="test.htm">TestController</a></p>
+        
     </body>
 </html>

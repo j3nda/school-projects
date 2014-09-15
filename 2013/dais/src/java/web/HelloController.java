@@ -11,11 +11,8 @@ import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.sql.DataSource;
 import model.entity.PredmetDao;
 import model.entity.PredmetEntity;
-import model.service.repository.crud.PrimaryKey;
-import model.service.repository.crud.StorageInfo;
 import model.service.repository.crud.storage.SqlOracleStorage;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -77,7 +74,7 @@ public class HelloController implements Controller
 
 		//test_SqlOracleStorage_Query();
                 //test_SqlMySqlStorage_Query();
-                test_SqlMySqlStorage_Entity();
+//                test_SqlMySqlStorage_Entity();
 
         return maw;
     }
