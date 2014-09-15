@@ -19,6 +19,10 @@
 
 -- http://docs.spring.io/docs/Spring-MVC-step-by-step/part2.html
 
+
+COMPOSITE VIEW
+-- http://bikashshaw.wordpress.com/2013/05/13/spring-mvc-create-jspjstl-composite-view-header-body-and-footer/
+
 -->
 		
 	</head>
@@ -26,9 +30,10 @@
 	<body>
 		<div style="background-color:gray;"><strong>@layout:</strong><br/>
 			LAYOUT-UPPER:
-			<div style="background-color:silver;"><strong>@content</strong><br/>
+
+			<div style="background-color:silver;"><strong>@content</strong> ~ as innerView:<br/>
 				CONTENT-UPPER:
-				<jsp:include page="${__contentFilename__}" />
+				<jsp:include page="/WEB-INF/jsp/${__contentFilename__}.jsp" />
 				CONTENT-BOTTOM:
 
 			</div>
