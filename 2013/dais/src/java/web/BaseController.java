@@ -13,7 +13,6 @@ import org.springframework.web.servlet.mvc.Controller;
 public class BaseController implements Controller
 {
 	protected final String TAG_layoutName  = "__layoutName__";
-	protected final String TAG_contentName = "__contentName__";
 	protected final String TAG_contentView = "__content__";
 
 	protected Log logger;
@@ -26,7 +25,7 @@ public class BaseController implements Controller
 	public BaseController()
 	{
 		 setLayoutFilename("layouts/"+getLayoutName()+"/layout");
-		 setContentFilename("");
+		 setContentFilename("test");
 	}
 
 
@@ -43,9 +42,12 @@ public class BaseController implements Controller
 	protected ModelAndView processRequest()
 	{
 		ModelAndView layout  = processRequestLayout(new ModelAndView(getLayoutFilename()));
-		ModelAndView content = processRequestContent(new ModelAndView(getContentFilename()));
+//		ModelAndView content = processRequestContent(new ModelAndView(getContentFilename()));
 
-		layout.addObject(TAG_contentView, content);
+//		layout.addObject(TAG_contentView, content.getView().toString());
+
+//		getLogger().info(content);
+//		getLogger().info(content.getView());
 
 		return layout;
 	}
@@ -54,17 +56,14 @@ public class BaseController implements Controller
 	protected ModelAndView processRequestLayout(ModelAndView layout)
 	{
 		layout.addObject(TAG_layoutName, getLayoutName());
-		layout.addObject(TAG_contentName, getContentFilename());
 
 		return layout;
 	}
 
+
 	protected ModelAndView processRequestContent(ModelAndView content)
 	{
-		content.addObject(TAG_layoutName, getLayoutName());
-		content.addObject(TAG_contentName, getContentFilename());
-
-		return content;
+		return processRequestLayout(content);
 	}
 
 

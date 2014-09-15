@@ -7,6 +7,11 @@ package web;
 public class TestController extends BaseController
 {
 
+//	public TestController()
+//	{
+//		setContentFilename("test");
+//	}
+
 
 //	@Override
 //	protected ModelAndView processRequest(ModelAndView maw)

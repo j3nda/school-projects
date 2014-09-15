@@ -55,6 +55,7 @@ dais)
 	- honza:
 		- napsat hlavicky metod, co kam pude a jak se bude volat (promenne bez typu)
 OK		- 2x stranky skrz SpringMVC: index -> redirect -> hello | test, @see: /WEB-INF/dispatcher-servlet.xml
+			- BaseController: pro handling: @layout a @content pro data v sablone napric 1x controllerem
 	- jarda:
 		- JNBI connector <resources.xml> --> javaAppConnector
 

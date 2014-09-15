@@ -1,30 +1,49 @@
 <%@ include file="/WEB-INF/jsp/layouts/_includeBeforeLayout.jsp" %>
-
-<%-- Redirected because we can't set the welcome page to a virtual URL. --%>
-<%-- c:redirect url="/hello.htm"/ --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>dais@smi051 - web app</title>
-    </head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>dais@smi051 - web app</title>
 
-    <body>
-        <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
-        <p><i>To display a different welcome page for this project, modify</i>
-            <tt>index.jsp</tt> <i>, or create your own welcome page then change
-                the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
-                welcome page and also update the welcome-file setting in</i>
-            <tt>web.xml</tt>.</p>
-        
-        
-        <p><table>
-            <tr><th>__layoutName__</th><td>${__layoutName__}</td></tr>
-            <tr><th>__contentName__</th><td>${__contentName__}</td></tr>
-        </table></p>
+<!--
+-- http://docs.spring.io/autorepo/docs/webflow/2.3.x/reference/html/spring-js.html
+	<script type="text/javascript" src="<c:url value="/resources/dojo/dojo.js" />"> </script>
+	<link type="text/css" rel="stylesheet" href="<c:url value="/resources/dijit/themes/tundra/tundra.css" />" />
 
-    </body>
+-- http://www.mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/
+	<link href="${pageContext.request.contextPath}/resources/css/main.css" rel="stylesheet" >
+
+-- http://docs.oracle.com/javaee/1.4/tutorial/doc/JSPTags5.html
+	-- and: http://stackoverflow.com/questions/11069950/include-a-view-in-spring-mvc
+
+-- http://docs.spring.io/docs/Spring-MVC-step-by-step/part2.html
+
+-->
+		
+	</head>
+
+	<body>
+		<div style="background-color:gray;"><strong>@layout:</strong><br/>
+			LAYOUT-UPPER:
+			<div style="background-color:silver;"><strong>@content</strong><br/>
+				CONTENT-UPPER:
+				<jsp:include page="${__contentFilename__}" />
+				CONTENT-BOTTOM:
+
+			</div>
+			LAYOUT-BOTTOM:
+		</div>
+
+		<hr/>
+
+
+		<table>
+			<tr><th>__layoutName__</th><td>${__layoutName__}</td></tr>
+			<tr><th>__content__</th><td>ModelAndView object</td></tr>
+		</table>
+
+
+	</body>
 </html>
 <%@ include file="/WEB-INF/jsp/layouts/_includeAfterLayout.jsp" %>
