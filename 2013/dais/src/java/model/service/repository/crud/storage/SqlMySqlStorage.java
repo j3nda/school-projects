@@ -79,14 +79,15 @@ public class SqlMySqlStorage extends CRUDSEL
 	@Override
 	public ResultSet Query(String query)
 	{
-            try {
-                PreparedStatement ps = getDataSource().getConnection().prepareStatement(query);
-                ResultSet rs = ps.executeQuery();
-                return rs;
-            } catch (SQLException ex) {
-                Logger.getLogger(SqlMySqlStorage.class.getName()).log(Level.SEVERE, null, ex);
-                return null;
-            }
+		try {
+			PreparedStatement ps = getDataSource().getConnection().prepareStatement(query);
+			ResultSet rs = ps.executeQuery();
+			return rs;
+
+		} catch (SQLException ex) {
+			Logger.getLogger(SqlMySqlStorage.class.getName()).log(Level.SEVERE, null, ex);
+			return null;
+		}
 	}
 
 //	public int ExecuteUpdate(String query)

@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 
-package test;
+package test.orm;
 
 
 /**
  *
  * @author smid
  */
-public class Test_107_OrmCRUD
+public class Test_108_OrmCRUDSE
 {
 
 }

@@ -2,6 +2,7 @@ package web;
 
 import java.util.Date;
 import org.springframework.web.servlet.ModelAndView;
+import test.orm.Test_107_OrmCRUD;
 
 
 /**
@@ -48,6 +49,8 @@ public class TestController extends BaseController
 	{
 		content.addObject("now", (new Date()).toString());
 
+		runAllTests();
+
 		return content;
 	}
 
@@ -66,7 +69,8 @@ public class TestController extends BaseController
 
 	protected void runOrmTests()
 	{
-		// TODO
+		Test_107_OrmCRUD test107 = new Test_107_OrmCRUD();
+		test107.runAllTests();
 	}
 
 
