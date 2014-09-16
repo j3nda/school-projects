@@ -21,6 +21,7 @@ public class PredmetEntity implements IEntity
 	public void setId(int id) { this.id = id; }
 	public void setNazev(String nazev) { this.nazev = nazev; }
 
+
 	public int    getId()    { return id; }
 	public String getNazev() { return nazev; }
 

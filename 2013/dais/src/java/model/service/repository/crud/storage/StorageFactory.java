@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 public class StorageFactory
 {
 	protected DataSource dataSource;
-	protected StorageFactoryType storageType = StorageFactoryType.UNDEFINED;
+	protected StorageFactoryType storageType;
 	protected StorageInfo storageInfo;
 
 
