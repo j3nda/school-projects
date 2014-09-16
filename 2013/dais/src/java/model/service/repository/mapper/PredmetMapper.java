@@ -3,8 +3,8 @@ package model.service.repository.mapper;
 
 import javax.sql.DataSource;
 import model.entity.PredmetEntity;
-import model.service.repository.crud.StorageDataRow;
-import model.service.repository.crud.StorageInfo;
+import core.model.service.repository.crud.storage.StorageDataRow;
+import core.model.service.repository.crud.storage.StorageInfo;
 import model.service.repository.crud.storage.SqlOraclePrimaryKey;
 import model.service.repository.crud.storage.SqlOracleStorage;
 import resources.ResourceManager;

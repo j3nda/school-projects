@@ -1,6 +1,9 @@
 package model.entity;
 
 
+import core.model.entity.IEntity;
+
+
 public class PredmetEntity implements IEntity
 {
 	private int id;

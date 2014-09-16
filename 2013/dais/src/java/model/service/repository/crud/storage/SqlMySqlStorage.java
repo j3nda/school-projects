@@ -8,12 +8,12 @@ import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.sql.DataSource;
-import model.service.repository.crud.CRUDSEL;
-import model.service.repository.crud.ListConditions;
-import model.service.repository.crud.PrimaryKey;
-import model.service.repository.crud.SearchConditions;
-import model.service.repository.crud.StorageDataRow;
-import model.service.repository.crud.StorageInfo;
+import core.model.service.repository.crud.CRUDSEL;
+import core.model.service.repository.crud.ListConditions;
+import core.model.service.repository.crud.PrimaryKey;
+import core.model.service.repository.crud.SearchConditions;
+import core.model.service.repository.crud.storage.StorageDataRow;
+import core.model.service.repository.crud.storage.StorageInfo;
 
 
 public class SqlMySqlStorage extends CRUDSEL

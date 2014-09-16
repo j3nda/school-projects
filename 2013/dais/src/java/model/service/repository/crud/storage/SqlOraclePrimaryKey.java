@@ -2,7 +2,7 @@ package model.service.repository.crud.storage;
 
 
 import java.util.LinkedHashMap;
-import model.service.repository.crud.PrimaryKey;
+import core.model.service.repository.crud.PrimaryKey;
 
 
 public class SqlOraclePrimaryKey extends PrimaryKey

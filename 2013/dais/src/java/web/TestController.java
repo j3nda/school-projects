@@ -2,7 +2,7 @@ package web;
 
 import java.util.Date;
 import org.springframework.web.servlet.ModelAndView;
-import test.orm.Test_107_OrmCRUD;
+import test.model.Test_107_OrmCRUD;
 
 
 /**
