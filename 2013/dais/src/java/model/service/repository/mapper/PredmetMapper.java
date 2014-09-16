@@ -1,12 +1,13 @@
 package model.service.repository.mapper;
 
 
-import javax.sql.DataSource;
-import model.entity.PredmetEntity;
+import core.model.service.repository.crud.CRUDSEL;
+import core.model.service.repository.crud.PrimaryKey;
 import core.model.service.repository.crud.storage.StorageDataRow;
 import core.model.service.repository.crud.storage.StorageInfo;
-import model.service.repository.crud.storage.SqlOraclePrimaryKey;
-import model.service.repository.crud.storage.SqlOracleStorage;
+import javax.sql.DataSource;
+import model.entity.PredmetEntity;
+import model.service.repository.crud.storage.StorageFactory;
 import resources.ResourceManager;
 
 
@@ -17,15 +18,23 @@ public class PredmetMapper extends BaseMapper
 	@Override
 	public void initialize()
 	{
-		SqlOraclePrimaryKey pk = new SqlOraclePrimaryKey();
-		pk.add("id");
+		StorageFactory storage = new StorageFactory((DataSource)ResourceManager.getSqlDataSource(), ResourceManager.getSqlDataSourceType());
 
-		setCRUD(
-			new SqlOracleStorage(
-				(DataSource)ResourceManager.getSqlDataSource(),
-				new StorageInfo("predmet", pk)
-			)
-		);
+		PrimaryKey pkey = storage.getPrimaryKeyObjectInstance();
+		pkey.add("id");
+
+		CRUDSEL crud = storage.getStorageObjectInstance();
+		crud.setStorageInfo(new StorageInfo("predmet", pkey));
+
+		setCRUD(crud);
+
+// TODO: remove thid death-code...
+//		setCRUD(
+//			new SqlOracleStorage(
+//				(DataSource)ResourceManager.getSqlDataSource(),
+//				new StorageInfo("predmet", pk)
+//			)
+//		);
 
 		super.initialize();
 	}
@@ -34,24 +43,44 @@ public class PredmetMapper extends BaseMapper
 	@Override
 	protected StorageDataRow mapEntityToCRUD(String name)
 	{
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+/*
+		Entity --> CRUD --> SQL-COLUMNS
+		id					id
+		nazev				nazev
+*/
+		PredmetEntity entity   = (PredmetEntity)getEntity();
+		StorageDataRow dataRow = new StorageDataRow();
+
+		dataRow.set("id",    (Integer)entity.getId());
+		dataRow.set("nazev", (String)entity.getNazev());
+
+		return dataRow;
 	}
 
 
 	@Override
 	protected StorageDataRow mapEntityToCRUD_primaryKey(String name)
 	{
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+		PredmetEntity entity   = (PredmetEntity)getEntity();
+		StorageDataRow dataRow = new StorageDataRow();
+
+		dataRow.set("id", (Integer)entity.getId()); // TODO: auto_increment due DB-SERVER (MySQL, Oracle, ...)
+
+		return dataRow;
 	}
 
 
 	@Override
 	protected PredmetEntity mapCrudToEntity(String name)
 	{
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+		PredmetEntity entity   = new PredmetEntity();
+		StorageDataRow dataRow = crud.getDataRow();
+
+		entity.setId((Integer)dataRow.get("id"));
+		entity.setNazev((String)dataRow.get("nazev"));
+
+		return entity;
 	}
-
-
 
 
 

@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.entity.PredmetDao;
+import model.entity.PredmetDao_markAsOBSOLETEtoREMOVEfromHERE;
 import model.entity.PredmetEntity;
 import model.service.repository.crud.storage.SqlOracleStorage;
 import org.apache.commons.logging.Log;
@@ -145,24 +145,24 @@ public class HelloController implements Controller
             PredmetEntity novyPredmet = new PredmetEntity();
             novyPredmet.setId(40);
             novyPredmet.setNazev("testík");
-            boolean result = PredmetDao.insert(novyPredmet);
+            boolean result = PredmetDao_markAsOBSOLETEtoREMOVEfromHERE.insert(novyPredmet);
             logger.info("výsledek insertu: " + result);
 
             // načtení předmětu 40
-            PredmetEntity predmet = PredmetDao.seek(40);
+            PredmetEntity predmet = PredmetDao_markAsOBSOLETEtoREMOVEfromHERE.seek(40);
             logger.info(predmet.getId() + ": " + predmet.getNazev());
 
             // změna názvu předmětu
             predmet.setNazev("změněný název");
-            result = PredmetDao.update(predmet);
+            result = PredmetDao_markAsOBSOLETEtoREMOVEfromHERE.update(predmet);
             logger.info("výsledek updatu: " + result);
 
             // znovu načtení změněného předmětu 40
-            PredmetEntity zmenenyPredmet = PredmetDao.seek(predmet.getId());
+            PredmetEntity zmenenyPredmet = PredmetDao_markAsOBSOLETEtoREMOVEfromHERE.seek(predmet.getId());
             logger.info(zmenenyPredmet.getId() + ": " + zmenenyPredmet.getNazev());
             
             // smazání předmětu 40
-            result = PredmetDao.delete(40);
+            result = PredmetDao_markAsOBSOLETEtoREMOVEfromHERE.delete(40);
             logger.info("výsledek deletu: " + result);
         }
 //	protected void test_SqlOracleStorage_Query()

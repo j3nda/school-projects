@@ -18,6 +18,8 @@ import core.model.service.repository.crud.storage.StorageInfo;
 
 public class SqlMySqlStorage extends CRUDSEL
 {
+
+	
 	public SqlMySqlStorage(DataSource dataSource, StorageInfo storageInfo)
 	{
 		setDataSource(dataSource);

@@ -255,19 +255,19 @@ abstract public class BaseMapper implements IBaseMapper
 
 	protected StorageDataRow mapEntityToCRUD()
 	{
-		return mapEntityToCRUD(getEntity().getClass().toString());
+		return mapEntityToCRUD(null);
 	}
 
 
 	protected StorageDataRow mapEntityToCRUD_primaryKey()
 	{
-		return mapEntityToCRUD(getEntity().getClass().toString());
+		return mapEntityToCRUD(null);
 	}
 
 
 	protected IEntity mapCrudToEntity()
 	{
-		return mapCrudToEntity(getEntity().getClass().toString());
+		return mapCrudToEntity(null);
 	}
 
 

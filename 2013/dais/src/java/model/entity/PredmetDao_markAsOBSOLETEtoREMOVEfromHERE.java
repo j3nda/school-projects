@@ -11,7 +11,7 @@ import model.service.repository.crud.storage.SqlOracleStorage;
 import resources.ResourceManager;
 
 
-public class PredmetDao
+public class PredmetDao_markAsOBSOLETEtoREMOVEfromHERE
 {
         private static final String tableName = "predmet";
         private static final List<String> pkColumns = new ArrayList<>(Arrays.asList("id"));
@@ -38,7 +38,7 @@ public class PredmetDao
                 result.setNazev(rs.getString(2));
                 return result;
             }
-            } catch (SQLException ex) { Logger.getLogger(PredmetDao.class.getName()).log(Level.SEVERE, null, ex); }
+            } catch (SQLException ex) { Logger.getLogger(PredmetDao_markAsOBSOLETEtoREMOVEfromHERE.class.getName()).log(Level.SEVERE, null, ex); }
             return null;
         }
 

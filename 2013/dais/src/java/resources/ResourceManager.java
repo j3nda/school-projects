@@ -2,12 +2,15 @@ package resources;
 
 
 import javax.sql.DataSource;
+import model.service.repository.crud.storage.StorageFactoryType;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 
 
 public class ResourceManager
 {
+	protected static StorageFactoryType sqlStorageType = null;
+
 
 	/**
 	 * return default sql dataSource
@@ -21,16 +24,30 @@ public class ResourceManager
 	}
 
 
+	/**
+	 * return type of sql dataSource
+	 * @return
+	 */
+	static public StorageFactoryType getSqlDataSourceType()
+	{
+		if (sqlStorageType == null || !(sqlStorageType instanceof StorageFactoryType)) {
+			throw new RuntimeException("DataSourceType is not set! You must call getSqlDataSource() or getDataSource(String name) first!");
+		}
+		return sqlStorageType;
+	}
+
+
 //	static public DataSource getMemcacheDataSource()
 
 
 	static public Object getDataSource(String name)
 	{
-		switch(name) {
-			case "SqlMysql":
-			case "SqlMysql@asnetxe.j3nda":
+		switch(name.toLowerCase()) {
+			case "sqlmysql":
+			case "sqlmysql@asnetxe.j3nda":
 				// NOTE: http://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/jdbc.html
 				// NOTE: 12.9 Initializing a DataSource
+				sqlStorageType = StorageFactoryType.MYSQL;
 				DriverManagerDataSource dataSource = new DriverManagerDataSource("j3nda@asnetxe.com.db=skola-dais");
 				return (DataSource) dataSource;
 //
@@ -40,15 +57,28 @@ public class ResourceManager
 //				dataSource.setPassword(DataSourceDemo.PASSWORD);
 //				return dataSource;
 //
+////				return (DataSource) new SingleConnectionDataSource("jdbc:mysql://localhost:3306/test", "root", "t3rg0s", true);//
+//				dataSource.setDriverClassName(DataSourceDemo.DRIVER);
+//				dataSource.setUrl(DataSourceDemo.JDBC_URL);
+//				dataSource.setUsername(DataSourceDemo.USERNAME);
+//				dataSource.setPassword(DataSourceDemo.PASSWORD);
+//				return dataSource;
+//
 ////				return (DataSource) new SingleConnectionDataSource("jdbc:mysql://localhost:3306/test", "root", "t3rg0s", true);
 
-			case "SqlMysql@asnetxe.tergos":
+			case "sqlmysql@asnetxe.tergos":
+				sqlStorageType = StorageFactoryType.MYSQL;
 				return (DataSource) new SingleConnectionDataSource("jdbc:mysql://localhost:3306/test", "root", "t3rg0s", true);
 
-			case "SqlOracle":
-			case "SqlOracle@smi051":
+			case "sqloracle":
+			case "sqloracle@smi051":
+				sqlStorageType = StorageFactoryType.ORACLE;
 				throw new RuntimeException("Unimplemented: org.springframework.jdbc.datasource.DriverManagerDataSource()!");
 //				break;
+//				if ()
+//				return (DataSource)
+//		org.springframework.jdbc.datasource.DriverManagerDataSource().
+//		DriverManagerDataSource()//				break;
 //				if ()
 //				return (DataSource)
 //		org.springframework.jdbc.datasource.DriverManagerDataSource().
