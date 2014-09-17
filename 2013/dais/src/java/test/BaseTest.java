@@ -4,11 +4,16 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 
-public class BaseTest
+abstract public class BaseTest
 {
 	protected Log logger;
-	protected int assertCounter = 0;
-	protected int assertFailed  = 0;
+	protected TestSummaryEntity progressEntity = new TestSummaryEntity();
+
+
+	public void setLogger(Log logger)
+	{
+		this.logger = logger;
+	}
 
 
 	protected Log getLogger()
@@ -20,17 +25,24 @@ public class BaseTest
 	}
 
 
+	public TestSummaryEntity getSummary()
+	{
+		return progressEntity;
+	}
+
+
 	protected void Assert(Object testingCondition, Object finalCondition, String failedOutputMessage)
 	{
-		if (assertCounter == 0) {
+		if (progressEntity.assertCounter == 0) {
 			getLogger().info("=============================================================================");
 			getLogger().info("NEW-TESTS: "+getClass());
 			getLogger().info("-----------------------------------------------------------------------------");
 		}
 
-		assertCounter++;
+		progressEntity.assertCounter++;
 		if (!testingCondition.equals(finalCondition)) {
-			assertFailed++;
+			progressEntity.assertFailed++;
+			progressEntity.assertFailedMessages.add(failedOutputMessage);
 			getLogger().error("test: "+getClass()+"; FAILED: "+failedOutputMessage);
 		}
 	}
@@ -38,19 +50,19 @@ public class BaseTest
 
 	public void runAllTests()
 	{
-		if (assertCounter > 0) {
-			if (assertFailed > 0) {
+		if (progressEntity.assertCounter > 0) {
+			if (progressEntity.assertFailed > 0) {
 				getLogger().info("-----------------------------------------------------------------------------");
 			}
 			getLogger().info("SUMMARY: "+getClass());
-			if (assertFailed > 0) {
-				getLogger().error(" FAIL: "+assertFailed+"x <"+getClass()+">");
+			if (progressEntity.assertFailed > 0) {
+				getLogger().error(" FAIL: "+progressEntity.assertFailed+"x <"+getClass()+">");
 
 			} else {
-				getLogger().info("   FAIL: "+assertFailed+"x");
+				getLogger().info("   FAIL: "+progressEntity.assertFailed+"x");
 			}
-			getLogger().info("     OK: "+(assertCounter-assertFailed)+"x");
-			getLogger().info("--TOTAL: "+assertCounter+"x");
+			getLogger().info("     OK: "+(progressEntity.assertCounter-progressEntity.assertFailed)+"x");
+			getLogger().info("--TOTAL: "+progressEntity.assertCounter+"x");
 			getLogger().info("=============================================================================");
 
 		} else {

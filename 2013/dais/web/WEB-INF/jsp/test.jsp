@@ -2,3 +2,7 @@
 <p>To handle all testing requests and theirs results</p>
 
 <p>Test-Greetings, it is now ${now}</p>
+
+<hr/>
+${pageContext.request.contextPath}/smartphones/create.json
+

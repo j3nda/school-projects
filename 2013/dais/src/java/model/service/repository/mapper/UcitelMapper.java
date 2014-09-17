@@ -55,7 +55,7 @@ public class UcitelMapper extends BaseMapper
 
 
 	@Override
-	protected StorageDataRow mapEntityToCRUD_primaryKey(String name)
+	protected StorageDataRow mapEntityToCRUD_asPrimaryKey(String name)
 	{
 		UcitelEntity entity    = (UcitelEntity)getEntity();
 		StorageDataRow dataRow = new StorageDataRow();

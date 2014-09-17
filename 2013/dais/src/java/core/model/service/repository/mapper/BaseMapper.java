@@ -23,11 +23,11 @@ abstract public class BaseMapper implements IBaseMapper
 	{
 		if (!isInitialized()) {
 			if (!(crud instanceof ICRUD)) {
-				throw new RuntimeException("Must setBaseCRUD() first!");
+				throw new RuntimeException("Must setCRUD() first!");
 			}
 
 			if (!(entity instanceof IEntity)) {
-				throw new RuntimeException("Must setBaseEntity() first!");
+				throw new RuntimeException("Must setEntity() first!");
 			}
 
 			initialized = true;
@@ -53,7 +53,7 @@ abstract public class BaseMapper implements IBaseMapper
 	 */
 	protected boolean processLoad(ICRUD crud, IEntity entity)
 	{
-		crud.getPrimaryKey().setWhereValues(mapEntityToCRUD_primaryKey());
+		crud.getPrimaryKey().setWhereValues(mapEntityToCRUD_asPrimaryKey());
 
 		if (crud instanceof ICRUDSE) {
 			CRUDSE crud_se = (CRUDSE)crud;
@@ -62,10 +62,10 @@ abstract public class BaseMapper implements IBaseMapper
 					mapCrudToEntity(entity.getClass().getName());
 					return true;
 				}
-				throw new RuntimeException("processLoad() failed! data exists, but invalid invalid state detected!");
+				throw new RuntimeException("processLoad() failed! data exists, but invalid state was detected!");
 
 			} else {
-				entity.reset();
+				getEntity().reset();
 				return false;
 			}
 
@@ -77,7 +77,7 @@ abstract public class BaseMapper implements IBaseMapper
 				return true;
 
 			} else if (crud_gs.getState() == StateCRUD.NONE) {
-				entity.reset();
+				getEntity().reset();
 				return false;
 			}
 		}
@@ -217,7 +217,6 @@ abstract public class BaseMapper implements IBaseMapper
 	}
 
 
-
 	@Override
 	public boolean Destroy()
 	{
@@ -248,7 +247,7 @@ abstract public class BaseMapper implements IBaseMapper
 
 
 	abstract protected StorageDataRow mapEntityToCRUD(String name);
-	abstract protected StorageDataRow mapEntityToCRUD_primaryKey(String name);
+	abstract protected StorageDataRow mapEntityToCRUD_asPrimaryKey(String name);
 	abstract protected IEntity mapCrudToEntity(String name);
 
 
@@ -259,7 +258,7 @@ abstract public class BaseMapper implements IBaseMapper
 	}
 
 
-	protected StorageDataRow mapEntityToCRUD_primaryKey()
+	protected StorageDataRow mapEntityToCRUD_asPrimaryKey()
 	{
 		return mapEntityToCRUD(null);
 	}

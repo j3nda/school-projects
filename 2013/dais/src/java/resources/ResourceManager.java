@@ -10,6 +10,7 @@ import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 public class ResourceManager
 {
 	protected static StorageFactoryType sqlStorageType = null;
+	protected static DataSource sqlDataSource = null;
 
 
 	/**
@@ -18,9 +19,12 @@ public class ResourceManager
 	 */
 	static public DataSource getSqlDataSource()
 	{
-//		return (DataSource)getDataSource("SqlOracle@smi051");
-//		return (DataSource)getDataSource("SqlMysql@asnetxe.tergos");
-		return (DataSource)getDataSource("SqlMysql@asnetxe.j3nda");
+		if (sqlDataSource == null || !(sqlDataSource instanceof DataSource)) {
+//			sqlDataSource = (DataSource)getDataSource("SqlOracle@smi051");
+//			sqlDataSource = (DataSource)getDataSource("SqlMysql@asnetxe.tergos");
+			sqlDataSource = (DataSource)getDataSource("SqlMysql@asnetxe.j3nda");
+		}
+		return sqlDataSource;
 	}
 
 
@@ -39,7 +43,11 @@ public class ResourceManager
 
 //	static public DataSource getMemcacheDataSource()
 
-
+	/**
+	 * return (mixed) dataSource specified by "name" parameter
+	 * @param name
+	 * @return
+	 */
 	static public Object getDataSource(String name)
 	{
 		switch(name.toLowerCase()) {

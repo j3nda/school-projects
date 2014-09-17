@@ -28,14 +28,6 @@ public class PredmetMapper extends BaseMapper
 
 		setCRUD(crud);
 
-// TODO: remove thid death-code...
-//		setCRUD(
-//			new SqlOracleStorage(
-//				(DataSource)ResourceManager.getSqlDataSource(),
-//				new StorageInfo("predmet", pk)
-//			)
-//		);
-
 		super.initialize();
 	}
 
@@ -59,7 +51,7 @@ public class PredmetMapper extends BaseMapper
 
 
 	@Override
-	protected StorageDataRow mapEntityToCRUD_primaryKey(String name)
+	protected StorageDataRow mapEntityToCRUD_asPrimaryKey(String name)
 	{
 		PredmetEntity entity   = (PredmetEntity)getEntity();
 		StorageDataRow dataRow = new StorageDataRow();
